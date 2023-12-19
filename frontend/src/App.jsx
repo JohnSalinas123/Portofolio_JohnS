@@ -1,13 +1,14 @@
 import './App.css'
 import { Routes, Route} from 'react-router-dom'
 import { Navbar } from './components/Navbar'
+import { NavbarSC } from './components/NavbarSC'
 import { Home, Projects, About, Blog } from './components/pages'
 
 function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      <NavbarSC />
       <Routes>
         <Route path="/"  element={<Home />}/>
         <Route path="/projects"  element={<Projects />}/>

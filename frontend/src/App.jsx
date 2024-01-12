@@ -1,21 +1,21 @@
-import './App.css'
+import './styles/App.css'
 import { Routes, Route} from 'react-router-dom'
 import { Navbar } from './components/Navbar'
-import { NavbarSC } from './components/NavbarSC'
-import { Home, Projects, About, Blog } from './components/pages'
+import { NavbarSC } from './old/NavbarSC'
+import { Home, Projects, About, Blog } from './pages'
 
 function App() {
 
   return (
     <div className="App">
-      <NavbarSC />
-      <Routes>
-        <Route path="/"  element={<Home />}/>
-        <Route path="/projects"  element={<Projects />}/>
-        <Route path="/about"  element={<About />}/>
-        <Route path="/blog"  element={<Blog />}/>
-      </Routes>
-    </div>
+      <Navbar />
+        <Routes>
+          <Route path="/"  element={<Home />}/>
+          <Route path="/projects"  element={<Projects />}/>
+          <Route path="/about"  element={<About />}/>
+          <Route path="/blog"  element={<Blog />}/>
+        </Routes>
+      </div> 
   )
 }
 

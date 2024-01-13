@@ -32,9 +32,9 @@ export const Navbar = () => {
                 </ul>
             </div>
             <div className="nav-edge-container social-container">
-                <FaLinkedin className="social-icon"/>
-                <IoIosMail className="social-icon"/>
-                <FaGithub className="social-icon"/>
+                <a href="https://www.linkedin.com/in/johnsalinas123/" target="_blank"><FaLinkedin className="social-icon"/></a>
+                <a href = "mailto: salinasjohn257@gmail.com" target="_blank"><IoIosMail className="social-icon"/></a>
+                <a href = "https://github.com/JohnSalinas123" target="_blank"><FaGithub className="social-icon"/></a>
             </div>
             
         </nav>

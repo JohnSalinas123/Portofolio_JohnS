@@ -122,14 +122,24 @@ nav .menu span {
     
 }
 
-.social-icon {
-    cursor: pointer;
-    width: 20px;
-    height: 20px;
+.social-container a {
+    width: 24px;
+    height: 24px;
     margin-left: 1.5rem;
-    transition: transform 0.3s ease;
-    color: white;
 }
+
+.social-container .social-icon {
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        transition: transform 0.3s ease;
+        color: white;
+}
+
+
+
+
+
 
 .social-icon:hover {
     transform: scale(1.2);

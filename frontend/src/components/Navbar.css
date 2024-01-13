@@ -1,22 +1,22 @@
 .active {
-    color: rgb(191, 123, 0);
+    color: rgb(255, 205, 112);
 }
 
 nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
     position: sticky;
     top: 0;
-    margin-top: 1rem
+    margin-top: 1rem;
+    margin-bottom: 5rem;
 }
 
 nav .title {
     font-size: 1.5rem;
-    margin: 2rem;
     font-weight: bold;
     text-decoration: none;
     color: white;
+    margin: 2rem;
 }
 
 nav ul {
@@ -35,13 +35,13 @@ nav ul li a {
     margin: 0 2rem;
     border-radius: 0.5rem;
     transition: color 0.3s ease;
-    font-weight: 300;
+    font-weight: 3wwwwwwwwwwww00;
     font-family: 'Nunito', sans-serif;
-
+    font-size: 1.25rem;
 }
 
 nav ul li a:not(.active):hover {
-    color:rgb(221, 147, 11);
+    color:rgb(247, 168, 22);
     transition: color 0.3s ease;
 }
 
@@ -89,5 +89,47 @@ nav .menu span {
         margin: 0.2rem 0.5rem;
     }
 
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    text-align: center;
+}
+
+.logo-link {
+    color: orange;
+    text-decoration: none;
+}
+
+.logo-container div {
+    display: inline-block;
+    font-size: 30px;
+    font-family: consolas;
+    font-weight: 500;
+}
+
+.social-container {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: auto;
+    
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 1rem;
+}
+
+.nav-container {
+    display: flex;
+}
+
+.nav-edge-container {
+    min-width: 200px;
 }
 

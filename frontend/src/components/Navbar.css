@@ -5,14 +5,14 @@
 nav {
     display: flex;
     justify-content: space-evenly;
-    position: sticky;
+    align-items: center;
+    position: fixed;
+    width: 100%;
     top: 0;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
     z-index: 100;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: rgb(16,16,16);
+    background-color: rgb(16,16,16,0.99);
 }
 
 nav .title {
@@ -25,6 +25,7 @@ nav .title {
 
 nav ul {
     display: flex;
+    transition: transform 0.3s ease;
 }
 
 nav ul li {
@@ -51,68 +52,50 @@ nav ul li a:not(.active):hover {
 
 nav .menu {
     display: none;
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
+    position: fixed;
+    top: 1.2rem;
+    right: 1.2rem;
     flex-direction: column;
     justify-content: space-between;
-    width: 2.25rem;
-    height: 2rem;
+    height: 36px;
+    width: 36px;
 }
 
-nav .menu span {
-    height: 0.4rem;
-    width: 100%;
-    background-color: white;
-    border-radius: 0.2rem;
+nav .menu svg{
+    height: 36px;
+    width: 36px;
 }
 
-@media (max-width: 500px) {
-    nav .menu {
-        display: flex;
-    }
-
-    nav {
-        flex-direction: column;
-        align-items: start;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin-bottom: 0.25rem;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul li a {
-        margin: 0.2rem 0.5rem;
-    }
-
+.menu-socials {
+    display: none;
 }
+
+
 
 .logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: auto;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
 }
 
-.logo-container div {
+.logo-box {
+    width: 144px;
+}
+
+.logo-link {
     display: inline-block;
-    font-size: 30px;
+    font-size: 32px;
     font-family: consolas;
     font-weight: 500;
-    width: 108px;
     text-align: left;
     color: orange;
+    text-decoration: none;
 }
+
+
 
 .social-container {
     display: flex;
@@ -137,10 +120,6 @@ nav .menu span {
 }
 
 
-
-
-
-
 .social-icon:hover {
     transform: scale(1.2);
     transition: transform 0.3s ease;
@@ -152,5 +131,94 @@ nav .menu span {
 
 .nav-edge-container {
     min-width: 200px;
+}
+
+@media (max-width: 950px) {
+    nav ul li a {
+        font-size: 1rem;
+
+    }
+
+    .logo-link {
+        font-size: 36px;
+    }
+
+    .logo-box {
+        width: 120px;
+        justify-content: center;
+    }
+
+    .nav-edge-container {
+        min-width: 130px;
+    }
+
+    .social-container a {
+        width: 20px;
+        height: 20px;
+        margin-left: 1.5rem;
+    }
+    
+    .social-container .social-icon {
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+            color: white;
+    }
+}
+
+@media (max-width: 780px) {
+
+    .logo-container {
+        margin-left: 1rem;
+    }
+
+    .menu-socials {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav .menu {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: start;
+        margin-top: 0;
+
+    }
+
+    .nav-container {
+        text-align: center;
+        width: 100%;
+        z-index: 200;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        margin: 0.2rem 0.5rem;
+    }
+
+    .social-container {
+        display: none;
+    }
+
 }
 

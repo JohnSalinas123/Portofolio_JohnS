@@ -16,12 +16,15 @@ export const Navbar = () => {
             </div>
             <div className="nav-edge-container logo-container">
                 <div className="logo-box">
-                    <NavLink to="/" className="logo-link">JS</NavLink>
+                    <NavLink to="/" className="logo-link">John Salinas</NavLink>
                 </div>
                 
             </div>
             <div className="nav-container">
                 <ul className={menuVisible ? "open" : ""}>
+                    <li>
+                        <NavLink to="/">Home</NavLink>
+                    </li>
                     <li>
                         <NavLink to="/about">About</NavLink>
                     </li>
@@ -31,9 +34,7 @@ export const Navbar = () => {
                     <li>
                         <NavLink to="/blog">Blog</NavLink>
                     </li>
-                    <li>
-                        <NavLink to="/contact">Contact</NavLink>
-                    </li>
+                    
                     <li className="menu-socials">
                         <a href="https://www.linkedin.com/in/johnsalinas123/" target="_blank"><FaLinkedin className="social-icon"/></a>
                         <a href = "mailto: salinasjohn257@gmail.com" target="_blank"><IoIosMail className="social-icon"/></a>

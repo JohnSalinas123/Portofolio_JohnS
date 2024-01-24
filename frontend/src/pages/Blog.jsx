@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/blog.css'
+import './Blog.css'
 import { donuts, lighthouse, dungeon} from "../images/blog/blogIndex.js"
 
 
@@ -22,6 +22,8 @@ const ImageGallery = () => {
       <Image src={donuts} alt="Blender Donut Tutorial"/>
       <Image src={donuts} alt="Blender Donut Tutorial"/>
       <Image src={lighthouse} alt="Blender Donut Tutorial" type={"wide"}/>
+      <Image src={donuts} alt="Blender Donut Tutorial"/>
+      <Image src={donuts} alt="Blender Donut Tutorial"/>
     </div>
   )
 

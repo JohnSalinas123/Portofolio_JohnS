@@ -21,10 +21,12 @@
     transition: transform 0.3s ease;
 }
 
+/*
 .image-grid img:hover {
     transform: scale(1.02);
     transition: transform 0.3s ease;
 }
+*/
 
 .image-grid-col-2 {
     grid-column: span 2;
@@ -33,6 +35,45 @@
 .image-grid-row-2 {
     grid-row: span 2;
 }
+
+
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    text-align: center;
+  }
+  
+.image-grid .image-container:hover .image-overlay {
+    opacity: 1;
+}
+
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-appear-active,
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
 
 /* screen smaller than 1024px */
 @media screen and (max-width: 1024px) {

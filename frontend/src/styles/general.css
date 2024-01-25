@@ -1,5 +1,18 @@
 .narrow-content-container {
     max-width: 1400px;
     min-height: 80vh;
-    margin: 0 auto; 
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 150px;
   }
+
+.fade-appear,
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-appear-active,
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms;
+}

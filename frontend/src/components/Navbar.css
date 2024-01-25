@@ -27,7 +27,7 @@ nav {
     z-index: 100;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: rgb(16,16,16,0.99);
+    background-color: rgb(16,16,16);
 }
 
 nav .title {

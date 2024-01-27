@@ -1,7 +1,8 @@
 import React from 'react'
 import './Blog.css'
-import { donuts, lighthouse, dungeon} from "../images/blog/blogIndex.js"
+import { donuts, lighthouse, dungeon,} from "../images/blog/blogIndex.js"
 import { CSSTransition } from 'react-transition-group';
+import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
 
 
@@ -19,29 +20,34 @@ export const Blog = () => {
 const ImageGallery = () => {
 
   return (
-    <div className="image-grid">
-      <Image src={dungeon} alt="Blender Donut Tutorial" type={"wide"} overlayTitle={"Blender Donut Tutorial"} />
-      <Image src={donuts} alt="Blender Donut Tutorial" type={"large"} overlayTitle={"Blender Donut Tutorial"}/>
-      <Image src={donuts} alt="Blender Donut Tutorial" overlayTitle={"Blender Donut Tutorial"}/>
-      <Image src={donuts} alt="Blender Donut Tutorial"/>
-      
-    </div>
+    <ResponsiveMasonry
+      columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
+  >
+      <Masonry gutter="16px">
+          <Image src={dungeon} alt="Blender Donut Tutorial"  overlayTitle={"Blender Donut Tutorial"} />
+          <Image src={donuts} alt="Blender Donut Tutorial"  overlayTitle={"Blender Donut Tutorial"}/>
+          <Image src={lighthouse} alt="Blender Donut Tutorial" overlayTitle={"Blender Donut Tutorial"}/>
+          <Image src={donuts} alt="Blender Donut Tutorial"  overlayTitle={"Blender Donut Tutorial"}/>
+          <Image src={donuts} alt="Blender Donut Tutorial" overlayTitle={"Blender Donut Tutorial"}/>
+          <Image src={donuts} alt="Blender Donut Tutorial" overlayTitle={"Blender Donut Tutorial"}/>
+          <Image src={donuts} alt="Blender Donut Tutorial" overlayTitle={"Blender Donut Tutorial"}/>
+          <Image src={donuts} alt="Blender Donut Tutorial" overlayTitle={"Blender Donut Tutorial"}/>
+      </Masonry>
+    </ResponsiveMasonry>
+    
+
   )
 
 }
 
-const Image = ({src,alt, type, overlayTitle}) => {
-
-  var classNames = "image-container"
-  if (type == 'wide') {
-    classNames = "image-container image-grid-col-2"
-  } else if (type == 'large') {
-    classNames = "image-container image-grid-col-2 image-grid-row-2"
-  }
+const Image = ({src,alt, height, overlayTitle}) => {
 
   return (
-    <div className={classNames}>
-      <img src={src} alt={alt} />
+    <div>
+      <div className="image-container image-wrapper" >
+        <img src={src} alt={alt} />
+      </div>
+      
       <div className="image-overlay">
         {overlayTitle}
       </div>

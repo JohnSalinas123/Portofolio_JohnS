@@ -1,4 +1,6 @@
-
+.home-container {
+    height: 100vh;
+}
 
 .home-header-content {
     position: relative;

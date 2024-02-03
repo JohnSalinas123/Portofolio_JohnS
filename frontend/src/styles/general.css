@@ -16,3 +16,18 @@
   opacity: 1;
   transition: opacity 500ms;
 }
+
+.main-color {
+  background-color: var(--sky-blue);
+  color: black;
+}
+
+.main-color > a {
+  color: black;
+}
+
+.active {
+  color: var(--darker-blue);
+  position: relative;
+  display: inline-block;
+}

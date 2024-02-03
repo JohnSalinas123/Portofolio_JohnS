@@ -1,16 +1,16 @@
 import React from 'react'
 import {useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import "./Navbar.css"
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx";
+import "../styles/Navbar.css"
 
 export const Navbar = () => {
     const [menuVisible, setMenuVisible] = useState(false)
 
     return (
-        <nav>
+        <nav className="main-color">
             <div className="menu" onClick={() => {setMenuVisible(!menuVisible)}}>
                 <RxHamburgerMenu />
             </div>

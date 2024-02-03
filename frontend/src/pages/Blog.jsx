@@ -1,9 +1,8 @@
 import React from 'react'
-import './Blog.css'
 import { donuts, lighthouse, dungeon,} from "../images/blog/blogIndex.js"
 import { CSSTransition } from 'react-transition-group';
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
-
+import '../styles/Blog.css'
 
 
 

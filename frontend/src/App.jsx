@@ -7,7 +7,7 @@ import './styles/App.css'
 function App() {
 
   return (
-    <div className="App">
+    <div className="App main-color">
       <Navbar />
       <div className="content-container">
         <Routes>

@@ -1,7 +1,7 @@
 import React from 'react'
-import './Projects.css'
 import { donuts, lighthouse, dungeon} from "../images/blog/blogIndex.js"
 import { CSSTransition } from 'react-transition-group';
+import '../styles/Projects.css'
 
 export const Projects = () => {
   return (

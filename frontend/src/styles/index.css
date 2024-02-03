@@ -10,8 +10,8 @@ html {
 }
 
 :root {
-  background-color: rgb(16, 16, 16);
-  color: white;
+  --sky-blue: #afd7ff;
+  --darker-blue: #3998f8;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

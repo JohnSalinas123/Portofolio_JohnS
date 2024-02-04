@@ -52,7 +52,6 @@ export const Home = () => {
           <PerspectiveCamera makeDefault fov={75} position={[0,0,0.7]} rotation={[0,0,0]}/>
           <ambientLight intensity={Math.PI / 2} />
           <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
-          <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} />
           <LaptopModel position={[0, 0, 0]} rotation={[0.5,0,0]}/>
           
           

@@ -9,7 +9,7 @@ import '../styles/Blog.css'
 export const Blog = () => {
   return (
     <CSSTransition in={true} appear={true} timeout={1000} classNames="fade">
-      <div className="narrow-content-container blog-content">
+      <div className="narrow-content-container">
         <ImageGallery />
       </div>
     </CSSTransition>
@@ -43,13 +43,15 @@ const Image = ({src,alt, height, overlayTitle}) => {
 
   return (
     <div>
+
       <div className="image-container image-wrapper" >
         <img src={src} alt={alt} />
-      </div>
-      
-      <div className="image-overlay">
+        <div className="image-overlay">
         {overlayTitle}
       </div>
+      </div>
+      
+      
     </div>
   )
 

@@ -12,11 +12,30 @@ html {
 :root {
   --sky-blue: #afd7ff;
   --darker-blue: #3998f8;
+  --tan: #FFD7AF;
+
+  --bright-blue: #66FCF1;
+
+  --main-background: #0f172a;
+
+  --sky-blue2: #8ecae6ff;
+  --blue-green: #219ebcff;
+  --prussian-blue: #023047ff;
+  --selective-yellow: #ffb703ff;
+  --ut-orange: #fb8500ff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.gradient-background {
+  background:
+      linear-gradient(to bottom, var(--main-background), transparent),
+      linear-gradient(to top,var(--main-background), transparent),
+      linear-gradient(to right,var(--main-background), transparent),
+      linear-gradient(to left,var(--main-background), transparent);
 }
 
 /*

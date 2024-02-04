@@ -7,7 +7,7 @@ import './styles/App.css'
 function App() {
 
   return (
-    <div className="App main-color">
+    <div className="App gradient-background">
       <Navbar />
       <div className="content-container">
         <Routes>

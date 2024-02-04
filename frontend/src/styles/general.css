@@ -1,9 +1,9 @@
 .narrow-content-container {
     max-width: 1400px;
-    min-height: 80vh;
+    min-height: 100vh;
     margin-left: auto; 
     margin-right: auto;
-    margin-top: 150px;
+    padding-top: 150px;
   }
 
 .fade-appear,
@@ -17,17 +17,14 @@
   transition: opacity 500ms;
 }
 
-.main-color {
-  background-color: var(--sky-blue);
-  color: black;
-}
-
-.main-color > a {
-  color: black;
+.main-color,
+.main-color a {
+  color: #f8fafc;
 }
 
 .active {
-  color: var(--darker-blue);
+  color: var(#0E9594) !important;
   position: relative;
   display: inline-block;
 }
+

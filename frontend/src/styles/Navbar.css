@@ -10,7 +10,11 @@ nav {
     z-index: 100;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    
+    transition: background-color 0.3s ease;
+}
+
+.nav-background { 
+    background-color: #0e0e0e;
 }
 
 nav .title {
@@ -61,6 +65,24 @@ nav .menu svg{
     width: 36px;
 }
 
+.nav-element.active {
+    color: var(--darker-blue) !important;
+    position: relative;
+    display: inline-block;
+  }
+  
+  
+.nav-element.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust as needed */
+    left: 0;
+    width: 100%;
+    height: 3px; /* Thickness of the bar */
+    border-radius: 20px;
+    background-color: #fff; /* Color of the bar */
+}
+
 .menu-socials {
     display: none;
 }
@@ -89,6 +111,16 @@ nav .menu svg{
     font-weight: 400;
     text-align: left;
     text-decoration: none;
+}
+
+.logo-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust as needed */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Thickness of the bar */
+    background-color: transparent; /* Set to transparent to hide the bar */
 }
 
 

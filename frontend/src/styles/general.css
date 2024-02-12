@@ -22,9 +22,4 @@
   color: #f8fafc;
 }
 
-.active {
-  color: var(#0E9594) !important;
-  position: relative;
-  display: inline-block;
-}
 

@@ -16,7 +16,7 @@ html {
 
   --bright-blue: #66FCF1;
 
-  --main-background: #0f172a;
+  --main-background: black;
 
   --sky-blue2: #8ecae6ff;
   --blue-green: #219ebcff;
@@ -34,8 +34,8 @@ html {
   background:
       linear-gradient(to bottom, var(--main-background), transparent),
       linear-gradient(to top,var(--main-background), transparent),
-      linear-gradient(to right,var(--main-background), transparent),
-      linear-gradient(to left,var(--main-background), transparent);
+      linear-gradient(to right,var(--main-background),#cbcbcb, transparent),
+      linear-gradient(to left,var(--main-background), #cbcbcb,transparent);
 }
 
 /*

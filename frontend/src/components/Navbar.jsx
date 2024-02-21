@@ -43,9 +43,12 @@ export const Navbar = () => {
                     <li>
                         <NavLink to="/" className="nav-element">Home</NavLink>
                     </li>
+                    {/*
                     <li>
                         <NavLink to="/about" className="nav-element">About</NavLink>
                     </li>
+                    */
+                    }
                     <li>
                         <NavLink to="/projects" className="nav-element">Projects</NavLink>
                     </li>

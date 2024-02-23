@@ -17,31 +17,48 @@ const ProjectGallery = () => {
 
   return (
     <div className="project-grid">
-      <ProjectSquare src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} />
-      <ProjectSquare src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} />
-      <ProjectSquare src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} />
-      <ProjectSquare src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} />
+      <Project src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} links={{"Github": "https://github.com/JohnSalinas123/simpleCalculator", "LinkedIn": "https://github.com/JohnSalinas123/simpleCalculator"}} />
+      <Project src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} />
+      <Project src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} />
+      <Project src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} />
     </div>
 
   )
 
 }
 
-const ProjectSquare = ({src, title, short_descrip,date, alt}) => {
+const Project = ({src, title, short_descrip,date, alt, links}) => {
 
 
   return (
     <div className="project-container">
       <img src={src} alt={alt} />
-      <div className="projet-text">
+      <div className="project-footer">
+        <div className="project-links">
+          {links && Object.keys(links).map((linkName) => (
+            <ProjectLink key={links[linkName]} name={linkName} url={links[linkName]}/>
+          ))}
+        </div>
         <div className="project-text-header">
             <p className="project-title">{title}</p>
-            <p className="project-date">{date}</p>
+            {
+              /* <p className="project-date">{date}</p>*/
+            }
+
+            <p className="project-short-descrip">{short_descrip}</p>
         </div>
-        <p className="project-short-descrip">{short_descrip}</p>
+        
       </div>
 
     </div>
+  )
+
+}
+
+const ProjectLink = ({name, url}) => {
+
+  return (
+    <a href={url} className="project-link-button">{name}</a>
   )
 
 }

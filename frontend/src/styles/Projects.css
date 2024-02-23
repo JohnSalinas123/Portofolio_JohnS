@@ -1,8 +1,8 @@
 .project-grid {
-    --row-gap: 90px;
-    --col-gap: 32px;
-    --num-cols: 2;
-    --row-height: 300px;
+    --row-gap: 120px;
+    --col-gap: 50px;
+    --num-cols: 3;
+    --row-height: 250px;
 
     box-sizing: border-box;
     padding: var(--gap);
@@ -20,4 +20,31 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+}
+
+.project-links {
+    display: flex;
+    justify-content: left;
+}
+
+.project-text-header {
+    padding: 0px 20px;
+}
+
+.project-link-button {
+    color: white;
+    text-decoration: none;
+    border: 2px solid white;
+    padding: 5px 10px;
+    margin: 5px 10px;
+}
+
+.project-title {
+    display: inline-block;
+    color: var(--darker-blue);
+    font-weight: 400;
+}
+
+.project-short-descrip {
+    font-size: 0.9em;
 }

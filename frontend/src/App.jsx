@@ -1,4 +1,4 @@
-import { Routes, Route} from 'react-router-dom'
+import { Routes, Route, useLocation} from 'react-router-dom'
 import { Navbar } from './components/Navbar'
 import { Home, Projects, About, Blog } from './pages/pagesIndex.js'
 import './styles/App.css'
@@ -6,8 +6,11 @@ import './styles/App.css'
 
 function App() {
 
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+
   return (
-    <div className="App gradient-background">
+    <div className={`App main-color ${isHomePage ? 'gradient-background' : 'solid-background'}`}>
       <Navbar />
       <div className="content-container">
         <Routes>

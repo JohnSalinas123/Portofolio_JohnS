@@ -17,10 +17,10 @@ const ProjectGallery = () => {
 
   return (
     <div className="project-grid">
-      <Project src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} links={{"Github": "https://github.com/JohnSalinas123/simpleCalculator", "LinkedIn": "https://github.com/JohnSalinas123/simpleCalculator"}} />
-      <Project src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} />
-      <Project src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} />
-      <Project src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} />
+      <Project src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} links={{"Github": "https://github.com/JohnSalinas123/simpleCalculator"}} />
+      <Project src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} links={{"Github": "https://github.com/JohnSalinas123/simpleCalculator"}}/>
+      <Project src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} links={{"Github": "https://github.com/JohnSalinas123/simpleCalculator"}}/>
+      <Project src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} links={{"Github": "https://github.com/JohnSalinas123/simpleCalculator"}}/>
     </div>
 
   )

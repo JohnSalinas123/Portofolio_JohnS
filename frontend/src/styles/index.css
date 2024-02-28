@@ -39,6 +39,14 @@ html {
       linear-gradient(to left,var(--main-background), #cbcbcb,transparent);
 }
 
+.inter-300 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
 
 .inter-400 {
   font-family: "Inter", sans-serif;

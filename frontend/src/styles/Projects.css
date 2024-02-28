@@ -35,7 +35,7 @@
 }
 
 .project-link-button {
-    color: white;
+    color: var(--white-text);
     text-decoration: none;
     border: 2px solid white;
     border-radius: 5px;
@@ -53,7 +53,7 @@
 
 .project-title {
     display: inline-block;
-    color: var(--darker-blue);
+    color: var(--active);
     font-weight: 400;
 }
 

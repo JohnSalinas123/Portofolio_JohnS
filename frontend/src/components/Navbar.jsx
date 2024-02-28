@@ -28,20 +28,20 @@ export const Navbar = () => {
     
 
     return (
-        <nav className={`main-color ${scrolled ? 'nav-background' : ''}`}>
+        <nav className={` ${scrolled ? 'nav-background' : ''}`}>
             <div className="menu" onClick={() => {setMenuVisible(!menuVisible)}}>
                 <RxHamburgerMenu />
             </div>
             <div className="nav-edge-container logo-container">
                 <div className="logo-box">
-                    <NavLink to="/" className="logo-link">John Salinas</NavLink>
+                    <NavLink to="/" className=" inter-700 logo-link">John Salinas</NavLink>
                 </div>
                 
             </div>
-            <div className="nav-container">
+            <div className="nav-container inter-500">
                 <ul className={menuVisible ? "open" : ""}>
                     <li>
-                        <NavLink to="/" className="nav-element">Home</NavLink>
+                        <NavLink to="/" className="nav-element">HOME</NavLink>
                     </li>
                     {/*
                     <li>
@@ -50,10 +50,10 @@ export const Navbar = () => {
                     */
                     }
                     <li>
-                        <NavLink to="/projects" className="nav-element">Projects</NavLink>
+                        <NavLink to="/projects" className="nav-element">PROJECTS</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/blog" className="nav-element">Blog</NavLink>
+                        <NavLink to="/blog" className="nav-element">BLOG</NavLink>
                     </li>
                     
                     <li className="menu-socials">

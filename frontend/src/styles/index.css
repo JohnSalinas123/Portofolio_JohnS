@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Nunito', sans-serif;
+
 }
 
 html {
@@ -12,22 +12,23 @@ html {
 :root {
   --sky-blue: #afd7ff;
   --darker-blue: #3998f8;
-  --tan: #FFD7AF;
-
+  --light-blue: #56a8fb;
   --bright-blue: #66FCF1;
+  --main-background: #0f172a;
 
-  --main-background: black;
-
-  --sky-blue2: #8ecae6ff;
-  --blue-green: #219ebcff;
-  --prussian-blue: #023047ff;
-  --selective-yellow: #ffb703ff;
-  --ut-orange: #fb8500ff;
+  --inactive: rgba(100,116,139,1);
+  --active: rgba(94,234,212,1);
+  --light-text: rgba(148,163,184,1);
+  --white-text: rgba(226,232,240,1);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.solid-background {
+  background-color: var(--main-background);
 }
 
 .gradient-background {
@@ -36,4 +37,42 @@ html {
       linear-gradient(to top,var(--main-background), transparent),
       linear-gradient(to right,var(--main-background),#cbcbcb, transparent),
       linear-gradient(to left,var(--main-background), #cbcbcb,transparent);
+}
+
+
+.inter-400 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.inter-500 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+
+.inter-600 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+}
+
+.inter-700 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
 }

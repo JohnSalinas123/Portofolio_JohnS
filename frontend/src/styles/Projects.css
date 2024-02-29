@@ -18,20 +18,40 @@
 }
 
 .project-grid img {
-    width: 100%;
+    display: block;
+    width: auto;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
     max-height: 200px;
 }
 
+.project-outer {
+    transition-property: background-color, box-shadow;
+    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    transition-duration: .15s;
+}
+
+.project-outer:hover {
+    background-color: rgba(30, 41, 59, .5);
+    border-radius: 0.375rem;
+    box-shadow: 0 0 #0000, 0 0 #0000, inset 0 1px 0 0 rgba(148,163,184,.1);
+}
+
+
+.project-inner {
+    margin: 20px
+}
+
+
+
 .project-links {
     display: flex;
     justify-content: left;
+    
 }
 
 .project-text-header {
-    padding: 0px 20px;
 }
 
 .project-link-button {
@@ -58,6 +78,7 @@
 }
 
 .project-short-descrip {
+    display: block;
     font-size: 0.9em;
     margin-bottom: 10px;
 }

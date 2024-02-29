@@ -31,26 +31,28 @@ const Project = ({src, title, short_descrip,date, alt, links}) => {
 
 
   return (
-    <div className="project-container">
-      <img src={src} alt={alt} />
-      <div className="project-footer">
-        <div className="project-links inter-400">
-          {links && Object.keys(links).map((linkName) => (
-            <ProjectLink key={links[linkName]} name={linkName} url={links[linkName]}/>
-          ))}
-        </div>
-        <div className="project-text-header">
-            <p className="project-title inter-500">{title}</p>
-            {
-              /* <p className="project-date">{date}</p>*/
-            }
+    <div className="project-outer">
+      <div className="project-inner">
+        <img src={src} alt={alt} />
+        <div className="project-footer">
+          <div className="project-links inter-400">
+            {links && Object.keys(links).map((linkName) => (
+              <ProjectLink key={links[linkName]} name={linkName} url={links[linkName]}/>
+            ))}
+          </div>
+          <div className="project-text-header">
+              <p className="project-title inter-500">{title}</p>
+              {
+                /* <p className="project-date">{date}</p>*/
+              }
 
-            <p className="project-short-descrip inter-300">{short_descrip}</p>
+              <p className="project-short-descrip inter-300">{short_descrip}</p>
+          </div>
+          
         </div>
-        
+
       </div>
-
-    </div>
+   </div>   
   )
 
 }

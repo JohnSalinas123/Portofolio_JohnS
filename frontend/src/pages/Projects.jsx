@@ -6,7 +6,7 @@ import '../styles/Projects.css'
 export const Projects = () => {
   return (
     <CSSTransition in={true} appear={true} timeout={1000} classNames="fade">
-      <div className="narrow-content-container project-content">
+      <div className="narrow-content-container">
         <ProjectGallery />
       </div>
     </CSSTransition>

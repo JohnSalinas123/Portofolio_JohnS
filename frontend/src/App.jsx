@@ -1,7 +1,7 @@
 import { Routes, Route, useLocation} from 'react-router-dom'
 import { Navbar } from './components/Navbar'
 import { Home, Projects, About, Blog } from './pages/pagesIndex.js'
-import './styles/App.css'
+import './styles/App.scss'
 
 
 function App() {
@@ -12,7 +12,17 @@ function App() {
   return (
     <div className={`App main-color ${isHomePage ? 'gradient-background' : 'solid-background'}`}>
       <Navbar />
+
+      <div className="container">
+          {[...Array(100)].map((_, i) => (
+              <div className="circle-container" key={i}>
+                <div className="circle"></div>
+              </div>
+          ))}
+        </div>
       <div className="content-container">
+
+        
         <Routes>
                 <Route path="/"  element={<Home />}/>
                 <Route path="/projects"  element={<Projects />}/>

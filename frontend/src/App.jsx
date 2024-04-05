@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation} from 'react-router-dom'
 import { Navbar } from './components/Navbar'
 import { Home, Projects, About, Blog } from './pages/pagesIndex.js'
+import ParticleAnimation from './components/Particles.jsx'
 import './styles/App.scss'
 
 
@@ -12,14 +13,20 @@ function App() {
   return (
     <div className={`App main-color ${isHomePage ? 'gradient-background' : 'solid-background'}`}>
       <Navbar />
-
-      <div className="container">
+      {
+        /* 
+        <div className="container">
           {[...Array(100)].map((_, i) => (
               <div className="circle-container" key={i}>
                 <div className="circle"></div>
               </div>
           ))}
         </div>
+        */
+      }
+
+      <ParticleAnimation />
+      
       <div className="content-container">
 
         

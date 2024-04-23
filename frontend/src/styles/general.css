@@ -1,10 +1,12 @@
 .narrow-content-container {
-    max-width: 1400px;
+    display: inline-block;
     min-height: 100vh;
-    margin: auto;
+    width: auto;
+    padding: auto;
     padding-top: 150px;
     position: relative;
     z-index: 10;
+    text-align: left;
   }
 
 .fade-appear,
@@ -30,6 +32,15 @@
 
 .z-0 {
   z-index: 0
+}
+
+/* screen smaller than 1200px */
+@media screen and (max-width: 1200px) {
+  .narrow-content-container {
+    max-width: 900px;
+  }
+  
+
 }
 
 

@@ -28,7 +28,7 @@ export const Navbar = () => {
     
 
     return (
-        <nav className={` ${scrolled ? 'nav-background' : ''}`}>
+        <nav className={` ${scrolled || menuVisible ? 'nav-background' : ''}`}>
             <div className="menu" onClick={() => {setMenuVisible(!menuVisible)}}>
                 <RxHamburgerMenu />
             </div>

@@ -85,16 +85,14 @@ export const Home = () => {
   return (
     <CSSTransition in={true} appear={true} timeout={1000} classNames="fade">
       <div className="home-container" >
+        <div className="intro-text inter-400">
+            <p> Hi, I'm John Salinas</p>
+        </div>
         <Canvas>
           <PerspectiveCamera makeDefault fov={75} position={[0,0.5,2]} rotation={[0,0,0]}/>
           <ambientLight intensity={Math.PI / 2} />
           <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} />
-          <DeskSetup position={[0, 0, 0]} rotation={[0.5,0,0]}/>
-          
-          
-
-          
-
+          <DeskSetup position={[0, -0.5, 0]} rotation={[0.25,0,0]}/>
         </Canvas>
         
       </div>

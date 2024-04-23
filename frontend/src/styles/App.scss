@@ -28,6 +28,7 @@ body {
 
 .content-container {
   z-index: 50;
+  text-align: center;
 }
 
 .container {
@@ -39,8 +40,8 @@ body {
 }
 
 .circle-container {
-  $particleNum: 80;
-  $particleColor: hsl(180, 100%, 80%);
+  $particleNum: 100;
+  $particleColor: hsl(170.57, 76.92%, 64.31%);
 
   position: absolute;
   transform: translateY(-10vh);
@@ -53,12 +54,12 @@ body {
     border-radius: 50%;
     mix-blend-mode: screen;
     background-image: radial-gradient(
-      hsl(180, 100%, 80%),
-      hsl(180, 100%, 80%) 10%,
-      hsla(180, 100%, 80%, 0) 56%
+      hsl(170.57, 76.92%, 64.31%),
+      hsl(170.57, 76.92%, 64.31%) 10%,
+      hsla(170.57, 76.92%, 64.31%,0) 56%
     );
 
-    animation: fadein-frames 200ms infinite, scale-frames 4s infinite;
+    animation: fadein-frames 200ms infinite, scale-frames 2s infinite;
 
     @keyframes fade-frames {
       0% {
@@ -99,7 +100,7 @@ body {
 
       $startPositionY: random(10) + 100;
       $framesName: "move-frames-" + $i;
-      $moveDuration: 100000 + random(50000) + ms;
+      $moveDuration: 40000 + random(10000) + ms;
 
       animation-name: #{$framesName};
       animation-duration: $moveDuration;

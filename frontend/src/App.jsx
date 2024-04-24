@@ -1,7 +1,6 @@
 import { Routes, Route, useLocation} from 'react-router-dom'
 import { Navbar } from './components/Navbar'
 import { Home, Projects, About, Blog } from './pages/pagesIndex.js'
-import ParticleAnimation from './components/Particles.jsx'
 import './styles/App.scss'
 
 
@@ -24,8 +23,6 @@ function App() {
         </div>
         */
       }
-
-      <ParticleAnimation />
       
       <div className="content-container">
 

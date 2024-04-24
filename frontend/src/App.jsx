@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation} from 'react-router-dom'
 import { Navbar } from './components/Navbar'
-import { Home, Projects, About, Blog } from './pages/pagesIndex.js'
+import { Home, Projects,Blog } from './pages/pagesIndex.js'
 import './styles/App.scss'
 
 
@@ -30,7 +30,6 @@ function App() {
         <Routes>
                 <Route path="/"  element={<Home />}/>
                 <Route path="/projects"  element={<Projects />}/>
-                <Route path="/about"  element={<About />}/>
                 <Route path="/blog"  element={<Blog />}/>
         </Routes>
       </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { donuts, lighthouse, dungeon} from "../images/blog/blogIndex.js"
 import { CSSTransition } from 'react-transition-group';
-import '../styles/Projects.css'
+import './Projects.css'
 
 export const Projects = () => {
   return (
@@ -16,12 +16,15 @@ export const Projects = () => {
 const ProjectGallery = () => {
 
   return (
-    <div className="project-grid">
-      <Project src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} links={{"Github": "https://github.com/JohnSalinas123/simpleCalculator"}} />
-      <Project src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} links={{"Github": "https://github.com/JohnSalinas123/simpleCalculator"}}/>
-      <Project src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} links={{"Github": "https://github.com/JohnSalinas123/simpleCalculator"}}/>
-      <Project src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} links={{"Github": "https://github.com/JohnSalinas123/simpleCalculator"}}/>
+    <div className="project-grid-box">
+      <div className="project-grid">
+        <Project src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} links={{"Github": "https://github.com/JohnSalinas123/simpleCalculator"}} />
+        <Project src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} links={{"Github": "https://github.com/JohnSalinas123/simpleCalculator"}}/>
+        <Project src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} links={{"Github": "https://github.com/JohnSalinas123/simpleCalculator"}}/>
+        <Project src={donuts} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} links={{"Github": "https://github.com/JohnSalinas123/simpleCalculator"}}/>
+      </div>
     </div>
+    
 
   )
 

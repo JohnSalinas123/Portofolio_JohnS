@@ -28,6 +28,7 @@
     font-size: 20px;
     padding: 15px;
     text-align: center;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   }
   
 .image-container:hover .image-overlay {

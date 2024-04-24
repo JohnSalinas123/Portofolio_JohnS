@@ -11,18 +11,18 @@ html,body {
 }
 
 :root {
-  --sky-blue: #afd7ff;
-  --darker-blue: #3998f8;
-  --light-blue: #56a8fb;
-  --bright-blue: #66FCF1;
-  --main-background: #0f172a;
+  --main-background: #DDDDDD;
+  --nav-background: #ffffff;
 
   --inactive: rgba(100,116,139,1);
   --active: rgba(94,234,212,1);
   --light-text: rgba(148,163,184,1);
-  --white-text: rgba(226,232,240,1);
+  --main-text: rgb(70, 70, 70);
 
-  --shadow-color: 223deg 75% 3%;
+  --project: rgb(102, 136, 191);;
+  --project-hover: rgb(78, 116, 183);;
+
+  --shadow-color: 0deg 0% 54%;
   --shadow-elevation-low:
     0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
     0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),

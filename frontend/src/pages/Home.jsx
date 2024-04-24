@@ -4,7 +4,7 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { useGLTF } from "@react-three/drei";
 import { PerspectiveCamera } from '@react-three/drei';
 import { Mesh } from 'three'
-import '../styles/Home.css'
+import './Home.css'
 
 export function DeskSetup(props) {
   const { nodes, materials } = useGLTF("/desk_w_lamp_laptop.glb");

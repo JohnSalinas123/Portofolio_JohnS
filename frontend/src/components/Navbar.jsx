@@ -4,31 +4,15 @@ import { Link, NavLink } from 'react-router-dom'
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx";
-import "../styles/Navbar.css"
+import "./Navbar.css"
 
 export const Navbar = () => {
     const [menuVisible, setMenuVisible] = useState(false)
-    const [scrolled, setScrolled] = useState(false)
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const isScrolled = window.scrollY > 0;
-            setScrolled(isScrolled)
-        };    
-            
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll)
-        };
-        
-        
-    }, []);
 
     
 
     return (
-        <nav className={` ${scrolled || menuVisible ? 'nav-background' : ''}`}>
+        <nav >
             <div className="menu" onClick={() => {setMenuVisible(!menuVisible)}}>
                 <RxHamburgerMenu />
             </div>
@@ -43,12 +27,6 @@ export const Navbar = () => {
                     <li>
                         <NavLink to="/" className="nav-element">HOME</NavLink>
                     </li>
-                    {/*
-                    <li>
-                        <NavLink to="/about" className="nav-element">About</NavLink>
-                    </li>
-                    */
-                    }
                     <li>
                         <NavLink to="/projects" className="nav-element">PROJECTS</NavLink>
                     </li>

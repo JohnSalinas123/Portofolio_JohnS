@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import {useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { Link } from 'react-scroll'
 import "./Navbar.css"
 
 export const Navbar = () => {
@@ -18,20 +18,44 @@ export const Navbar = () => {
             </div>
             <div className="nav-edge-container logo-container">
                 <div className="logo-box">
-                    <NavLink to="/" className=" inter-700 logo-link">John Salinas</NavLink>
+                    <Link 
+                        to="top"
+                        spy={true}
+                        smooth={true}
+                        duration={500}
+                        className="inter-700 logo-link"
+                    >John Salinas</Link>
                 </div>
                 
             </div>
             <div className="nav-container inter-500">
                 <ul className={menuVisible ? "open" : ""}>
                     <li>
-                        <NavLink to="/" className="nav-element">HOME</NavLink>
+                        <Link 
+                            to="about"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            className="nav-element"
+                        >About</Link>
                     </li>
                     <li>
-                        <NavLink to="/projects" className="nav-element">PROJECTS</NavLink>
+                        <Link 
+                            to="skills"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            className="nav-element"
+                        >Skills</Link>
                     </li>
                     <li>
-                        <NavLink to="/blog" className="nav-element">BLOG</NavLink>
+                        <Link 
+                            to="projects"
+                            spy={true}
+                            smooth={true}
+                            duration={500}
+                            className="nav-element"
+                        >Projects</Link>
                     </li>
                     
                     <li className="menu-socials">

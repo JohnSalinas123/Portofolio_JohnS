@@ -10,17 +10,36 @@ html,body {
   height: 100%;
 }
 
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh; /* Ensures it takes full viewport height */
+  overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
 :root {
-  --main-background: #DDDDDD;
+  
+  --main-background: rgba(79, 126, 202, 0.276);
   --nav-background: #ffffff;
 
-  --inactive: rgba(100,116,139,1);
-  --active: rgba(94,234,212,1);
+  --inactive: #64748b;
+  --active: #4f7eca;
   --light-text: rgba(148,163,184,1);
-  --main-text: rgb(70, 70, 70);
+  --main-text: #4f7eca;
 
-  --project: rgb(102, 136, 191);;
-  --project-hover: rgb(78, 116, 183);;
+  --project: #fefefe;
+  --project-hover: #7190c5;
+
+  --project-title: #1c1c1c;
+  --project-text: rgb(72, 72, 72);
+  --project-text-hover: #fefefe;
+  --project-link: #1c1c1c;
+  --project-link-hover: #fefefe;
 
   --shadow-color: 0deg 0% 54%;
   --shadow-elevation-low:
@@ -47,6 +66,7 @@ html,body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  background-color: var(--main-background);
 
 
 }

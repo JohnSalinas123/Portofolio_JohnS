@@ -11,21 +11,21 @@ function App() {
   const isHomePage = location.pathname === "/";
 
   return (
-    <div className={`App main-color ${isHomePage ? 'gradient-background' : 'solid-background'}`}>
+    <>
       <Navbar />
-      
-      <div className="content-container">
-
-        
-        <Routes>
-                <Route path="/"  element={<Home />}/>
-                <Route path="/projects"  element={<Projects />}/>
-                <Route path="/blog"  element={<Blog />}/>
-        </Routes>
+      <div id="main-container">
+        <div className="content-container">   
+          <Routes>
+                  <Route path="/"  element={<Home />}/>
+                  <Route path="/projects"  element={<Projects />}/>
+                  <Route path="/blog"  element={<Blog />}/>
+          </Routes>
+        </div>
       </div>
       
+    </>  
       
-    </div> 
+    
   )
 }
 

@@ -1,6 +1,7 @@
 import { Navbar } from './components/Navbar'
-import { Home, Projects,Blog } from './pages/pagesIndex.js'
+import { Home, Projects } from './sections/sectionsIndex.js'
 import './App.scss'
+import { AboutMe } from './sections/AboutMe.jsx'
 
 
 
@@ -12,8 +13,8 @@ function App() {
       <Navbar />
       <div id="main-container">
         <Home />
+        <AboutMe />
         <Projects />
-        <Blog />
       </div>
       
     </>  

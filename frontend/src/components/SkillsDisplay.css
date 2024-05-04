@@ -36,7 +36,7 @@
 
 .skill-item:hover {
     border: 1px solid var(--off-black);
-    box-shadow: 0 5px 10px #82849e;
+    box-shadow: 8px 10px #82849e;
 }
 
 .skill-item:hover p {

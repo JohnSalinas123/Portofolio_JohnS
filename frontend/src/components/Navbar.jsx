@@ -32,21 +32,14 @@ export const Navbar = () => {
                 <ul className={menuVisible ? "open" : ""}>
                     <li>
                         <Link 
-                            to="about"
+                            to="aboutme"
                             spy={true}
                             smooth={true}
                             duration={500}
+                            offset={-80}
+                            aciveClass="active"
                             className="nav-element"
                         >About</Link>
-                    </li>
-                    <li>
-                        <Link 
-                            to="skills"
-                            spy={true}
-                            smooth={true}
-                            duration={500}
-                            className="nav-element"
-                        >Skills</Link>
                     </li>
                     <li>
                         <Link 
@@ -54,6 +47,7 @@ export const Navbar = () => {
                             spy={true}
                             smooth={true}
                             duration={500}
+                            offset={-80}
                             className="nav-element"
                         >Projects</Link>
                     </li>

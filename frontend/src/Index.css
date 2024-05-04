@@ -23,21 +23,26 @@ body {
 }
 
 :root {
-  
-  --main-background: rgba(79, 126, 202, 0.276);
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif !important;
+    color: var(--off-black) !important;
+
+  --main-background: #fefefe;
   --nav-background: #ffffff;
+
+  --off-black: #4e4e4e;
 
   --inactive: #64748b;
   --active: #4f7eca;
+  --active-light: #6a96e0b5;
+  
   --light-text: rgba(148,163,184,1);
   --main-text: #4f7eca;
 
   --project: #fefefe;
-  --project-hover: #7190c5;
+  --project-hover: #7190c58e;
 
   --project-title: #1c1c1c;
   --project-text: rgb(72, 72, 72);
-  --project-text-hover: #fefefe;
   --project-link: #1c1c1c;
   --project-link-hover: #fefefe;
 

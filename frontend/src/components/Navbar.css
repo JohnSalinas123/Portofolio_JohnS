@@ -11,7 +11,7 @@ nav {
     padding-bottom: 1rem;
     transition: background-color 0.3s ease;
     background-color: var(--nav-background);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
@@ -30,11 +30,11 @@ nav ul li {
 nav ul li a {
     display: block;
     text-decoration: none;
-    padding: 0.5rem;
     margin: 0 2rem;
     transition: color 0.3s ease;
     font-size: 1.2rem;
     font-weight: 700;
+    cursor: pointer;
 }
 
 nav ul li a:not(.active) {
@@ -98,8 +98,6 @@ nav .menu svg{
 
 .logo-box {
     width: 230px;
-    height: 38px;
-    line-height: 38px;
 }
 
 .logo-link {
@@ -108,6 +106,7 @@ nav .menu svg{
     font-weight: 400;
     text-align: left;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .logo-link.active::after {

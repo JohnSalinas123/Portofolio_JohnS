@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import {useState } from 'react'
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
@@ -37,7 +36,6 @@ export const Navbar = () => {
                             smooth={true}
                             duration={500}
                             offset={-80}
-                            aciveClass="active"
                             className="nav-element"
                         >About</Link>
                     </li>
@@ -53,16 +51,16 @@ export const Navbar = () => {
                     </li>
                     
                     <li className="menu-socials">
-                        <a href="https://www.linkedin.com/in/johnsalinas123/" target="_blank"><FaLinkedin className="social-icon"/></a>
-                        <a href = "mailto: salinasjohn257@gmail.com" target="_blank"><IoIosMail className="social-icon"/></a>
-                        <a href = "https://github.com/JohnSalinas123" target="_blank"><FaGithub className="social-icon"/></a>
+                        <a href="https://www.linkedin.com/in/johnsalinas123/" target="_blank" rel="noreferrer"><FaLinkedin className="social-icon"/></a>
+                        <a href = "mailto: salinasjohn257@gmail.com" target="_blank" rel="noreferrer"><IoIosMail className="social-icon"/></a>
+                        <a href = "https://github.com/JohnSalinas123" target="_blank" rel="noreferrer"><FaGithub className="social-icon"/></a>
                     </li>
                 </ul>
             </div>
             <div className="nav-edge-container social-container">
-                <a href="https://www.linkedin.com/in/johnsalinas123/" target="_blank"><FaLinkedin className="social-icon"/></a>
-                <a href = "mailto: salinasjohn257@gmail.com" target="_blank"><IoIosMail className="social-icon"/></a>
-                <a href = "https://github.com/JohnSalinas123" target="_blank"><FaGithub className="social-icon"/></a>
+                <a href="https://www.linkedin.com/in/johnsalinas123/" target="_blank" rel="noreferrer"><FaLinkedin className="social-icon"/></a>
+                <a href = "mailto: salinasjohn257@gmail.com" target="_blank" rel="noreferrer"><IoIosMail className="social-icon"/></a>
+                <a href = "https://github.com/JohnSalinas123" target="_blank" rel="noreferrer"><FaGithub className="social-icon"/></a>
             </div>
             
         </nav>

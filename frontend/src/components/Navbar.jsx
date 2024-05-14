@@ -17,13 +17,16 @@ export const Navbar = () => {
             </div>
             <div className="nav-edge-container logo-container">
                 <div className="logo-box">
-                    <Link 
+                    <h1>
+                        <Link 
                         to="top"
                         spy={true}
                         smooth={true}
                         duration={500}
                         className="inter-700 logo-link"
                     >John Salinas</Link>
+                    </h1>
+                    
                 </div>
                 
             </div>

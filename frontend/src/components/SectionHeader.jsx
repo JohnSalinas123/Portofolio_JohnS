@@ -6,7 +6,7 @@ export const SectionHeader = ({sectionTitle}) => {
     return (
         <>
             <div className="section-box">
-                <p className="section-title">{sectionTitle}</p>
+                <h1 className="section-title">{sectionTitle}</h1>
             </div>
         </>
     )

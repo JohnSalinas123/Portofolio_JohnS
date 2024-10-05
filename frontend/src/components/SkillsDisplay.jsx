@@ -7,7 +7,7 @@ export const SkillsDisplay = ({title, skills_array}) => {
     return (
         <div className="skills-display-box">
             <div className="skills-title-box">
-                <p>{title}</p>
+                <h2>{title}</h2>
             </div>
             
             <div className="skill-items-box">
@@ -34,9 +34,12 @@ const SkillItem = ({skill_name, skill_img}) => {
 
     return (
         <>
-            <div className="skill-item">
-                <img src={skill_img} alt={`${skill_name} icon`} />
-                <p>{skill_name}</p>
+            <div className="skill-box">
+                <div className="skill-item">
+                    <img src={skill_img} alt={`${skill_name} icon`} />
+                    <span>{skill_name}</span>
+                </div>
+                
             </div>
             
         </>

@@ -1,85 +1,126 @@
-import React from 'react'
-import { donuts, lighthouse, dungeon} from "../images/blog/blogIndex.js"
-import { mybookshelf, polylang  } from '../images/project/projectIndex.js';
-import { CSSTransition } from 'react-transition-group';
-import './Projects.css'
-import { SectionHeader } from '../components/SectionHeader.jsx';
+import { mybookshelf, polylang, cppeventmap, weekly } from "../images/project/projectIndex.js";
+import { CSSTransition } from "react-transition-group";
+import "./Projects.css";
+import { SectionHeader } from "../components/SectionHeader.jsx";
 
 export const Projects = () => {
-  return (
-    <CSSTransition in={true} appear={true} timeout={1000} classNames="fade">
-        <ProjectGallery />
-    </CSSTransition>
-  )
-}
+	return (
+		<CSSTransition in={true} appear={true} timeout={1000} classNames="fade">
+			<ProjectGallery />
+		</CSSTransition>
+	);
+};
 
 const ProjectGallery = () => {
+	return (
+		<div id="projects">
+			<SectionHeader sectionTitle="Projects" />
 
-  return (
-    <div id="projects">
+			<div id="project-grid-box">
+				<div className="project-grid">
+					<Project
+						src={weekly}
+						title={"Weekly: Calendar for friends"}
+						short_descrip={
+							"I worked as an IOS developer for Weekly, an app for making plans and discovering them with friends."
+						}
+						alt={"An image of a mobile application Weekly, it displays the apps features, of sharing your calendar, discovering free time with friends and making plans."}
+						links={{
+							"App Store": "https://apps.apple.com/us/app/weekly-calendar-for-friends/id1596555762",
+						}}
+						skills={["Swift","SwiftUI"]}
+					/>
+					<Project
+						src={cppeventmap}
+						title={"CPPEventMap"}
+						short_descrip={
+							"I was the tech lead during my software engeering class for this full stack project, CPP Event Map,a web app to help CPP students know about and reach on campus events."
+						}
+						alt={"An image of a web application that is mainly a map that shows where events are occuring on the Cal Poly Pomona campus."}
+						links={{
+							Github: "https://github.com/JohnSalinas123/simpleCalculator",
+						}}
+						skills={["React","CSS", "Node.js","Express","MongoDB", "Jest"]}
+					/>
+					<Project
+						src={polylang}
+						title={"PolyLang"}
+						short_descrip={
+							"A translation app that uses a deep learning rnn model to translate english to spanish."
+						}
+						alt={
+							"An image of a web application that uses deep learning to translate english to spanish."
+						}
+						links={{
+							Github: "https://github.com/JohnSalinas123/simpleCalculator",
+						}}
+						skills={["React", "Flask", "Keras"]}
+					/>
+					<Project
+						src={mybookshelf}
+						title={"MyBookshelf"}
+						short_descrip={
+							"A desktop app that organizes and provides a visual for ones pdf book library. "
+						}
+						alt={"An image of a desktop pdf library application."}
+						links={{
+							Github: "https://github.com/JohnSalinas123/simpleCalculator",
+						}}
+						skills={["React", "Electron"]}
+					/>
+					
+				</div>
+			</div>
+		</div>
+	);
+};
 
-      <SectionHeader sectionTitle="Projects" />
+const Project = ({ src, title, short_descrip, alt, links, skills }) => {
+	return (
+		<div className="project-outer">
+			<div className="project-inner">
+				<div className="project-image">
+					<img src={src} alt={alt} />
+				</div>
 
-      <div id="project-grid-box">
-          <div className="project-grid">
-            <Project src={polylang} title={"CPP EventMap"} short_descrip={"An event map to help students find events"} date={"11/23/2023"} alt={"An image of a web application using a map to display event locations on e CPP campus using markers tsting if the text overflow works,ecececefewfwegwgwgwgergergergeg"} links={{"Github": "https://github.com/JohnSalinas123/simpleCalculator"}} />   
-            <Project src={mybookshelf} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A  model of a plate with a few donuts on it"} links={{"Github": "https://github.com/JohnSalinas123/simpleCalculator"}}/>
-            <Project src={mybookshelf} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} links={{"Github": "https://github.com/JohnSalinas123/simpleCalculator"}}/>
-            <Project src={polylang} title={"CPP EventMap"} short_descrip={"An event map to help students find events on campus"} date={"11/23/2023"} alt={"An image of a web application using a map to display event locations on the CPP campus using markers"} links={{"Github": "https://github.com/JohnSalinas123/simpleCalculator"}} />   
-            <Project src={mybookshelf} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} links={{"Github": "https://github.com/JohnSalinas123/simpleCalculator"}}/>
-            <Project src={mybookshelf} title={"Blender Donut"} short_descrip={"3D Model of a plate of donuts"} date={"11/23/2023"} alt={"A 3D model of a plate with a few donuts on it"} links={{"Github": "https://github.com/JohnSalinas123/simpleCalculator"}}/>
+				<div className="project-footer">
+					<div className="project-links inter-400">
+						{links &&
+							Object.keys(links).map((linkName) => (
+								<ProjectLink
+									key={links[linkName]}
+									name={linkName}
+									url={links[linkName]}
+								/>
+							))}
+					</div>
+					<div className="project-text-header">
+						<h3 className="project-title inter-500">{title}</h3>
 
-            
-            
-            
-          </div>
-        </div>
-    </div>
+						<p className="project-short-descrip inter-400">{short_descrip}</p>
+					</div>
+					<div className="project-skills-box">
+						<ul className="project-skills-list">
+							{skills &&
+								skills.map((skill, index) => (
+									<li key={index} className="project-skills-item">
+										{skill}
+									</li>
+								))}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
+};
 
-    
-    
-
-  )
-
-}
-
-const Project = ({src, title, short_descrip,date, alt, links}) => {
-
-
-  return (
-    <div className="project-outer">
-      <div className="project-inner">
-        <div className="project-image">
-          <img src={src} alt={alt} />
-        </div>
-        
-        <div className="project-footer">
-          <div className="project-links inter-400">
-            {links && Object.keys(links).map((linkName) => (
-              <ProjectLink key={links[linkName]} name={linkName} url={links[linkName]}/>
-            ))}
-          </div>
-          <div className="project-text-header">
-              <p className="project-title inter-500">{title}</p>
-              {
-                /* <p className="project-date">{date}</p>*/
-              }
-
-              <p className="project-short-descrip inter-400">{short_descrip}</p>
-          </div>
-          
-        </div>
-
-      </div>
-   </div>   
-  )
-
-}
-
-const ProjectLink = ({name, url}) => {
-
-  return (
-    <a href={url} className="project-link-button">{name}</a>
-  )
-
-}
+const ProjectLink = ({ name, url }) => {
+	return (
+		<>
+			<a href={url} target="_blank" className="project-link-button" rel="noreferrer">
+				{name}
+			</a>
+		</>
+	);
+};

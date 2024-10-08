@@ -26,27 +26,26 @@ body {
 	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif !important;
 	color: var(--off-black) !important;
 
-	--main-background: #fefefe;
-	--nav-background: #ffffff;
+	--main-background: #252627;
+	--nav-background: #252627;
 
+	--bright-green: #d6ff79;
+	--brighter-green: #d7ff7928;
+	--bright-blue: #00f6ed;
+	--brighter-blue: #00f6eeb6;
+	--columbia-blue: #cad8de;
+	--white: #ffffff;
 	--off-black: #4e4e4e;
 
-	--inactive: #64748b;
-	--active: #4f7eca;
-	--active-light: #6a96e0b5;
-
-	--light-text: rgba(148, 163, 184, 1);
-	--main-text: #4f7eca;
+	--active-white: var(--white);
+	--inactive-white: var(--columbia-blue);
 
 	--project: #fefefe;
 	--project-hover: #7190c58e;
 
-	--project-title: #1c1c1c;
 	--project-text: rgb(72, 72, 72);
-	--project-link: #1c1c1c;
-	--project-link-hover: #fefefe;
 
-	--shadow-color: 0deg 0% 54%;
+	--shadow-color: var(--white);
 	--shadow-elevation-low: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
 		0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
 		1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);

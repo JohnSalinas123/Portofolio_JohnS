@@ -1,4 +1,9 @@
-import { mybookshelf, polylang, cppeventmap, weekly } from "../images/project/projectIndex.js";
+import {
+	mybookshelf,
+	polylang,
+	cppeventmap,
+	weekly,
+} from "../images/project/projectIndex.js";
 import { CSSTransition } from "react-transition-group";
 import "./Projects.css";
 import { SectionHeader } from "../components/SectionHeader.jsx";
@@ -14,7 +19,7 @@ export const Projects = () => {
 const ProjectGallery = () => {
 	return (
 		<div id="projects">
-			<SectionHeader sectionTitle="Projects" />
+			<SectionHeader sectionTitle="" />
 
 			<div id="project-grid-box">
 				<div className="project-grid">
@@ -24,11 +29,14 @@ const ProjectGallery = () => {
 						short_descrip={
 							"I worked as an IOS developer for Weekly, an app for making plans and discovering them with friends."
 						}
-						alt={"An image of a mobile application Weekly, it displays the apps features, of sharing your calendar, discovering free time with friends and making plans."}
+						alt={
+							"An image of a mobile application Weekly, it displays the apps features, of sharing your calendar, discovering free time with friends and making plans."
+						}
 						links={{
-							"App Store": "https://apps.apple.com/us/app/weekly-calendar-for-friends/id1596555762",
+							"App Store":
+								"https://apps.apple.com/us/app/weekly-calendar-for-friends/id1596555762",
 						}}
-						skills={["Swift","SwiftUI"]}
+						skills={["Swift", "SwiftUI"]}
 					/>
 					<Project
 						src={cppeventmap}
@@ -36,11 +44,13 @@ const ProjectGallery = () => {
 						short_descrip={
 							"I was the tech lead during my software engeering class for this full stack project, CPP Event Map,a web app to help CPP students know about and reach on campus events."
 						}
-						alt={"An image of a web application that is mainly a map that shows where events are occuring on the Cal Poly Pomona campus."}
+						alt={
+							"An image of a web application that is mainly a map that shows where events are occuring on the Cal Poly Pomona campus."
+						}
 						links={{
 							Github: "https://github.com/JohnSalinas123/simpleCalculator",
 						}}
-						skills={["React","CSS", "Node.js","Express","MongoDB", "Jest"]}
+						skills={["React", "CSS", "Node.js", "Express", "MongoDB", "Jest"]}
 					/>
 					<Project
 						src={polylang}
@@ -68,7 +78,6 @@ const ProjectGallery = () => {
 						}}
 						skills={["React", "Electron"]}
 					/>
-					
 				</div>
 			</div>
 		</div>
@@ -104,7 +113,7 @@ const Project = ({ src, title, short_descrip, alt, links, skills }) => {
 							{skills &&
 								skills.map((skill, index) => (
 									<li key={index} className="project-skills-item">
-										{skill}
+										<p>{skill}</p>
 									</li>
 								))}
 						</ul>
@@ -118,7 +127,12 @@ const Project = ({ src, title, short_descrip, alt, links, skills }) => {
 const ProjectLink = ({ name, url }) => {
 	return (
 		<>
-			<a href={url} target="_blank" className="project-link-button" rel="noreferrer">
+			<a
+				href={url}
+				target="_blank"
+				className="project-link-button"
+				rel="noreferrer"
+			>
 				{name}
 			</a>
 		</>

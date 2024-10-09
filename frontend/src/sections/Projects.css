@@ -16,12 +16,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	max-width: 1500px;
+	max-width: 900px;
 	margin: 0 auto;
 }
 
 .project-grid {
-	--num-cols: 3;
+	--num-cols: 2;
 	padding: var(--gap);
 	display: grid;
 	grid-template-columns: repeat(var(--num-cols), minmax(0, 1fr));
@@ -35,7 +35,7 @@
 	aspect-ratio: 16 / 9;
 	background-color: #b3b3b3;
 	border-radius: 8px;
-	border: 2px solid var(--columbia-blue);
+	border: 2px solid var(--border-dark);
 	overflow: hidden;
 }
 
@@ -44,23 +44,23 @@
 	height: 100%;
 	object-fit: cover;
 	object-position: top left;
-	border-radius: 5px;
 }
 
 .project-outer {
 	height: 100%;
 	display: inline-block;
 	padding: 20px;
-	transition-property: background-color;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-property: background-color scale border;
+	transition-timing-function: cubic-bezier(0.3, 0, 0.2, 1);
 	transition-duration: 0.15s;
-
-	border: 2px solid var(--bright-green);
+	border: 2px solid var(--border-dark);
 	border-radius: 10px;
+	background-color: var(--main-bg);
 }
 
 .project-outer:hover {
-	background-color: var(--brighter-green);
+	border: 2px solid var(--border-light);
+	background-color: var();
 }
 
 .project-inner {
@@ -84,38 +84,57 @@
 }
 
 .project-link-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	color: var(--project-link);
 	text-decoration: none;
-	border: 2px solid var(--project-link);
-	border-radius: 5px;
-	padding: 5px 10px;
-	margin: 8px 10px;
+	border: 1.5px solid var(--project-link);
+	border-radius: 10px;
+	margin: 8px 5px 5px 0;
 	cursor: pointer;
+	padding-left: 8px;
+	padding-right: 8px;
+	height: 32px;
 	transition-property: color, border-color, transform;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 0.15s;
 }
 
+.project-link-icon {
+	height: 0.9rem;
+	width: 0.9rem;
+	margin-left: 3px;
+}
+
 .project-link-button:hover {
 	border-color: var(--project-link-hover);
-	color: var(--project-link-hover);
+	background-color: var(--bright-blue);
+	color: var(--main-bg);
+}
+
+.project-text-header {
+	font-size: 1rem;
+	line-height: 1.5rem;
 }
 
 .project-title {
 	display: inline-block;
 	color: var(--project-title);
-	font-size: 20px;
+	font-weight: 600;
+	font-size: 1rem;
+	line-height: 1.5rem;
 }
 
 .project-short-descrip {
 	display: inline-block;
-	font-size: 16px;
 	margin-top: 4px;
 	margin-bottom: 10px;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	height: 60px;
+	height: 90px;
 	color: var(--project-descr);
+	font-weight: 300;
 }
 
 .project-skills-list {
@@ -132,6 +151,7 @@
 	padding: 0px 10px;
 	border-radius: 10px;
 	height: 27px;
+	line-height: 27px;
 	color: var(--bright-blue);
 	border: 1.5px solid var(--bright-blue);
 	font-size: 16px;

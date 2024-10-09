@@ -7,6 +7,7 @@ import {
 import { CSSTransition } from "react-transition-group";
 import "./Projects.css";
 import { SectionHeader } from "../components/SectionHeader.jsx";
+import { FiExternalLink } from "react-icons/fi";
 
 export const Projects = () => {
 	return (
@@ -104,9 +105,9 @@ const Project = ({ src, title, short_descrip, alt, links, skills }) => {
 							))}
 					</div>
 					<div className="project-text-header">
-						<h3 className="project-title inter-500">{title}</h3>
+						<h3 className="project-title inter-600">{title}</h3>
 
-						<p className="project-short-descrip inter-400">{short_descrip}</p>
+						<p className="project-short-descrip">{short_descrip}</p>
 					</div>
 					<div className="project-skills-box">
 						<ul className="project-skills-list">
@@ -134,6 +135,7 @@ const ProjectLink = ({ name, url }) => {
 				rel="noreferrer"
 			>
 				{name}
+				<FiExternalLink className="project-link-icon" />
 			</a>
 		</>
 	);

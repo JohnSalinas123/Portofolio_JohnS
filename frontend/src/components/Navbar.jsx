@@ -30,11 +30,6 @@ export const Navbar = () => {
 			<div className="nav-container inter-500">
 				<ul className={menuVisible ? "open" : ""}>
 					<li>
-						<NavLink to="/" className="nav-element">
-							Home
-						</NavLink>
-					</li>
-					<li>
 						<NavLink to="/projects" className="nav-element">
 							Projects
 						</NavLink>

@@ -1,7 +1,7 @@
 import { SectionHeader } from "../components/SectionHeader";
 import { SkillsDisplay } from "../components/SkillsDisplay";
 
-import "./AboutMe.css";
+import "./AboutMePage.css";
 
 const proficient_skills_array = [
 	{ name: "HTML", img: "html5_icon.svg" },
@@ -20,7 +20,7 @@ const learning_interested_skills_array = [
 	{ name: "Pytorch", img: "pytorch_icon.svg" },
 ];
 
-export const AboutMe = () => {
+export const AboutMePage = () => {
 	return (
 		<>
 			<div id="aboutme">
@@ -28,8 +28,8 @@ export const AboutMe = () => {
 
 				<div id="aboutme-text-box">
 					<p id="aboutme-text" className="inter-400">
-						I graduated with a bachelor&apos;s degree in computer science from Cal
-						Poly Pomona, where I had the opportunity to lead several class
+						I graduated with a bachelor&apos;s degree in computer science from
+						Cal Poly Pomona, where I had the opportunity to lead several class
 						projects and enjoyed helping my classmates learn and grow. My
 						dedication to learning has fueled my passion for web development
 						and, more recently, machine learning. I strive to continually

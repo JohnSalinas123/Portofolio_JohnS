@@ -1,5 +1,5 @@
 import { Navbar } from "./components/Navbar";
-import { Home, Projects } from "./sections/sectionsIndex.js";
+import { HomePage, ProjectsPage, ProgressPage } from "./sections/pagesIndex.js";
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -9,10 +9,10 @@ function App() {
 			<div id="top"></div>
 			<Navbar />
 			<div id="main-container">
-					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/projects" element={<Projects />} />
-					</Routes>
+				<Routes>
+					<Route path="/projects" element={<ProjectsPage />} />
+					<Route path="/learning" element={<ProgressPage />} />
+				</Routes>
 			</div>
 		</>
 	);

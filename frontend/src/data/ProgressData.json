@@ -1,0 +1,28 @@
+[
+	{
+		"name": "Machine Learning",
+		"nodes": [
+			{
+				"title": "Coursera - Machine Learning Specialization",
+				"text": "The Machine Learning Specialization by Andrew Ng, went more in depth into the math of some non neural network algorithms such as linear regression, logistic regression, and decision trees, as well as for the cost function, regularization, and gradient descent. Which I think was important as it provided a clearer picture of machine learning and ultimately built up to the math that operates in neural networks.\\n \\n Just as important, was the intuition that I gained from the course, in terms of understanding some different types of sources for model error such as bias and variance, and how to go about mitigating their effect on model performance, using a method such as L2 Regularization. \\n \\n Additionally I was introduced to unsupervised learning, starting off with clustering and anomaly detection, and then getting into recommender systems and even reinforcement learning, which was really interesting."
+			},
+			{
+				"title": "Undergraduate Seminar - Neural Networks",
+				"text": "For my CS 4630 undergraduate seminar class, I chose to do my presentation on \"Neural Networks\". Before getting into my research on the topic, I had no idea what these networks were, only that the recent technologies at the time, such as  ChatGPT were powered by these neural networks. This seminar presentation led me to learn the basics, through reading 4 conceptual and practical books:\\n • Deep Learning with Python, by Francois Chollet\\n • MIT Essential Press Deep Learning\\n • MIT Essential Press Machine Learning\\n • MIT Essential Press Data Science \\n that provided a solid foundation for my presentation and to continue learning about the topic. "
+			}
+		]
+	},
+	{
+		"name": "Web Development",
+		"nodes": [
+			{
+				"title": "CS 4800 Software Engineering",
+				"text": ""
+			},
+			{
+				"title": "CS 80 Internet Programming",
+				"text": "I Took my first web development class, CS 80 at Santa Monica College over the summer, where I learned the basics of developing on the web such as HTML, CSS, and JS.\\n \\nWith the various on hand projects throughout the class, including a final project where I made a basic website with  commonly found elements, such as a navbar, homepage, scroll navigation, layouts, and interactive forms,  it provided a good foundation to continue my development journey."
+			}
+		]
+	}
+]

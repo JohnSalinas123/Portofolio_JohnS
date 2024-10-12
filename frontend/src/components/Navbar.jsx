@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import { RxHamburgerMenu } from "react-icons/rx";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 export const Navbar = () => {
@@ -30,19 +30,19 @@ export const Navbar = () => {
 			<div className="nav-container inter-500">
 				<ul className={menuVisible ? "open" : ""}>
 					<li>
-						<Link to="/" className="nav-element">
+						<NavLink to="/" className="nav-element">
 							Home
-						</Link>
+						</NavLink>
 					</li>
 					<li>
-						<Link to="/projects" className="nav-element">
+						<NavLink to="/projects" className="nav-element">
 							Projects
-						</Link>
+						</NavLink>
 					</li>
 					<li>
-						<Link to="/progress" className="nav-element">
+						<NavLink to="/progress" className="nav-element">
 							Progress
-						</Link>
+						</NavLink>
 					</li>
 
 					<li className="menu-socials">

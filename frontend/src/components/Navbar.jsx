@@ -35,8 +35,8 @@ export const Navbar = () => {
 						</NavLink>
 					</li>
 					<li>
-						<NavLink to="/progress" className="nav-element">
-							Progress
+						<NavLink to="/studylog" className="nav-element">
+							Study Log
 						</NavLink>
 					</li>
 

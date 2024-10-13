@@ -1,7 +1,7 @@
 import { Navbar } from "./components/Navbar";
-import { HomePage, ProjectsPage, ProgressPage } from "./sections/pagesIndex.js";
+import { ProjectsPage, StudyLogPage } from "./pages/pagesIndex.js";
 import "./App.scss";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
 	return (
@@ -10,8 +10,9 @@ function App() {
 			<Navbar />
 			<div id="main-container">
 				<Routes>
+					<Route path="/" element={<Navigate to="/projects" replace />} />
 					<Route path="/projects" element={<ProjectsPage />} />
-					<Route path="/learning" element={<ProgressPage />} />
+					<Route path="/studylog" element={<StudyLogPage />} />
 				</Routes>
 			</div>
 		</>

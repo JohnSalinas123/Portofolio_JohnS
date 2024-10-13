@@ -1,41 +1,21 @@
-.active {
-    color: rgb(255, 205, 112);
-    position: relative;
-    display: inline-block;
-}
-
-/*
-.active:not(.logo-link):after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%; 
-    height: 3px; 
-    background-color: orange;
-    border-radius: 5px;
-}
-*/
-
 nav {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     position: fixed;
+    z-index: 100;
+    height: 80px;
     width: 100%;
     top: 0;
-    z-index: 100;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: rgb(16,16,16);
+    transition: background-color 0.3s ease;
+    background-color: var(--nav-background);
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);
 }
 
-nav .title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-decoration: none;
-    color: white;
-    margin: 2rem;
+nav a {
+    color: var(--main-text);
 }
 
 nav ul {
@@ -50,17 +30,19 @@ nav ul li {
 nav ul li a {
     display: block;
     text-decoration: none;
-    color: white;
-    padding: 0.5rem;
     margin: 0 2rem;
     transition: color 0.3s ease;
-    font-weight: 200;
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.25rem;
+    font-size: 25px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+nav ul li a:not(.active) {
+    color: var(--inactive);
 }
 
 nav ul li a:not(.active):hover {
-    color:rgb(247, 168, 22);
+    color: var(--active-nav);
     transition: color 0.3s ease;
 }
 
@@ -80,6 +62,25 @@ nav .menu svg{
     width: 36px;
 }
 
+.nav-element.active {
+    color: var(--active) !important;
+    position: relative;
+    display: inline-block;
+}
+
+
+  
+.nav-underline.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust as needed */
+    left: 0;
+    width: 100%;
+    height: 3px; /* Thickness of the bar */
+    border-radius: 20px;
+    background-color: #fff; /* Color of the bar */
+}
+
 .menu-socials {
     display: none;
 }
@@ -96,21 +97,27 @@ nav .menu svg{
 }
 
 .logo-box {
-    width: 200px;
-    height: 38px;
-    line-height: 38px;
+    width: 280px;
 }
 
 .logo-link {
     display: inline-block;
-    font-size: 25px;
-    font-family: 'Nunito', sans-serif;
+    font-size: 35px;
     font-weight: 400;
     text-align: left;
-    color: orange;
     text-decoration: none;
+    cursor: pointer;
 }
 
+.logo-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust as needed */
+    left: 0;
+    width: 100%;
+    height: 2px; /* Thickness of the bar */
+    background-color: transparent; /* Set to transparent to hide the bar */
+}
 
 
 .social-container {
@@ -132,7 +139,6 @@ nav .menu svg{
         width: 24px;
         height: 24px;
         transition: transform 0.3s ease;
-        color: white;
 }
 
 
@@ -150,7 +156,7 @@ nav .menu svg{
     height: 100%;
 }
 
-@media (max-width: 950px) {
+@media screen and (max-width: 950px) {
     nav ul li a {
         font-size: 1rem;
         margin: 0.2rem 0.5rem;
@@ -161,7 +167,7 @@ nav .menu svg{
     }
 
     .logo-box {
-        width: 120px;
+        width: 140px;
         justify-content: center;
     }
 
@@ -180,11 +186,11 @@ nav .menu svg{
             width: 20px;
             height: 20px;
             transition: transform 0.3s ease;
-            color: white;
+            
     }
 }
 
-@media (max-width: 780px) {
+@media screen and (max-width: 780px) {
 
     .logo-container {
         margin-left: 1rem;

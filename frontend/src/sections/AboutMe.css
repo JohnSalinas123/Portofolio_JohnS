@@ -1,0 +1,39 @@
+#aboutme {
+    width: 100%;
+    margin-bottom: 150px;
+}
+
+#aboutme-text-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 34px;
+    width: 100%;
+}
+
+#aboutme-text-box p {
+    font-size: 22px;
+    font-weight: 500;
+    width: 800px;
+    color: var(--off-black);
+    text-indent: 1em;
+}
+
+#aboutme-image {
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+    box-shadow: 10px 10px #82849e;
+    border: 2px solid var(--off-black);
+    border-radius: 10px;
+}
+
+#aboutme-skills-box {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    gap: 100px;
+    margin-top: 60px;
+}

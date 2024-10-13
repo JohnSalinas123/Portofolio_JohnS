@@ -5,7 +5,7 @@ import { HorizontalDivider } from "../components/HorizontalDivider.jsx";
 import "./StudyLogPage.css";
 
 // import learning ndoe data from json
-import nodeData from "../data/LearningNodeData.json";
+import nodeData from "../data/StudyLogNodeData.json";
 
 export const StudyLogPage = () => {
 	return <StudyLogDisplay />;

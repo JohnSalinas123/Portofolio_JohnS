@@ -3,12 +3,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: var(--active);
+	background-color: var(--bright-green);
 	border-radius: 4px;
 }
 
 ::-webkit-scrollbar-track {
-	background-color: var(--nav-background);
+	background-color: var(--main-bg);
 }
 
 ::-webkit-scrollbar-button {
@@ -41,6 +41,10 @@ body {
 .fade-enter-active {
 	opacity: 1;
 	transition: opacity 500ms;
+}
+
+.active {
+	color: var(--active-white);
 }
 
 .z-50 {

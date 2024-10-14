@@ -8,26 +8,27 @@ import "./Navbar.css";
 export const Navbar = () => {
 	const [menuVisible, setMenuVisible] = useState(false);
 
+	window.addEventListener("scroll", function () {
+		const nav = document.querySelector("nav");
+		if (window.scrollY > 20) {
+			// Adjust the scroll value as needed
+			nav.classList.add("scrolled");
+		} else {
+			nav.classList.remove("scrolled");
+		}
+	});
+
 	return (
 		<nav>
-			<div
-				className="menu"
-				onClick={() => {
-					setMenuVisible(!menuVisible);
-				}}
-			>
-				<RxHamburgerMenu />
-			</div>
 			<div className="nav-edge-container logo-container">
-				<div className="logo-box">
-					<h1>
-						<Link to="/" className="inter-700 logo-link">
-							John Salinas
-						</Link>
-					</h1>
-				</div>
+				<h1 className="logo-box">
+					<Link to="/" className="inter-700 logo-link">
+						John Salinas
+					</Link>
+				</h1>
 			</div>
-			<div className="nav-container inter-500">
+
+			<div className="nav-container">
 				<ul className={menuVisible ? "open" : ""}>
 					<li>
 						<NavLink to="/projects" className="nav-element">
@@ -64,6 +65,16 @@ export const Navbar = () => {
 						</a>
 					</li>
 				</ul>
+			</div>
+			<div className="nav-mobile-spacer">
+
+			</div>
+			<div className={`nav-menu ${menuVisible ? "active" : ""}`}>
+				<RxHamburgerMenu
+					onClick={() => {
+						setMenuVisible(!menuVisible);
+					}}
+				/>
 			</div>
 			<div className="nav-edge-container social-container">
 				<a

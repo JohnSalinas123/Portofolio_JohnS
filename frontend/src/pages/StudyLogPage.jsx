@@ -18,7 +18,7 @@ const StudyLogDisplay = () => {
 		<>
 			<div id="studylog-display">
 				<StudyLogSelector setSelectedTopic={setSelectedTopic} />
-				<CSSTransition in={true} appear={true} timeout={1000} classNames="fade">
+				<CSSTransition appear={true} timeout={1000} classNames="fade">
 					<HorizontalDivider />
 				</CSSTransition>
 
@@ -41,7 +41,6 @@ const StudyLogSelector = ({ setSelectedTopic }) => {
 			<TransitionGroup className="studylog-selector">
 				{nodeData.map((topic, index) => (
 					<CSSTransition
-						in={true}
 						appear={true}
 						key={index}
 						timeout={1000}
@@ -69,7 +68,6 @@ const StudyLogNodes = ({ selectedTopic }) => {
 			<TransitionGroup className="studylog-nodes">
 				{selectedTopic.nodes.map((node, index) => (
 					<CSSTransition
-						in={true}
 						appear={true}
 						key={index}
 						timeout={1000}

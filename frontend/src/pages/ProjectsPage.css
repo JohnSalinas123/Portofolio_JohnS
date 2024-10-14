@@ -120,7 +120,7 @@
 }
 
 .project-title {
-	display: inline-block;
+	display: block;
 	color: var(--project-title);
 	font-weight: 600;
 	font-size: 1rem;

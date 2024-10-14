@@ -4,17 +4,24 @@ nav {
 	align-items: center;
 	position: fixed;
 	z-index: 100;
-	height: 80px;
+	height: 64px;
 	width: 100%;
 	top: 0;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
 	transition: background-color 0.3s ease;
-	background-color: var(--nav-background);
+	background-color: transparent;
+}
+
+nav.scrolled {
+	background-color: var(--main-bg);
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* shadow for the scrolled state */
 }
 
 nav a {
 	color: var(--bright-green);
+}
+
+.nav-element {
+	display: inline-block;
 }
 
 .nav-element.active {
@@ -50,18 +57,19 @@ nav ul li a:not(.active):hover {
 	transition: color 0.3s ease;
 }
 
-nav .menu {
+.nav-menu {
 	display: none;
-	position: fixed;
-	top: 1.2rem;
-	right: 1.2rem;
-	flex-direction: column;
-	justify-content: space-between;
-	height: 36px;
-	width: 36px;
+	height: 100%;
+	width: auto;
+	color: var(--inactive-white);
+	transition: color 0.3s ease;
 }
 
-nav .menu svg {
+.nav-menu:hover {
+	color: var(--active-white);
+}
+
+.nav-menu svg {
 	height: 36px;
 	width: 36px;
 }
@@ -81,6 +89,8 @@ nav .menu svg {
 
 .logo-box {
 	width: 200px;
+	display: flex;
+	align-content: center;
 }
 
 .logo-link {
@@ -130,6 +140,8 @@ nav .menu svg {
 
 .nav-container {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .nav-edge-container {
@@ -138,6 +150,10 @@ nav .menu svg {
 }
 
 @media screen and (max-width: 950px) {
+	nav {
+		height: 70px;
+	}
+
 	nav ul li a {
 		font-size: 1rem;
 		margin: 0.2rem 0.5rem;
@@ -172,15 +188,18 @@ nav .menu svg {
 
 @media screen and (max-width: 780px) {
 	.logo-container {
-		margin-left: 1rem;
+		width: 150px;
+		height: 100%;
+		margin-left: 0;
 	}
 
 	.logo-box {
-		width: 200px;
+		margin-top: 10px;
+		margin-left: 20px;
 	}
 
-	.logo-link {
-		font-size: 25px;
+	.nav-mobile-spacer {
+		width: 150px;
 	}
 
 	.menu-socials {
@@ -188,35 +207,40 @@ nav .menu svg {
 		justify-content: center;
 	}
 
-	nav .menu {
-		display: flex;
+	.nav-menu {
+		display: inline-block;
+		position: absolute;
+		top: 10px;
+		right: 20px;
 	}
 
 	nav {
-		flex-direction: column;
+		flex-direction: row;
 		align-items: start;
+		justify-content: space-between;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		height: auto;
+		min-height: 60px;
 	}
 
 	.nav-container {
+		align-items: center;
 		text-align: center;
-		width: 100%;
-		z-index: 200;
+		left: 50%;
 	}
 
 	nav ul {
 		display: none;
 		flex-direction: column;
-		width: 100%;
 		margin-bottom: 0.25rem;
 	}
 
 	nav ul.open {
 		display: flex;
-	}
-
-	nav ul li {
-		width: 100%;
-		text-align: center;
+		margin-top: 10px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	nav ul li a {

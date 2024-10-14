@@ -3,6 +3,7 @@ import {
 	polylang,
 	cppeventmap,
 	weekly,
+	apptrack,
 } from "../images/project/projectIndex.js";
 import { CSSTransition } from "react-transition-group";
 import "./ProjectsPage.css";
@@ -50,6 +51,25 @@ const ProjectGallery = () => {
 							Github: "https://github.com/FiveFineCoders/CPP_EventMap",
 						}}
 						skills={["React", "CSS", "Node.js", "Express", "MongoDB", "Jest"]}
+					/>
+					<Project
+						src={apptrack}
+						title={"AppTrack"}
+						short_descrip={
+							"A full stack application for tracking job applications. "
+						}
+						alt={"An image of a web application for tracking job applications."}
+						links={{
+							Github: "https://github.com/JohnSalinas123/AppTrack",
+						}}
+						skills={[
+							"TypeScript",
+							"React",
+							"Node.js",
+							"Express",
+							"MongoDB",
+							"JWT Auth",
+						]}
 					/>
 					<Project
 						src={polylang}

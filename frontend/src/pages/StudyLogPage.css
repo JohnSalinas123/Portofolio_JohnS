@@ -65,7 +65,7 @@
 }
 
 .study-node {
-	width: 461px;
+	max-width: 461px;
 	border: 1.5px solid white;
 	border-radius: 20px;
 	padding: 20px;

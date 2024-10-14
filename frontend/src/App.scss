@@ -43,6 +43,10 @@ body {
 	transition: opacity 500ms;
 }
 
+.active {
+	color: var(--active-white);
+}
+
 .z-50 {
 	z-index: 50;
 }

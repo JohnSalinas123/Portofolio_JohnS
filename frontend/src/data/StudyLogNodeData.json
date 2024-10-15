@@ -3,12 +3,16 @@
 		"name": "Machine Learning",
 		"nodes": [
 			{
+				"title": "Fast.ai - Practical Deep Learning for coders",
+				"text": ""
+			},
+			{
 				"title": "Coursera - Machine Learning Specialization",
-				"text": "The Machine Learning Specialization by Andrew Ng, went more in depth into the math of some non neural network algorithms such as linear regression, logistic regression, and decision trees, as well as for the cost function, regularization, and gradient descent. Which I think was important as it provided a clearer picture of machine learning and ultimately built up to the math that operates in neural networks.\\n \\n Just as important, was the intuition that I gained from the course, in terms of understanding some different types of sources for model error such as bias and variance, and how to go about mitigating their effect on model performance, using a method such as L2 Regularization. \\n \\n Additionally I was introduced to unsupervised learning, starting off with clustering and anomaly detection, and then getting into recommender systems and even reinforcement learning, which was really interesting."
+				"text": "The Machine Learning Specialization by Andrew Ng provided an in-depth exploration of the math behind various non-neural network algorithms, such as linear regression, logistic regression, and decision trees. It also covered key concepts like cost functions, regularization, and gradient descent. This deeper mathematical understanding was important, as it gave me a clearer picture of machine learning and helped build up to the math used in neural networks.\\n \\nEqually important was the intuition I gained from the course. I learned about different sources of model error, such as bias and variance, and strategies to mitigate their effects on model performance, including using L2 regularization.\\n \\nAdditionally, the course introduced me to unsupervised learning, starting with clustering and anomaly detection, and progressing to recommender systems and even reinforcement learning, which I found particularly fascinating."
 			},
 			{
 				"title": "Undergraduate Seminar - Neural Networks",
-				"text": "For my CS 4630 undergraduate seminar class, I chose to do my presentation on \"Neural Networks\". Before getting into my research on the topic, I had no idea what these networks were, only that the recent technologies at the time, such as  ChatGPT were powered by these neural networks. This seminar presentation led me to learn the basics, through reading 4 conceptual and practical books:\\n • Deep Learning with Python, by Francois Chollet\\n • MIT Essential Press Deep Learning\\n • MIT Essential Press Machine Learning\\n • MIT Essential Press Data Science \\n that provided a solid foundation for my presentation and to continue learning about the topic. "
+				"text": "For my CS 4630 undergraduate seminar, I chose to present on the topic of Neural Networks. Before diving into my research, I had little knowledge of the subject, knowing only that recent technologies like ChatGPT were powered by these networks. Preparing for this presentation allowed me to learn the basics of neural networks through four conceptual and practical books:\\n • Deep Learning with Python, by Francois Chollet\\n • MIT Essential Press Deep Learning\\n • MIT Essential Press Machine Learning\\n • MIT Essential Press Data Science \\n These resources provided a solid foundation for both my presentation and my continued learning in the field."
 			}
 		]
 	},
@@ -17,11 +21,11 @@
 		"nodes": [
 			{
 				"title": "CS 4800 Software Engineering",
-				"text": ""
+				"text": "In this software engineering class, we worked on a semester-long project to develop a full-stack web application using agile methodologies. As my team's tech lead, I effectively presented various project ideas to gather feedback, supplemented with visuals I created in Figma to streamline both the planning and development processes. I also introduced the team to Trello for tracking each member's weekly sprint tasks. These organizational steps were crucial, as I learned that clear communication and alignment are essential when working in a team to ensure everyone is on the same page about what needs to be developed. \\n \\nOur project, CPP Event Map, featured a map view of the Cal Poly Pomona campus and surrounding areas, allowing students to see event markers in a single place. This simplified the process of finding and attending events, as this information is typically scattered across different organizations' media channels. \\n \\nI primarily worked on the map view, part of the login/signup components, and the backend infrastructure, while also assisting my teammates when needed. This project gave me valuable experience in team-based development, while also enhancing my skills in using TypeScript with React on the frontend and efficiently setting up the backend with MongoDB."
 			},
 			{
 				"title": "CS 80 Internet Programming",
-				"text": "I Took my first web development class, CS 80 at Santa Monica College over the summer, where I learned the basics of developing on the web such as HTML, CSS, and JS.\\n \\nWith the various on hand projects throughout the class, including a final project where I made a basic website with  commonly found elements, such as a navbar, homepage, scroll navigation, layouts, and interactive forms,  it provided a good foundation to continue my development journey."
+				"text": "I took my first web development class, CS 80, at Santa Monica College over the summer, where I learned the fundamentals of web development, including HTML, CSS, and JavaScript.\\n \\nThroughout the course, we completed various hands-on projects, culminating in a final project where I built a basic website incorporating commonly used elements such as a navbar, homepage, scroll navigation, layouts, and interactive forms. This course provided a strong foundation for me to continue expanding my web development skills."
 			}
 		]
 	}

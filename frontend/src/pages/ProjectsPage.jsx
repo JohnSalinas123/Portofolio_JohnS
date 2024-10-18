@@ -27,7 +27,7 @@ const ProjectGallery = () => {
 						src={weekly}
 						title={"Weekly: Calendar for friends"}
 						short_descrip={
-							"I worked as an IOS developer for Weekly, an app for making plans and discovering them with friends."
+							"A mobile application that allows users to create and discover plans with friends. I contributed to the iOS development team, helping implement features for organizing and sharing events in a social, intuitive interface."
 						}
 						alt={
 							"An image of a mobile application Weekly, it displays the apps features, of sharing your calendar, discovering free time with friends and making plans."
@@ -42,7 +42,7 @@ const ProjectGallery = () => {
 						src={cppeventmap}
 						title={"CPPEventMap"}
 						short_descrip={
-							"I was the tech lead during my software engeering class for this full stack project, CPP Event Map,a web app to help CPP students know about and reach on campus events."
+							"As the tech lead in my software engineering class, I guided the development of CPP Event Map, a web app designed to help Cal Poly Pomona students discover and navigate on-campus events. The project incorporated React, CSS, Node.js, and MongoDB to create a streamlined user experience for accessing event information."
 						}
 						alt={
 							"An image of a web application that is mainly a map that shows where events are occuring on the Cal Poly Pomona campus."
@@ -56,7 +56,7 @@ const ProjectGallery = () => {
 						src={apptrack}
 						title={"AppTrack"}
 						short_descrip={
-							"A full stack application for tracking job applications. "
+							"A full-stack application built to help users track and manage their job applications efficiently. I developed both the frontend and backend, implementing secure JWT authentication and leveraging MongoDB for data storage."
 						}
 						alt={"An image of a web application for tracking job applications."}
 						links={{
@@ -75,7 +75,7 @@ const ProjectGallery = () => {
 						src={polylang}
 						title={"PolyLang"}
 						short_descrip={
-							"A translation app that uses a deep learning rnn model to translate english to spanish."
+							"A translation app utilizing a recurrent neural network (RNN) model to translate English text into Spanish. I integrated React for the frontend and Flask with Keras on the backend to process translations in real-time."
 						}
 						alt={
 							"An image of a web application that uses deep learning to translate english to spanish."
@@ -89,7 +89,7 @@ const ProjectGallery = () => {
 						src={mybookshelf}
 						title={"MyBookshelf"}
 						short_descrip={
-							"A desktop app that organizes and provides a visual for ones pdf book library. "
+							"A desktop application that organizes and visualizes a user's PDF book library. Using React and Electron, I built a user-friendly interface for managing and accessing digital book collections."
 						}
 						alt={"An image of a desktop pdf library application."}
 						links={{

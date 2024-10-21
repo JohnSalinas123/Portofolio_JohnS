@@ -12,7 +12,7 @@
 	{
 		"src": "/Projects/cppeventmap_image.png",
 		"title": "CPPEventMap",
-		"short_descrip": "As the tech lead in my software engineering class, I guided the development of CPP Event Map, a web app designed to help Cal Poly Pomona students discover and navigate on-campus events. This project utilized the Mapbox API for interactive mapping features and incorporated React, CSS, Node.js, Express, and MongoDB to create a streamlined user experience for accessing event information.",
+		"short_descrip": "As the tech lead in my software engineering class, I guided the development of CPP Event Map, a web app designed to help Cal Poly Pomona students discover and navigate on-campus events. This project utilized the Mapbox API for interactive mapping features, enhancing the user experience by providing an intuitive interface for accessing event information",
 		"alt": "An image of a web application that is mainly a map that shows where events are occurring on the Cal Poly Pomona campus.",
 		"links": {
 			"Github": "https://github.com/FiveFineCoders/CPP_EventMap"

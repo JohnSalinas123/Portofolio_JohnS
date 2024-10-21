@@ -1,0 +1,59 @@
+[
+	{
+		"src": "/Projects/weekly_image.png",
+		"title": "Weekly: Calendar for friends",
+		"short_descrip": "A mobile application that allows users to create and discover plans with friends. I contributed to the iOS development team, helping implement features for organizing and sharing events in a social, intuitive interface.",
+		"alt": "An image of a mobile application Weekly, it displays the apps features, of sharing your calendar, discovering free time with friends and making plans.",
+		"links": {
+			"App Store": "https://apps.apple.com/us/app/weekly-calendar-for-friends/id1596555762"
+		},
+		"skills": ["Swift", "SwiftUI"]
+	},
+	{
+		"src": "/Projects/cppeventmap_image.png",
+		"title": "CPPEventMap",
+		"short_descrip": "As the tech lead in my software engineering class, I guided the development of CPP Event Map, a web app designed to help Cal Poly Pomona students discover and navigate on-campus events. This project utilized the Mapbox API for interactive mapping features and incorporated React, CSS, Node.js, Express, and MongoDB to create a streamlined user experience for accessing event information.",
+		"alt": "An image of a web application that is mainly a map that shows where events are occurring on the Cal Poly Pomona campus.",
+		"links": {
+			"Github": "https://github.com/FiveFineCoders/CPP_EventMap"
+		},
+		"skills": ["React", "CSS", "Node.js", "Express", "MongoDB", "Jest"]
+	},
+	{
+		"src": "/Projects/apptrack_image.png",
+		"title": "AppTrack",
+		"short_descrip": "A full-stack application built to help users track and manage their job applications efficiently. I developed both the frontend and backend, implementing secure JWT authentication and leveraging MongoDB for data storage.",
+		"alt": "An image of a web application for tracking job applications.",
+		"links": {
+			"Github": "https://github.com/JohnSalinas123/AppTrack"
+		},
+		"skills": [
+			"TypeScript",
+			"React",
+			"Node.js",
+			"Express",
+			"MongoDB",
+			"JWT Auth"
+		]
+	},
+	{
+		"src": "/Projects/polylang_image.png",
+		"title": "PolyLang",
+		"short_descrip": "A translation app utilizing a recurrent neural network (RNN) model to translate English text into Spanish. I integrated React for the frontend and Flask with Keras on the backend to process translations in real-time.",
+		"alt": "An image of a web application that uses deep learning to translate English to Spanish.",
+		"links": {
+			"Github": "https://github.com/JohnSalinas123/PolyLang/tree/main"
+		},
+		"skills": ["React", "Flask", "Keras"]
+	},
+	{
+		"src": "/Projects/mybookshelf_image.png",
+		"title": "MyBookshelf",
+		"short_descrip": "A desktop application that organizes and visualizes a user's PDF book library. Using React and Electron, I built a user-friendly interface for managing and accessing digital book collections.",
+		"alt": "An image of a desktop PDF library application.",
+		"links": {
+			"Github": "https://github.com/JohnSalinas123/MyBookshelf"
+		},
+		"skills": ["React", "Electron"]
+	}
+]

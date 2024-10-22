@@ -5,30 +5,33 @@ import { HorizontalDivider } from "../components/HorizontalDivider.jsx";
 import "./StudyLogPage.css";
 
 // import learning ndoe data from json
-import nodeData from "../data/StudyLogNodeData.json";
+import nodeData from "../data/studylog_data.json";
 
 export const StudyLogPage = () => {
-	return <StudyLogDisplay />;
+	return (
+		<div role="region" aria-label="studylog">
+			<StudyLogDisplay />
+		</div>
+	);
 };
 
-const StudyLogDisplay = () => {
+export const StudyLogDisplay = () => {
 	const [selectedTopic, setSelectedTopic] = useState(nodeData[0]);
 
 	return (
 		<>
-			<div id="studylog-display">
+			<div id="studylog-display" role="group" aria-label="studylog">
 				<StudyLogSelector setSelectedTopic={setSelectedTopic} />
 				<CSSTransition appear={true} timeout={1000} classNames="fade">
 					<HorizontalDivider />
 				</CSSTransition>
-
 				<StudyLogNodes selectedTopic={selectedTopic} />
 			</div>
 		</>
 	);
 };
 
-const StudyLogSelector = ({ setSelectedTopic }) => {
+export const StudyLogSelector = ({ setSelectedTopic }) => {
 	const [activeTopic, setActiveTopic] = useState(nodeData[0]);
 
 	const handleTopicClick = (topic) => {
@@ -62,7 +65,7 @@ const StudyLogSelector = ({ setSelectedTopic }) => {
 	);
 };
 
-const StudyLogNodes = ({ selectedTopic }) => {
+export const StudyLogNodes = ({ selectedTopic }) => {
 	return (
 		<>
 			<TransitionGroup className="studylog-nodes">
@@ -73,7 +76,7 @@ const StudyLogNodes = ({ selectedTopic }) => {
 						timeout={1000}
 						classNames="fade"
 					>
-						<div>
+						<div role="listitem">
 							<div key={index} className="study-node">
 								<h3 className="study-node-title">{node.title}</h3>
 								<div className="study-node-text">

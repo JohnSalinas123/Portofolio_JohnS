@@ -11,6 +11,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "@mantine/core": "^7.15.2",
+    "@mantine/hooks": "^7.15.2",
     "@react-three/drei": "^9.96.5",
     "@react-three/fiber": "^8.15.15",
     "@tsparticles/basic": "^3.3.0",
@@ -42,6 +44,9 @@
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jest-transform-stub": "^2.0.0",
+    "postcss": "^8.4.49",
+    "postcss-preset-mantine": "^1.17.0",
+    "postcss-simple-vars": "^7.0.1",
     "react-router-dom": "^6.26.2",
     "react-test-renderer": "^18.3.1",
     "vite": "^5.0.8"

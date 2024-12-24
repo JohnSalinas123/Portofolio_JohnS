@@ -1,6 +1,7 @@
 import { useState, useRef, createRef } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import { HorizontalDivider } from "../components/HorizontalDivider.jsx";
+import { FaArrowUp } from "react-icons/fa";
 
 import "./StudyLogPage.css";
 
@@ -90,7 +91,9 @@ export const StudyLogNodes = ({ selectedTopic }) => {
 						</div>
 					</CSSTransition>
 				))}
-				<div className="study-node-start">Start</div>
+				<div className="study-node-start">
+					<FaArrowUp size={14} />
+				</div>
 			</TransitionGroup>
 		</>
 	);

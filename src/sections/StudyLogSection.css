@@ -3,7 +3,7 @@
 	justify-content: top;
 	align-items: center;
 	flex-direction: column;
-	max-width: 900px;
+	max-width: 1000px;
 	margin: 0 auto;
 	width: 100%;
 }
@@ -65,7 +65,7 @@
 }
 
 .study-node {
-	max-width: 461px;
+	max-width: 600px;
 	border: 1.5px solid white;
 	border-radius: 20px;
 	padding: 20px;
@@ -78,7 +78,7 @@
 }
 
 .study-node-text {
-	color: white;
+	color: var(--off-black);
 	font-weight: 300;
 	white-space: pre-wrap;
 }

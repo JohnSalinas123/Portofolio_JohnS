@@ -26,7 +26,7 @@ body {
 }
 
 :root {
-	font-family: ui-sans-serif, Avenir, Helvetica, Arial, sans-serif !important;
+	font-family: "Montserrat", ui-sans-serif, Avenir, Helvetica, Arial, sans-serif !important;
 	color: var(--off-black) !important;
 
 	--main-bg: #252627;
@@ -71,4 +71,11 @@ body {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+	width: 100%;
+	text-align: left;
+	font-family: "Montserrat" !important;
+	margin-bottom: 5px !important;
 }

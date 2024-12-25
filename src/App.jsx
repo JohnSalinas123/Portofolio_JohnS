@@ -1,5 +1,5 @@
 import { Navbar } from "./components/Navbar";
-import { ProjectsPage, StudyLogPage } from "./pages/pagesIndex.js";
+import { HomePage } from "./pages/HomePage.jsx";
 import "./App.scss";
 import { Routes, Route, Navigate } from "react-router-dom";
 
@@ -10,9 +10,7 @@ function App() {
 			<Navbar />
 			<div id="main-container">
 				<Routes>
-					<Route path="/" element={<Navigate to="/projects" replace />} />
-					<Route path="/projects" element={<ProjectsPage />} />
-					<Route path="/studylog" element={<StudyLogPage />} />
+					<Route path="/" element={<HomePage />} />
 				</Routes>
 			</div>
 		</>

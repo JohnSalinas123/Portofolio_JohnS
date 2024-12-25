@@ -14,8 +14,24 @@ import {
 // import learning ndoe data from json
 import nodeData from "../data/studylog_data.json";
 
+interface StudyLogNode {
+	completed: boolean;
+	title: string;
+	text: string;
+}
+
+interface StudyLogTopic {
+	label: string;
+	value: string;
+	nodes: StudyLogNode[];
+}
+
+interface StudyLogSectionProps {
+	selectedTopic: StudyLogTopic;
+}
+
 export const StudyLogSection = () => {
-	const [activeTopic, setActiveTopic] = useState(nodeData[0].value);
+	const [activeTopic, setActiveTopic] = useState<string>(nodeData[0].value);
 
 	const selectedTopic = nodeData.find((topic) => topic.value === activeTopic);
 
@@ -37,7 +53,7 @@ export const StudyLogSection = () => {
 	);
 };
 
-export const StudyLogNodes = ({ selectedTopic }) => {
+export const StudyLogNodes = ({ selectedTopic }: StudyLogSectionProps) => {
 	const completedCount =
 		selectedTopic.nodes.slice(0, 3).filter((node) => node.completed).length - 1;
 

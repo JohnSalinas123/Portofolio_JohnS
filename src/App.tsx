@@ -1,5 +1,4 @@
-import { HomePage } from "./pages/HomePage.jsx";
-import "./App.scss";
+import { HomePage } from "./pages/HomePage.tsx";
 import { Routes, Route } from "react-router-dom";
 import { useDisclosure } from "@mantine/hooks";
 
@@ -8,9 +7,11 @@ import { UnstyledButton, Title } from "@mantine/core";
 import { AppShell, Burger, Group } from "@mantine/core";
 import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
-import { AboutMePage } from "./pages/AboutMePage.jsx";
+import { AboutMePage } from "./pages/AboutMePage.tsx";
 
-import RootLayout from "./layouts/RootLayout.jsx";
+import RootLayout from "./layouts/RootLayout";
+
+import "./App.scss";
 
 function App() {
 	const [opened, { toggle }] = useDisclosure();
@@ -36,12 +37,7 @@ function App() {
 						/>
 						<Group justify="space-between" style={{ flex: 1 }}>
 							<Title order={1} size="h2" className="logo-box">
-								<RouterLink
-									to="/"
-									smooth="true"
-									duration={500}
-									className="inter-700 logo-link"
-								>
+								<RouterLink to="/" className="inter-700 logo-link">
 									John Salinas
 								</RouterLink>
 							</Title>
@@ -70,11 +66,7 @@ function App() {
 								>
 									<UnstyledButton>Skills</UnstyledButton>
 								</ScrollLink>
-								<RouterLink
-									to="/log"
-									duration={500}
-									className="inter-700 logo-link"
-								>
+								<RouterLink to="/log" className="inter-700 logo-link">
 									<UnstyledButton>Log</UnstyledButton>
 								</RouterLink>
 							</Group>

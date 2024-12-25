@@ -1,4 +1,3 @@
-import { SectionHeader } from "../components/SectionHeader";
 import { SkillsDisplay } from "../components/SkillsDisplay";
 
 import "./AboutMePage.css";
@@ -24,8 +23,6 @@ export const AboutMePage = () => {
 	return (
 		<>
 			<div id="aboutme">
-				<SectionHeader sectionTitle="About me" />
-
 				<div id="aboutme-text-box">
 					<p id="aboutme-text" className="inter-400">
 						I graduated with a bachelor&apos;s degree in computer science from

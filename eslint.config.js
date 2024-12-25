@@ -1,40 +1,17 @@
 import globals from "globals";
 import pluginJs from "@eslint/js";
-import pluginReactConfig from "eslint-plugin-react/configs/recommended.js";
-import reactHooks from "eslint-plugin-react-hooks";
-import jest from "eslint-plugin-jest";
+import pluginReact from "eslint-plugin-react";
 
+/** @type {import('eslint').Linter.Config[]} */
 export default [
-	{
-		languageOptions: {
-			globals: globals.browser,
-			ecmaVersion: "latest",
-			sourceType: "module",
-		},
-		settings: { react: { version: "18.2" } },
-	},
+	{ files: ["**/*.{js,mjs,cjs,jsx}"] },
+	{ languageOptions: { globals: globals.browser } },
 	pluginJs.configs.recommended,
-	pluginReactConfig,
-	reactHooks.configs.recommended,
+	pluginReact.configs.flat.recommended,
 	{
-		plugins: {
-			"react-refresh": {
-				rules: {
-					"react-refresh/only-export-components": [
-						"warn",
-						{ allowConstantExport: true },
-					],
-				},
-			},
-			jest: {
-				rules: jest.configs.recommended.rules,
-			},
+		rules: {
+			"react/react-in-jsx-scope": "off",
+			"react/prop-types": "off", // Disable the prop-types validation rule
 		},
-		overrides: [
-			{
-				files: ["**/*.test.js", "**/*.test.jsx"],
-				env: { jest: true },
-			},
-		],
 	},
 ];

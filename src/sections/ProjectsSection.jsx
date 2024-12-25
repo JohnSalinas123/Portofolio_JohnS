@@ -2,16 +2,7 @@ import { CSSTransition } from "react-transition-group";
 import "./ProjectsSection.css";
 import { FiExternalLink } from "react-icons/fi";
 
-import {
-	Image,
-	Paper,
-	Box,
-	Title,
-	Text,
-	Divider,
-	Button,
-	Pill,
-} from "@mantine/core";
+import { Image, Paper, Box, Title, Text, Divider, Button } from "@mantine/core";
 
 import projectsData from "../data/projects_data.json";
 
@@ -20,6 +11,10 @@ export const ProjectsSection = () => {
 		<div role="region" aria-label="projects">
 			<CSSTransition in={true} appear={true} timeout={1000} classNames="fade">
 				<div id="projects" data-testid="projects">
+					<Title className="header" order={2} size="h1" pl={8}>
+						Projects
+					</Title>
+
 					<div id="project-grid-box">
 						<div className="project-grid">
 							{projectsData.slice(0, 3).map((project, index) => (

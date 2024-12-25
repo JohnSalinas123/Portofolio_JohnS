@@ -1,13 +1,17 @@
 import "./HomePage.css";
-import { CSSTransition } from "react-transition-group";
 import { ProjectsSection } from "../sections/ProjectsSection.jsx";
 import { StudyLogSection } from "../sections/StudyLogSection.jsx";
+
+import { Stack } from "@mantine/core";
 
 export const HomePage = () => {
 	return (
 		<>
-			<ProjectsSection />
-			<StudyLogSection />
+			<Stack justify="center" align="center">
+				<div id="top" name="top"></div>
+				<ProjectsSection />
+				<StudyLogSection />
+			</Stack>
 		</>
 	);
 };

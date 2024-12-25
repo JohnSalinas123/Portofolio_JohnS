@@ -7,7 +7,10 @@
 		"links": {
 			"App Store": "https://apps.apple.com/us/app/weekly-calendar-for-friends/id1596555762"
 		},
-		"skills": ["Swift", "SwiftUI"]
+		"skills": [
+			{ "name": "Swift", "icon_src": "swift_icon.svg", "size": 16 },
+			{ "name": "SwiftUI", "icon_src": "swiftui_icon.svg", "size": 20 }
+		]
 	},
 	{
 		"src": "/Projects/cppeventmap_image.png",
@@ -17,7 +20,14 @@
 		"links": {
 			"Github": "https://github.com/FiveFineCoders/CPP_EventMap"
 		},
-		"skills": ["React", "CSS", "Node.js", "Express", "MongoDB", "Jest"]
+		"skills": [
+			{ "name": "React", "icon_src": "react_icon.svg", "size": 16 },
+			{ "name": "CSS", "icon_src": "css3_icon.svg", "size": 16 },
+			{ "name": "Node.js", "icon_src": "nodejs_icon.svg", "size": 18 },
+			{ "name": "Express", "icon_src": "express_icon.svg", "size": 16 },
+			{ "name": "MongoDB", "icon_src": "mongodb_icon.svg", "size": 16 },
+			{ "name": "Jest", "icon_src": "jest_icon.svg", "size": 16 }
+		]
 	},
 	{
 		"src": "/Projects/apptrack_image.png",
@@ -28,32 +38,12 @@
 			"Github": "https://github.com/JohnSalinas123/AppTrack"
 		},
 		"skills": [
-			"TypeScript",
-			"React",
-			"Node.js",
-			"Express",
-			"MongoDB",
-			"JWT Auth"
+			{ "name": "TypeScript", "icon_src": "typescript_icon.svg", "size": 16 },
+			{ "name": "React", "icon_src": "react_icon.svg", "size": 16 },
+			{ "name": "Node.js", "icon_src": "nodejs_icon.svg", "size": 16 },
+			{ "name": "Express", "icon_src": "express_icon.svg", "size": 16 },
+			{ "name": "MongoDB", "icon_src": "mongodb_icon.svg", "size": 16 },
+			{ "name": "JWT Auth", "icon_src": "jwt_auth_icon.svg", "size": 16 }
 		]
-	},
-	{
-		"src": "/Projects/polylang_image.png",
-		"title": "PolyLang",
-		"short_descrip": "A translation app utilizing a recurrent neural network (RNN) model to translate English text into Spanish. I integrated React for the frontend and Flask with Keras on the backend to process translations in real-time.",
-		"alt": "An image of a web application that uses deep learning to translate English to Spanish.",
-		"links": {
-			"Github": "https://github.com/JohnSalinas123/PolyLang/tree/main"
-		},
-		"skills": ["React", "Flask", "Keras"]
-	},
-	{
-		"src": "/Projects/mybookshelf_image.png",
-		"title": "MyBookshelf",
-		"short_descrip": "A desktop application that organizes and visualizes a user's PDF book library. Using React and Electron, I built a user-friendly interface for managing and accessing digital book collections.",
-		"alt": "An image of a desktop PDF library application.",
-		"links": {
-			"Github": "https://github.com/JohnSalinas123/MyBookshelf"
-		},
-		"skills": ["React", "Electron"]
 	}
 ]

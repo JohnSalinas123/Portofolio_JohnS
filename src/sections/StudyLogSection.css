@@ -3,14 +3,8 @@
 	justify-content: top;
 	align-items: center;
 	flex-direction: column;
-	max-width: 1000px;
-	margin: 0 auto;
 	width: 100%;
-	padding-bottom: 100px;
-}
-
-.study-timeline {
-	max-width: 1000px;
+	margin-bottom: 150px;
 }
 
 .studylog-nodes::-webkit-scrollbar {
@@ -34,8 +28,8 @@
 }
 
 .study-node-title {
-	text-align: center;
-	color: var(--bright-blue);
+	text-align: left;
+	color: var(--secondary);
 	width: 100%;
 }
 
@@ -43,4 +37,8 @@
 	color: var(--off-black);
 	font-weight: 400;
 	white-space: pre-wrap;
+}
+
+.study-node-text:hover {
+	cursor: default;
 }

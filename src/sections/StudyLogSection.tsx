@@ -37,7 +37,7 @@ export const StudyLogSection = () => {
 
 	return (
 		<div id="studylog-display" role="group" aria-label="studylog">
-			<Title className="header" order={2} size="h1" pl={8}>
+			<Title className="section-title" w="100%" order={2} size="h1" pl={8}>
 				Study Log
 			</Title>
 			<SegmentedControl
@@ -65,13 +65,18 @@ export const StudyLogNodes = ({ selectedTopic }: StudyLogSectionProps) => {
 				reverseActive
 				bulletSize={24}
 				lineWidth={3}
+				color="var(--secondary)"
 				className="study-timeline"
 			>
 				{selectedTopic.nodes.slice(0, 3).map((node, index) => (
 					<Timeline.Item key={index}>
-						<Paper radius="md" role="listitem">
+						<Paper radius="md" role="listitem" shadow="sm" withBorder>
 							<div className="study-node">
-								<Title order={3} size="h4" className="study-node-title">
+								<Title
+									order={3}
+									size="h4"
+									className="study-node-title sub-heading"
+								>
 									{node.title}
 								</Title>
 								<Spoiler

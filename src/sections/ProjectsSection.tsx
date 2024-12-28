@@ -7,9 +7,10 @@ import projectsData from "../data/projects_data.json";
 
 export const ProjectsSection = () => {
 	return (
-		<div role="region" aria-label="projects">
-			<div id="projects" data-testid="projects">
-				<Title className="header" order={2} size="h1" pl={8}>
+		<>
+			<div id="projects"></div>
+			<div className="projects-section">
+				<Title className="section-title" order={2}>
 					Projects
 				</Title>
 
@@ -29,7 +30,7 @@ export const ProjectsSection = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 
@@ -63,71 +64,67 @@ const Project = ({
 }: ProjectProps) => {
 	return (
 		<>
-			<Paper p={5} radius="md" className="project-outer">
-				<Paper className="project-box" shadow="sm" radius="md" withBorder>
-					<Box pt="md" className="project-image-box">
-						<Image className="project-image" src={src} alt={alt} />
-					</Box>
+			<Paper className="project-box" radius="md">
+				<Box pt="md" className="project-image-box">
+					<Image className="project-image" src={src} alt={alt} />
+				</Box>
 
-					<Box p="md">
-						<div className="project-links inter-400">
-							{links &&
-								links.map((link) => (
-									<Button
-										key={link.url}
-										component="a"
-										href={link.url}
-										target="_blank"
-										rel="noopener noreferrer"
+				<Box p="md">
+					<div className="project-links inter-400">
+						{links &&
+							links.map((link) => (
+								<Button
+									key={link.url}
+									component="a"
+									href={link.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									radius="xl"
+									size="sm"
+									variant="outline"
+									color="var(--off-black)"
+									style={{
+										borderWidth: "1px",
+									}}
+									rightSection={
+										<FiExternalLink className="project-link-icon" />
+									}
+								>
+									{link.location}
+								</Button>
+							))}
+					</div>
+					<div className="project-text-header">
+						<Title order={3} className="project-title">
+							{title}
+						</Title>
+						<Text className="project-short-descrip">{short_descrip}</Text>
+						<Divider />
+					</div>
+					<div className="project-skills-box">
+						<div className="project-skills-list">
+							{skills &&
+								skills.map((skill, index) => (
+									<Paper
+										key={index}
+										shadow="xs"
 										radius="xl"
-										size="sm"
-										variant="outline"
-										color="var(--bright-blue)"
-										style={{
-											borderWidth: "1px",
-										}}
-										rightSection={
-											<FiExternalLink className="project-link-icon" />
-										}
+										withBorder
+										className="project-skills-item"
 									>
-										{link.location}
-									</Button>
+										<Text className="skill-item-name">{skill.name}</Text>
+										<Image
+											src={`icons/${skill.icon_src}`}
+											style={{
+												width: skill.size,
+												height: skill.size,
+											}}
+										/>
+									</Paper>
 								))}
 						</div>
-						<div className="project-text-header">
-							<Title order={3} className="project-title inter-600">
-								{title}
-							</Title>
-							<Text className="project-short-descrip" c="dimmed">
-								{short_descrip}
-							</Text>
-							<Divider />
-						</div>
-						<div className="project-skills-box">
-							<div className="project-skills-list">
-								{skills &&
-									skills.map((skill, index) => (
-										<Paper
-											key={index}
-											shadow="xs"
-											radius="xl"
-											withBorder
-											className="project-skills-item"
-										>
-											<Text className="skill-item-name">{skill.name}</Text>
-											<Image
-												src={skill.icon_src}
-												style={{
-													width: skill.size,
-													height: skill.size,
-												}}
-											/>
-										</Paper>
-									))}
-							</div>
-						</div>
-					</Box>
-				</Paper>
+					</div>
+				</Box>
 			</Paper>
 		</>
 	);

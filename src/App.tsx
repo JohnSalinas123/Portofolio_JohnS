@@ -25,7 +25,15 @@ function App() {
 					breakpoint: "sm",
 					collapsed: { desktop: true, mobile: !opened },
 				}}
-				padding="md"
+				pl={20}
+				pr={20}
+				styles={{
+					header: {
+						backgroundColor: "var(--nav-bg)",
+						fontFamily: "Montserrat",
+					},
+				}}
+				withBorder={false}
 			>
 				<AppShell.Header>
 					<Group h="100%" px="md">
@@ -35,40 +43,44 @@ function App() {
 							hiddenFrom="sm"
 							size="sm"
 						/>
-						<Group justify="space-between" style={{ flex: 1 }}>
-							<Title order={1} size="h2" className="logo-box">
-								<RouterLink to="/" className="inter-700 logo-link">
+						<Group className="nav" justify="space-evenly" style={{ flex: 1 }}>
+							<Title order={1} size="h2">
+								<RouterLink to="/" className="logo-link montserrat-500">
 									John Salinas
 								</RouterLink>
 							</Title>
-							<Group ml="xl" gap={20} visibleFrom="sm">
+							<Group gap={30} visibleFrom="sm">
 								<ScrollLink
 									to="top"
 									smooth="true"
 									duration={500}
-									className="inter-700 logo-link"
+									offset={-100}
+									className="nav-link"
 								>
-									<UnstyledButton>Home</UnstyledButton>
+									<UnstyledButton className="nav-button">Home</UnstyledButton>
 								</ScrollLink>
 								<ScrollLink
 									to="projects"
 									smooth="true"
 									duration={500}
-									className="inter-700 logo-link"
+									offset={-80}
+									className="nav-link"
 								>
-									<UnstyledButton>Projects</UnstyledButton>
+									<UnstyledButton variant="default" className="nav-button">
+										Projects
+									</UnstyledButton>
 								</ScrollLink>
 								<ScrollLink
-									to="skills"
+									to="technologies"
 									smooth="true"
 									duration={500}
-									className="inter-700 logo-link"
+									offset={-70}
+									className="nav-link"
 								>
-									<UnstyledButton>Skills</UnstyledButton>
+									<UnstyledButton variant="default" className="nav-button">
+										Technologies
+									</UnstyledButton>
 								</ScrollLink>
-								<RouterLink to="/log" className="inter-700 logo-link">
-									<UnstyledButton>Log</UnstyledButton>
-								</RouterLink>
 							</Group>
 						</Group>
 					</Group>

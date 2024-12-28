@@ -8,13 +8,11 @@ html,
 body {
 	width: 100%;
 	min-height: 100vh;
-	font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-		"Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
 
 #root {
 	height: 100%;
-	background-color: #f7f6f2;
+	background-color: var(--bg-color);
 }
 
 body {
@@ -26,11 +24,44 @@ body {
 }
 
 :root {
-	font-family: "Montserrat", ui-sans-serif, Avenir, Helvetica, Arial, sans-serif !important;
 	color: var(--off-black) !important;
 
-	--main-bg: #252627;
-	--nav-bg: #252627;
+	--main-bg: #edf2f4;
+
+	--bg-color: var(--main-bg);
+	--nav-bg: var(--main-bg);
+
+	--primary: #ef233c;
+	--secondary: #d90429;
+	--tertiary: #8d99ae;
+	--quaternary: #2b2d42;
+
+	--bittersweet: #ee6055;
+	--darkpastelgreen: #0cca4a;
+
+	--yellow-green: #91cb3e;
+
+	--dodger-blue: #2191fb;
+	--silver-lake-blue: #6c91bf;
+	--orange-crayola: #e57a44;
+
+	--verdigris: #50a2a7;
+	--apple-green: #8fb339;
+	--rufous: #9b2915;
+	--gamboge: #e59500;
+	--selective-yellow: #ffb100;
+	--midnight-green: #0f5257;
+	--honolulu-blue: #0471a6;
+	--chefchaouen-blue: #3f8efc;
+	--kelly-green: #63c132;
+	--neon-blue: #2667ff;
+	--steel-blue: #3f88c5;
+
+	--tomato: #f55d3e;
+
+	--gunmetal: #292f36;
+
+	--rich-black: #061826;
 
 	--bright-green: #9acd23;
 	--brighter-green: #d7ff7928;
@@ -71,11 +102,4 @@ body {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-
-.header {
-	width: 100%;
-	text-align: left;
-	font-family: "Montserrat" !important;
-	margin-bottom: 5px !important;
 }

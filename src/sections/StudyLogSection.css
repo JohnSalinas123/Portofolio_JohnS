@@ -1,0 +1,44 @@
+#studylog-display {
+	display: flex;
+	justify-content: top;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	margin-bottom: 150px;
+}
+
+.studylog-nodes::-webkit-scrollbar {
+	width: 3px;
+}
+
+.studylog-nodes::-webkit-scrollbar-thumb {
+	background-color: var(--inactive-white);
+	border-radius: 4px;
+}
+
+.studylog-nodes:first-child {
+	margin-top: 20px !important;
+}
+
+.study-node {
+	width: 100%;
+	border: 1.5px solid white;
+	border-radius: 20px;
+	padding: 20px;
+}
+
+.study-node-title {
+	text-align: left;
+	color: var(--secondary);
+	width: 100%;
+}
+
+.study-node-text {
+	color: var(--off-black);
+	font-weight: 400;
+	white-space: pre-wrap;
+}
+
+.study-node-text:hover {
+	cursor: default;
+}

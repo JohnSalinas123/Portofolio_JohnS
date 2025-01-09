@@ -1,0 +1,105 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	min-height: 100vh;
+}
+
+#root {
+	height: 100%;
+	background-color: var(--bg-color);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	height: 100%; /* Ensures it takes full viewport height */
+	overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+:root {
+	color: var(--off-black) !important;
+
+	--main-bg: #edf2f4;
+
+	--bg-color: var(--main-bg);
+	--nav-bg: var(--main-bg);
+
+	--primary: #ef233c;
+	--secondary: #d90429;
+	--tertiary: #8d99ae;
+	--quaternary: #2b2d42;
+
+	--bittersweet: #ee6055;
+	--darkpastelgreen: #0cca4a;
+
+	--yellow-green: #91cb3e;
+
+	--dodger-blue: #2191fb;
+	--silver-lake-blue: #6c91bf;
+	--orange-crayola: #e57a44;
+
+	--verdigris: #50a2a7;
+	--apple-green: #8fb339;
+	--rufous: #9b2915;
+	--gamboge: #e59500;
+	--selective-yellow: #ffb100;
+	--midnight-green: #0f5257;
+	--honolulu-blue: #0471a6;
+	--chefchaouen-blue: #3f8efc;
+	--kelly-green: #63c132;
+	--neon-blue: #2667ff;
+	--steel-blue: #3f88c5;
+
+	--tomato: #f55d3e;
+
+	--gunmetal: #292f36;
+
+	--rich-black: #061826;
+
+	--bright-green: #9acd23;
+	--brighter-green: #d7ff7928;
+	--bright-blue: #2fcbc6;
+	--brighter-blue: #00f6eeb6;
+	--columbia-blue: #cad8de;
+	--white: #ffffff;
+	--off-black: #4e4e4e;
+
+	--active-white: var(--white);
+	--inactive-white: var(--columbia-blue);
+
+	--project: #fefefe;
+	--project-hover: #7190c58e;
+	--project-text: rgb(72, 72, 72);
+
+	--border-dark: #858b9833;
+	--border-light: #c8ceddc4;
+
+	--shadow-color: var(--white);
+	--shadow-elevation-low: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+		0.4px 0.8px 1px -1.2px hsl(var(--shadow-color) / 0.34),
+		1px 2px 2.5px -2.5px hsl(var(--shadow-color) / 0.34);
+	--shadow-elevation-medium: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.36),
+		0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.36),
+		2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.36),
+		5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.36);
+	--shadow-elevation-high: 0.3px 0.5px 0.7px hsl(var(--shadow-color) / 0.34),
+		1.5px 2.9px 3.7px -0.4px hsl(var(--shadow-color) / 0.34),
+		2.7px 5.4px 6.8px -0.7px hsl(var(--shadow-color) / 0.34),
+		4.5px 8.9px 11.2px -1.1px hsl(var(--shadow-color) / 0.34),
+		7.1px 14.3px 18px -1.4px hsl(var(--shadow-color) / 0.34),
+		11.2px 22.3px 28.1px -1.8px hsl(var(--shadow-color) / 0.34),
+		17px 33.9px 42.7px -2.1px hsl(var(--shadow-color) / 0.34),
+		25px 50px 62.9px -2.5px hsl(var(--shadow-color) / 0.34);
+
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

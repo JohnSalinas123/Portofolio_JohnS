@@ -1,0 +1,20 @@
+.footer-section {
+	font-family: "consolas";
+	color: white !important;
+	background-color: var(--quaternary);
+	height: 30vh;
+	padding: 10px 50px 0  50px;
+}
+
+.footer-heading {
+	font-size: xx-large !important;
+	font-weight: 700 !important;
+}
+
+.footer-link {
+	color: white;
+}
+
+.footer-link:visited {
+	color: white;
+}

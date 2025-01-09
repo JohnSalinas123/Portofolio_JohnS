@@ -105,6 +105,7 @@
 .project-title {
 	color: #007ea7 !important;
 	font-weight: 600 !important;
+	font-family: "Montserrat" !important;
 }
 
 .project-short-descrip {
@@ -144,6 +145,7 @@
 	justify-content: center !important;
 	align-items: center !important;
 	flex-direction: row !important;
+	font-family: "consolas";
 	gap: 5px;
 	padding: 0px 10px;
 	border-radius: 10px;
@@ -154,14 +156,4 @@
 
 .skill-item-name {
 	font-size: 14px !important;
-}
-
-@media screen and (max-width: 1800px) {
-}
-
-/* screen smaller than 1000px */
-@media screen and (max-width: 1000px) {
-}
-
-@media screen and (max-width: 460px) {
 }

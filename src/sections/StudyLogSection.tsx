@@ -36,20 +36,23 @@ export const StudyLogSection = () => {
 	const selectedTopic = nodeData.find((topic) => topic.value === activeTopic);
 
 	return (
-		<div id="studylog-display" role="group" aria-label="studylog">
-			<Title className="section-title" w="100%" order={2} size="h1" pl={8}>
-				Study Log
-			</Title>
-			<SegmentedControl
-				value={activeTopic}
-				onChange={setActiveTopic}
-				data={nodeData.map((topic) => ({
-					label: topic.label,
-					value: topic.value,
-				}))}
-			/>
-			{selectedTopic && <StudyLogNodes selectedTopic={selectedTopic} />}
-		</div>
+		<>
+			<div id="studylog"></div>
+			<div id="studylog-display" role="group" aria-label="studylog">
+				<Title className="section-title" w="100%" order={2} size="h1" pl={8}>
+					Study Log
+				</Title>
+				<SegmentedControl
+					value={activeTopic}
+					onChange={setActiveTopic}
+					data={nodeData.map((topic) => ({
+						label: topic.label,
+						value: topic.value,
+					}))}
+				/>
+				{selectedTopic && <StudyLogNodes selectedTopic={selectedTopic} />}
+			</div>
+		</>	
 	);
 };
 

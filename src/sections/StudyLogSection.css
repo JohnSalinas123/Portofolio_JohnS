@@ -31,6 +31,7 @@
 	text-align: left;
 	color: var(--secondary);
 	width: 100%;
+	font-size: 22px !important;
 }
 
 .study-node-text {

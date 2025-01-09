@@ -8,7 +8,7 @@ import "@mantine/core/styles.css";
 
 const theme = createTheme({
 	fontFamily: "Open Sans",
-	headings: { fontFamily: "Montserrat" },
+	headings: { fontFamily: "Consolas" },
 });
 
 createRoot(document.getElementById("root")!).render(

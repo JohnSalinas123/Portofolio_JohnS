@@ -1,6 +1,6 @@
 [
 	{
-		"src": "./projects/linguachat_image.png",
+		"src": "./Projects/linguachat_image.png",
 		"title": "LinguaChat",
 		"short_descrip": "A real-time chat translation app designed to bridge language barriers, allowing users to communicate seamlessly across different languages. The app offers translated chats, an easy chat invitation process, and makes use of an inference API powered by translation models. I plan to explore integrating DeepL translation for improved reliability in the future.",
 		"alt": "An image of a chat application showcasing real-time translation features between users speaking different languages.",
@@ -25,7 +25,7 @@
 		]
 	},
 	{
-		"src": "./projects/weekly_image.png",
+		"src": "./Projects/weekly_image.png",
 		"title": "Weekly: Calendar for friends",
 		"short_descrip": "A mobile application that allows users to create and discover plans with friends. I contributed to the iOS development team, helping implement features for organizing and sharing events in a social, intuitive interface.",
 		"alt": "An image of a mobile application Weekly, it displays the apps features, of sharing your calendar, discovering free time with friends and making plans.",
@@ -41,7 +41,7 @@
 		]
 	},
 	{
-		"src": "./projects/cppeventmap_image.png",
+		"src": "./Projects/cppeventmap_image.png",
 		"title": "CPPEventMap",
 		"short_descrip": "As the tech lead in my software engineering class, I led the development of CPP Event Map, a web app designed to help Cal Poly Pomona students discover and navigate on-campus events. This project utilized the Mapbox API for interactive mapping features, enhancing the user experience by providing an intuitive interface for accessing event information.",
 		"alt": "An image of a web application that is mainly a map that shows where events are occurring on the Cal Poly Pomona campus.",
@@ -61,7 +61,7 @@
 		]
 	},
 	{
-		"src": "./projects/apptrack_image.png",
+		"src": "./Projects/apptrack_image.png",
 		"title": "AppTrack",
 		"short_descrip": "A full-stack application built to help users track and manage their job applications efficiently. I developed both the frontend and backend, implementing secure JWT authentication and leveraging MongoDB for data storage.",
 		"alt": "An image of a web application for tracking job applications.",

@@ -32,6 +32,10 @@
 	letter-spacing: 1px !important;
 }
 
+.intro-sub {
+	width: 100% !important;
+}
+
 .tech-box {
 	display: flex;
 	justify-content: center;
@@ -54,37 +58,7 @@
 }
 
 @media screen and (max-width: 830px) {
-	.intro-section {
-		flex-direction: column-reverse;
-	}
-
-	.intro-title {
-		font-size: 50px !important;
-	}
-}
-
-@media screen and (max-width: 575px) {
-	.intro-title {
-		font-size: 42px !important;
-	}
-
-	.icon-hexagon {
-		width: 80%;
-		height: 80%;
-	}
-
-	.tech-cell {
-		width: 18px !important;
-		height: 18px !important;
-	}
 }
 
 @media screen and (max-width: 450px) {
-	.intro-title {
-		font-size: 32px !important;
-	}
-
-	.intro-sub {
-		font-size: 14px !important;
-	}
 }

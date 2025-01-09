@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 const layers = [4, 10, 12]; // Number of items in each layer
 const baseRadii = [40, 95, 160]; // Radii for each layer
 
-const containerSize = 400;
+const containerSize = 350;
 
 export const IntroSection = () => {
 	const [radii, setRadii] = useState(baseRadii);
@@ -16,7 +16,7 @@ export const IntroSection = () => {
 	const calculateResponsiveRadii = () => {
 		const width = window.innerWidth;
 		if (width < 575) {
-			return baseRadii.map((r) => r * 0.8); 
+			return baseRadii.map((r) => r * 0.8);
 		}
 		return baseRadii;
 	};
@@ -46,23 +46,61 @@ export const IntroSection = () => {
 
 	let skillIndex = 0;
 
+	const defaultAnimations = {
+		hidden: {},
+		visible: {
+			transition: {
+				staggerChildren: 0.3,
+			},
+		},
+	};
+
 	return (
 		<>
 			<div className="intro-section">
 				<Stack gap={0} justify="center" align="left">
-					<Title order={1} className="intro-self">
-						Hi, I'm John Salinas
-					</Title>
-					<Title order={1} className="intro-title">
-						Software Developer
-					</Title>
-
-					<Text size="lg" c="dimmed" className="intro-sub" pl={10} pr={10}>
-						Explore some of my projects and the technologies I work with below.
-					</Text>
+					<motion.div
+						initial="hidden"
+						whileInView="visible"
+						viewport={{ amount: 0.5 }}
+						variants={defaultAnimations}
+					>
+						<motion.div
+							variants={{
+								hidden: { opacity: 0, y: 20 },
+								visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+							}}
+						>
+							<Title order={1} className="intro-self">
+								Hi, I'm John Salinas
+							</Title>
+						</motion.div>
+						<motion.div
+							variants={{
+								hidden: { opacity: 0, y: 20 },
+								visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+							}}
+						>
+							<Title order={1} className="intro-title">
+								Software Developer
+							</Title>
+						</motion.div>
+						<motion.div
+							variants={{
+								hidden: { opacity: 0, y: 20 },
+								visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+							}}
+						>
+							<Text size="lg" c="dimmed" className="intro-sub" pl={10} pr={10}>
+								Explore some of my projects and the technologies I work with
+								below.
+							</Text>
+						</motion.div>
+					</motion.div>
 				</Stack>
 				<Center>
 					<div
+						className="intro-animation"
 						style={{
 							display: "flex",
 							position: "relative",

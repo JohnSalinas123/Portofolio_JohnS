@@ -4,31 +4,65 @@ import { FiExternalLink } from "react-icons/fi";
 import { Image, Paper, Box, Title, Text, Divider, Button } from "@mantine/core";
 
 import projectsData from "../data/projects_data.json";
+import { motion } from "motion/react";
 
 export const ProjectsSection = () => {
+	const defaultAnimations = {
+		hidden: {},
+		visible: {
+			transition: {
+				staggerChildren: 0.4,
+			},
+		},
+	};
+
 	return (
 		<>
 			<div id="projects"></div>
 			<div className="projects-section">
-				<Title className="section-title" order={2}>
-					Projects
-				</Title>
-
-				<div id="project-grid-box">
-					<div className="project-grid">
-						{projectsData.slice(0, 3).map((project, index) => (
-							<Project
-								key={index}
-								src={project.src}
-								title={project.title}
-								short_descrip={project.short_descrip}
-								alt={project.alt}
-								links={project.links}
-								skills={project.skills}
-							/>
-						))}
+				<motion.div
+					initial="hidden"
+					whileInView="visible"
+					viewport={{ amount: 0.2 }}
+					variants={defaultAnimations}
+				>
+					<motion.div
+						variants={{
+							hidden: { opacity: 0, y: 20 },
+							visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+						}}
+					>
+						<Title className="section-title" order={2} size="h2">
+							Projects
+						</Title>
+					</motion.div>
+					<div id="project-grid-box">
+						<div className="project-grid">
+							{projectsData.slice(0, 4).map((project, index) => (
+								<motion.div
+									variants={{
+										hidden: { opacity: 0, y: 20 },
+										visible: {
+											opacity: 1,
+											y: 0,
+											transition: { duration: 0.5 },
+										},
+									}}
+									key={index}
+								>
+									<Project
+										src={project.src}
+										title={project.title}
+										short_descrip={project.short_descrip}
+										alt={project.alt}
+										links={project.links}
+										skills={project.skills}
+									/>
+								</motion.div>
+							))}
+						</div>
 					</div>
-				</div>
+				</motion.div>
 			</div>
 		</>
 	);
@@ -69,7 +103,7 @@ const Project = ({
 					<Image className="project-image" src={src} alt={alt} />
 				</Box>
 
-				<Box p="md">
+				<Box p="md" className="project-footer">
 					<div className="project-links inter-400">
 						{links &&
 							links.map((link) => (
@@ -86,6 +120,7 @@ const Project = ({
 									style={{
 										borderWidth: "1px",
 									}}
+									className="project-link"
 									rightSection={
 										<FiExternalLink className="project-link-icon" />
 									}

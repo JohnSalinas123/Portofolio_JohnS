@@ -1,10 +1,12 @@
-import "./HomePage.css";
 import { ProjectsSection } from "../sections/ProjectsSection";
-import { StudyLogSection } from "../sections/StudyLogSection";
 
 import { Stack } from "@mantine/core";
 import { IntroSection } from "../sections/IntroSection";
 import { TechSkillsSection } from "../sections/TechSkillsSection";
+
+import "./HomePage.css";
+import "../sections/IntroSection.css";
+import { StudyLogSection } from "../sections/StudyLogSection";
 
 export const HomePage = () => {
 	return (
@@ -15,6 +17,7 @@ export const HomePage = () => {
 				<div className="homepage-content">
 					<ProjectsSection />
 					<TechSkillsSection />
+					<StudyLogSection />
 				</div>
 			</Stack>
 		</>

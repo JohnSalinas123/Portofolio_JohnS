@@ -8,6 +8,7 @@ html,
 body {
 	width: 100%;
 	min-height: 100vh;
+	scroll-behavior: smooth !important;
 }
 
 #root {
@@ -102,4 +103,8 @@ body {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	text-decoration: none;
 }

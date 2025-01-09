@@ -1,5 +1,30 @@
 [
 	{
+		"src": "/projects/linguachat_image.png",
+		"title": "LinguaChat",
+		"short_descrip": "A real-time chat translation app designed to bridge language barriers, allowing users to communicate seamlessly across different languages. The app offers translated chats, an easy chat invitation process, and makes use of an inference API powered by translation models. I plan to explore integrating DeepL translation for improved reliability in the future.",
+		"alt": "An image of a chat application showcasing real-time translation features between users speaking different languages.",
+		"links": [],
+		"skills": [
+			{ "name": "React", "icon_src": "react_icon.svg", "size": 16 },
+			{ "name": "Go", "icon_src": "go_icon.svg", "size": 16 },
+			{ "name": "Gin", "icon_src": "gin_icon.svg", "size": 16 },
+			{ "name": "PyTorch", "icon_src": "pytorch_icon.svg", "size": 16 },
+			{
+				"name": "Hugging Face",
+				"icon_src": "huggingface_icon.svg",
+				"size": 16
+			},
+			{ "name": "PostgreSQL", "icon_src": "postgresql_icon.svg", "size": 16 },
+			{
+				"name": "gorilla/websocket",
+				"icon_src": "websocket_icon.svg",
+				"size": 16
+			},
+			{ "name": "Clerk Auth", "icon_src": "clerk_icon.svg", "size": 16 }
+		]
+	},
+	{
 		"src": "/projects/weekly_image.png",
 		"title": "Weekly: Calendar for friends",
 		"short_descrip": "A mobile application that allows users to create and discover plans with friends. I contributed to the iOS development team, helping implement features for organizing and sharing events in a social, intuitive interface.",

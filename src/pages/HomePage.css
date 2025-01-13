@@ -89,7 +89,7 @@
 		border-left: none;
 		border-top: none;
 		border-bottom: calc(0.2rem * var(--mantine-scale)) solid
-		var(--mantine-color-gray-3);
+			var(--mantine-color-gray-3);
 		border-radius: none !important;
 	}
 
@@ -130,4 +130,21 @@
 		width: 18px !important;
 		height: 18px !important;
 	}
+
+	.footer-category {
+		gap: 7px !important;
+	}
+
+	.footer-heading {
+		width: 70px !important;
+		font-size: 16px !important;
+		font-weight: 700 !important;
+	}
+
+	.footer-button {
+		font-size: 14px !important;
+	}
+
+	
+
 }

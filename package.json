@@ -11,13 +11,15 @@
 		"test": "jest"
 	},
 	"dependencies": {
-		"@mantine/core": "^7.15.2",
-		"@mantine/hooks": "^7.15.2",
+		"@mantine/carousel": "^7.17.4",
+		"@mantine/core": "^7.17.4",
+		"@mantine/hooks": "^7.17.4",
 		"@react-three/drei": "^9.96.5",
 		"@react-three/fiber": "^8.15.15",
 		"@tsparticles/basic": "^3.3.0",
 		"@tsparticles/react": "^3.0.0",
 		"@vitejs/plugin-react-swc": "^3.7.2",
+		"embla-carousel-react": "^7.1.0",
 		"framer-motion": "^11.15.0",
 		"motion": "^11.15.0",
 		"react": "^18.2.0",

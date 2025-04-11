@@ -4,7 +4,12 @@
 		"title": "LinguaChat",
 		"short_descrip": "A real-time chat translation app designed to bridge language barriers, allowing users to communicate seamlessly across different languages. The app offers translated chats, an easy chat invitation process, and makes use of an inference API powered by translation models. I plan to explore integrating DeepL translation for improved reliability in the future.",
 		"alt": "An image of a chat application showcasing real-time translation features between users speaking different languages.",
-		"links": [],
+		"links": [
+			{
+				"location": "Github",
+				"url": "https://github.com/LinguaChatApp"
+			}
+		],
 		"skills": [
 			{ "name": "React", "icon_src": "react_icon.svg", "size": 16 },
 			{ "name": "Go", "icon_src": "go_icon.svg", "size": 16 },
@@ -37,7 +42,11 @@
 		],
 		"skills": [
 			{ "name": "Swift", "icon_src": "swift_icon.svg", "size": 16 },
-			{ "name": "SwiftUI", "icon_src": "swiftui_icon.svg", "size": 20 }
+			{ "name": "SwiftUI", "icon_src": "swiftui_icon.svg", "size": 20 },
+			{ "name": "Django", "icon_src": "django_icon.svg", "size": 16 },
+			{ "name": "Xcode", "icon_src": "xcode_icon.svg", "size": 16 },
+			{ "name": "Figma", "icon_src": "figma_icon.svg", "size": 16 },
+			{ "name": "Trello", "icon_src": "trello_icon.svg", "size": 16 }
 		]
 	},
 	{
@@ -53,7 +62,7 @@
 		],
 		"skills": [
 			{ "name": "React", "icon_src": "react_icon.svg", "size": 16 },
-			{ "name": "CSS", "icon_src": "css3_icon.svg", "size": 16 },
+			{ "name": "CSS", "icon_src": "css_icon.svg", "size": 16 },
 			{ "name": "Node.js", "icon_src": "nodejs_icon.svg", "size": 18 },
 			{ "name": "Express", "icon_src": "express_icon.svg", "size": 16 },
 			{ "name": "MongoDB", "icon_src": "mongodb_icon.svg", "size": 16 },

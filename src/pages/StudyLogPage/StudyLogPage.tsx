@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import "./StudyLogSection.css";
+import "./StudyLogPage.css";
 
 import {
 	Paper,
@@ -9,10 +9,12 @@ import {
 	Spoiler,
 	Title,
 	Text,
+	Divider,
+	Stack,
 } from "@mantine/core";
 
 // import learning ndoe data from json
-import nodeData from "../data/studylog_data.json";
+import nodeData from "../../data/studylog_data.json";
 
 interface StudyLogNode {
 	completed: boolean;
@@ -30,29 +32,30 @@ interface StudyLogSectionProps {
 	selectedTopic: StudyLogTopic;
 }
 
-export const StudyLogSection = () => {
+export const StudyLogPage = () => {
 	const [activeTopic, setActiveTopic] = useState<string>(nodeData[0].value);
 
 	const selectedTopic = nodeData.find((topic) => topic.value === activeTopic);
 
 	return (
 		<>
-			<div id="studylog"></div>
-			<div id="studylog-display" role="group" aria-label="studylog">
-				<Title className="section-title" w="100%" order={2} size="h1" pl={8}>
-					Study Log
-				</Title>
-				<SegmentedControl
-					value={activeTopic}
-					onChange={setActiveTopic}
-					data={nodeData.map((topic) => ({
-						label: topic.label,
-						value: topic.value,
-					}))}
-				/>
-				{selectedTopic && <StudyLogNodes selectedTopic={selectedTopic} />}
+			<div className="container-center">
+				<div className="projects-outer">
+					<div className="studylog-display" role="group" aria-label="studylog">
+						<SegmentedControl
+							value={activeTopic}
+							onChange={setActiveTopic}
+							data={nodeData.map((topic) => ({
+								label: topic.label,
+								value: topic.value,
+							}))}
+						/>
+						<Divider my="sm" w="100%" color="#424242" />
+						{selectedTopic && <StudyLogNodes selectedTopic={selectedTopic} />}
+					</div>
+				</div>
 			</div>
-		</>	
+		</>
 	);
 };
 
@@ -68,7 +71,7 @@ export const StudyLogNodes = ({ selectedTopic }: StudyLogSectionProps) => {
 				reverseActive
 				bulletSize={24}
 				lineWidth={3}
-				color="var(--secondary)"
+				color="var(--primary)"
 				className="study-timeline"
 			>
 				{selectedTopic.nodes.slice(0, 3).map((node, index) => (
@@ -78,7 +81,7 @@ export const StudyLogNodes = ({ selectedTopic }: StudyLogSectionProps) => {
 								<Title
 									order={3}
 									size="h4"
-									className="study-node-title sub-heading"
+									className="study-node-title sub-heading c-white"
 								>
 									{node.title}
 								</Title>
@@ -89,11 +92,9 @@ export const StudyLogNodes = ({ selectedTopic }: StudyLogSectionProps) => {
 									className="study-node-text"
 								>
 									{node.text &&
-										node.text.split("\\n").map((line, i) => (
-											<Text c="var(--off-black)" key={i}>
-												{line}
-											</Text>
-										))}
+										node.text
+											.split("\\n")
+											.map((line, i) => <Text key={i}>{line}</Text>)}
 								</Spoiler>
 							</div>
 						</Paper>

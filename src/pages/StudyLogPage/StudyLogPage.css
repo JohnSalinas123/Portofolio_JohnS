@@ -1,10 +1,7 @@
-#studylog-display {
+.studylog-display {
 	display: flex;
-	justify-content: top;
 	align-items: center;
 	flex-direction: column;
-	width: 100%;
-	margin-bottom: 150px;
 }
 
 .studylog-nodes::-webkit-scrollbar {
@@ -20,22 +17,26 @@
 	margin-top: 20px !important;
 }
 
+.study-timeline {
+	scrollbar-width: thin;
+	scrollbar-color: grey transparent;
+	overflow-y: scroll;
+	padding: 10px;
+}
+
 .study-node {
 	width: 100%;
-	border: 1.5px solid white;
 	border-radius: 20px;
 	padding: 20px;
 }
 
 .study-node-title {
 	text-align: left;
-	color: var(--secondary);
 	width: 100%;
 	font-size: 22px !important;
 }
 
 .study-node-text {
-	color: var(--off-black);
 	font-weight: 400;
 	white-space: pre-wrap;
 }

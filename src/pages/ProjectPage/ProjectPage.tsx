@@ -30,7 +30,7 @@ export const ProjectPage = () => {
 
 	return (
 		<>
-			<div className="projectpage-content">
+			<div className="container-center">
 				<div id="projects"></div>
 				<Modal
 					size="xl"

@@ -3,7 +3,6 @@
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: var(--bright-blue);
 	border-radius: 4px;
 }
 
@@ -44,22 +43,21 @@ body {
 }
 
 .logo-link:visited {
-	color: var(--off-black) !important;
+	color: white !important;
 }
 
 .nav {
 	color: var(--off-black) !important;
+	align-items: center !important;
 }
 
 .nav-link {
-	font-family: "consolas" !important;
 	font-weight: 400 !important;
 	padding: 0 20px;
 }
 
 .burger-link {
 	padding: 10px !important;
-
 }
 
 .burger-link:hover {
@@ -88,7 +86,7 @@ body {
 
 .nav-socials a,
 .nav-socials a:visited {
-	color: var(--secondary);
+	color: var(--primary);
 }
 
 .nav-socials a:hover {
@@ -96,20 +94,14 @@ body {
 	transform: scale(1.1);
 }
 
-.nav-button {
-	border: none !important;
-}
-
 .section-title {
+	height: 50px;
 	text-align: left;
-	font-family: "consolas" !important;
 	font-weight: 500 !important;
 	color: var(--primary);
-	margin-bottom: 30px !important;
-	font-size: 2.75rem !important;
+	font-size: 2rem !important;
 	letter-spacing: 1px !important;
 }
-
 
 .sub-heading {
 	color: #007ea7 !important;
@@ -147,7 +139,5 @@ body {
 	color: var(--primary);
 }
 
-
 @media screen and (max-width: 1275px) {
-	
 }

@@ -3,17 +3,14 @@ import App from "./App.jsx";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 
-import { createTheme, MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
+import '@mantine/carousel/styles.css';
+import { MantineProvider } from "@mantine/core";
 
-const theme = createTheme({
-	fontFamily: "Open Sans",
-	headings: { fontFamily: "Consolas" },
-});
 
 createRoot(document.getElementById("root")!).render(
 	<BrowserRouter>
-		<MantineProvider theme={theme}>
+		<MantineProvider defaultColorScheme="dark">
 			<App />
 		</MantineProvider>
 	</BrowserRouter>

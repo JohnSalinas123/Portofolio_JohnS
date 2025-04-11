@@ -1,0 +1,42 @@
+.nav-button-box {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 3px;
+	height: 40px;
+	margin: 0px 5px;
+	align-items: center;
+}
+
+.nav-button {
+	border: none !important;
+	color: #eeeeee;
+	transition: transform 0.3s ease-in-out;
+}
+
+.nav-button:hover {
+	transform: scale(1.01);
+}
+
+.nav-underline {
+	border: 1.5px solid var(--primary);
+	border-radius: 20px;
+	transition: all;
+	transition-duration: 300ms;
+	visibility: hidden;
+	width: 0;
+}
+
+.active-nav {
+	color: var(--primary) !important;
+}
+
+.nav-button-box:hover .nav-underline {
+	width: 100%;
+	visibility: visible;
+}
+
+.nav-button-box.active .nav-underline {
+	width: 100%;
+	visibility: visible;
+}

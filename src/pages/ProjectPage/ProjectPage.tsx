@@ -10,6 +10,8 @@ import {
 	Modal,
 	Stack,
 	Group,
+	useMantineTheme,
+	useMantineColorScheme,
 } from "@mantine/core";
 
 import projectsData from "../../data/projects_data.json";
@@ -28,10 +30,15 @@ export const ProjectPage = () => {
 		open();
 	};
 
+	const { colorScheme } = useMantineColorScheme();
+	const theme = useMantineTheme();
+	//const titleColor = colorScheme === "light" ? theme.black : theme.white;
+
+	// project dark/light colors for project page
+
 	return (
 		<>
 			<div className="container-center">
-				<div id="projects"></div>
 				<Modal
 					size="xl"
 					opened={opened}
@@ -44,7 +51,13 @@ export const ProjectPage = () => {
 				>
 					{selectedProject && <Stack></Stack>}
 				</Modal>
-				<div className="projects-outer">
+				<div
+					className={`box-container ${
+						colorScheme === "light"
+							? "box-container-light"
+							: "box-container-dark"
+					}`}
+				>
 					<div className="projects-inner">
 						{projectsData.slice(0, 4).map((project) => (
 							<Project
@@ -105,6 +118,12 @@ const Project = ({
 		console.log("Project link handler works");
 	};
 
+	const { colorScheme } = useMantineColorScheme();
+	const theme = useMantineTheme();
+	const titleColor = colorScheme === "light" ? theme.black : theme.white;
+
+	// project dark/light colors for project page
+
 	const renderActionIcon = (location: string) => {
 		if (location == "Github") return <FaGithub />;
 
@@ -114,13 +133,21 @@ const Project = ({
 	return (
 		<>
 			<Paper
-				className="project-box"
+				className={`project-box ${
+					colorScheme === "light" ? "project-box-light" : "project-box-dark"
+				}`}
 				onClick={openProject}
 				component="button"
 				radius="md"
 			>
 				<Box pt="md" className="project-image-box">
-					<div className="project-image-inner">
+					<div
+						className={`project-image-inner ${
+							colorScheme === "light"
+								? "project-image-inner-light"
+								: "project-image-inner-dark"
+						}`}
+					>
 						<Image className="project-image image-dim" src={src} alt={alt} />
 					</div>
 				</Box>
@@ -128,7 +155,11 @@ const Project = ({
 				<Box p="md" className="project-footer">
 					<div className="project-text-header">
 						<Group justify="space-between" wrap="nowrap">
-							<Title order={3} className="project-title c-white">
+							<Title
+								order={3}
+								className="project-title"
+								style={{ color: titleColor }}
+							>
 								{title}
 							</Title>
 							<div className="project-links">
@@ -152,9 +183,7 @@ const Project = ({
 							</div>
 						</Group>
 
-						<Text className="project-short-descrip c-white">
-							{short_descrip}
-						</Text>
+						<Text className="project-short-descrip">{short_descrip}</Text>
 					</div>
 					<div className="project-skills">
 						<div className="project-skills-list">

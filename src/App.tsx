@@ -3,31 +3,38 @@ import { StudyLogPage } from "./pages/StudyLogPage/StudyLogPage.tsx";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useDisclosure } from "@mantine/hooks";
 import { Link as RouterLink } from "react-router-dom";
+import cx from "clsx";
 
 import {
 	Stack,
 	useMantineColorScheme,
 	useComputedColorScheme,
 	ActionIcon,
+	useMantineTheme,
 } from "@mantine/core";
 
 import { AppShell, Burger, Group, Text, Image } from "@mantine/core";
 
 import { FaLinkedin, FaGithub, FaLaptopCode, FaBook } from "react-icons/fa";
-import { IoPersonSharp } from "react-icons/io5";
+import { IoMoonOutline, IoPersonSharp, IoSunnyOutline } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
 import { MouseEvent } from "react";
 
 import RootLayout from "./layouts/RootLayout";
 
 import "./App.scss";
+import classes from "./App.module.css";
 import { NavButton } from "./components/NavButton.tsx";
 
 function App() {
 	const { setColorScheme } = useMantineColorScheme();
-	const computedColorScheme = useComputedColorScheme("dark", {
+	const computedColorScheme = useComputedColorScheme("light", {
 		getInitialValueInEffect: true,
 	});
+
+	const { colorScheme } = useMantineColorScheme();
+	const theme = useMantineTheme();
+	const logoColor = colorScheme === "light" ? theme.black : theme.white;
 
 	const [mobileOpened, { toggle: toggleMobile }] = useDisclosure(false);
 	const [desktopOpened, { toggle: toggleDesktop }] = useDisclosure(true);
@@ -59,11 +66,9 @@ function App() {
 				}}
 				styles={{
 					header: {
-						backgroundColor: "var(--nav-bg)",
 						fontFamily: "consolas",
 					},
 					navbar: {
-						backgroundColor: "var(--nav-bg)",
 						fontFamily: "consolas",
 					},
 				}}
@@ -89,7 +94,7 @@ function App() {
 										radius={"50%"}
 									/>
 									<Stack gap={0} align="left">
-										<Text size="lg" className="logo-title">
+										<Text size="lg" style={{ color: logoColor }}>
 											John Salinas
 										</Text>
 										<Text size="sm" c="var(--primary)">
@@ -112,6 +117,19 @@ function App() {
 									active={location.pathname === "/studylog"}
 									to="/studylog"
 								/>
+								<ActionIcon
+									onClick={() =>
+										setColorScheme(
+											computedColorScheme === "light" ? "dark" : "light"
+										)
+									}
+									variant="default"
+									size="lg"
+									aria-label="Toggle color scheme"
+								>
+									<IoSunnyOutline className={cx(classes.icon, classes.light)} />
+									<IoMoonOutline className={cx(classes.icon, classes.dark)} />
+								</ActionIcon>
 								<Group className="nav-socials">
 									<ActionIcon
 										onClick={(e) => {

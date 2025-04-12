@@ -10,7 +10,6 @@ import {
 	Title,
 	Text,
 	Divider,
-	Stack,
 } from "@mantine/core";
 
 // import learning ndoe data from json
@@ -40,7 +39,7 @@ export const StudyLogPage = () => {
 	return (
 		<>
 			<div className="container-center">
-				<div className="projects-outer">
+				<div className="box-container">
 					<div className="studylog-display" role="group" aria-label="studylog">
 						<SegmentedControl
 							value={activeTopic}

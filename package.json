@@ -19,6 +19,7 @@
 		"@tsparticles/basic": "^3.3.0",
 		"@tsparticles/react": "^3.0.0",
 		"@vitejs/plugin-react-swc": "^3.7.2",
+		"clsx": "^2.1.1",
 		"embla-carousel-react": "^7.1.0",
 		"framer-motion": "^11.15.0",
 		"motion": "^11.15.0",

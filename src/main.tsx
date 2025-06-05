@@ -29,6 +29,7 @@ const theme = createTheme({
 	colors: {
 		primary,
 	},
+	fontFamily: 'Noto Sans, Noto Sans Fallback, system-ui, sans-serif',
 	defaultRadius: "md",
 	autoContrast: true,
 });

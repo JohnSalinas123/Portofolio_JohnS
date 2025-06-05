@@ -106,13 +106,16 @@ a {
 }
 
 .container-center {
-	max-width: 1200px;
-	height: calc(100vh - 60px);
+	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	scrollbar-width: thin;
 	scrollbar-color: grey transparent;
 	overflow-y: scroll;
+	padding-left: 5px;
+	padding-right: 5px;
+	display: flex;
+	justify-content: center;
 }
 
 .container-center::-webkit-scrollbar {
@@ -133,6 +136,13 @@ a {
 .container-center::-webkit-scrollbar-button {
 	display: none;
 	height: 0;
+}
+
+.content-container {
+	padding-top: 114px;
+	padding-bottom: 25px;
+	max-width: 1200px;
+	height: 100vh;
 }
 
 .box-container {

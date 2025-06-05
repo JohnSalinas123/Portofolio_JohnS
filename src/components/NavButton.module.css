@@ -10,12 +10,12 @@
 
 .nav-button {
 	border: none !important;
-	color: #eeeeee;
 	transition: transform 0.3s ease-in-out;
+	color: inherit;
 }
 
-.nav-button:hover {
-	transform: scale(1.01);
+.nav-button:visited {
+	color: inherit;
 }
 
 .nav-underline {
@@ -39,4 +39,8 @@
 .nav-button-box.active .nav-underline {
 	width: 100%;
 	visibility: visible;
+}
+
+.forward-slash {
+	font-size: 1.5rem;
 }

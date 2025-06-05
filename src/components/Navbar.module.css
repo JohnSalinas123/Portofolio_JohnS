@@ -1,0 +1,17 @@
+.nav-outer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav {
+	margin-top: 25px !important;
+    margin-bottom: 25px !important;
+	height: 64px !important;
+    max-width: 1200px !important;
+    flex-grow: 1;
+    display: flex !important;
+    align-items: center;
+    padding: 0 20px;
+}

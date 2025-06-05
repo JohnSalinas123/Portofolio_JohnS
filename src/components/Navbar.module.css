@@ -3,11 +3,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+	-webkit-backdrop-filter: blur(4px);
 }
 
 .nav {
 	margin-top: 25px !important;
-    margin-bottom: 25px !important;
 	height: 64px !important;
     max-width: 1200px !important;
     flex-grow: 1;

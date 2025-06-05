@@ -18,7 +18,12 @@ export function Navbar() {
                         <NavButton name={"hobby"} to={"/hobby"} />
                     </Group>
                     <Group gap={12}>
-                        <Text>John Salinas</Text>
+                        <Group gap={8}>
+                            <Text>John Salinas</Text>
+                            <Text>&#183;</Text>
+                            <Text>Software Developer</Text>
+                        </Group>
+                        
                         <Divider orientation="vertical"/>
                         <ActionIcon variant="subtle" aria-label="Settings">
                             <IconBrandLinkedinFilled style={{ width: '70%', height: '70%' }} stroke={1.5} color="#8A9299"/>

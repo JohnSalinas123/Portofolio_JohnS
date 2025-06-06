@@ -21,11 +21,11 @@ import { FaAppStoreIos, FaGithub } from "react-icons/fa";
 
 export const ProjectPage = () => {
 	const [opened, { open, close }] = useDisclosure(false);
-	const [selectedProject, setSelectedProject] = useState<ProjectProps | null>(
+	const [selectedProject, setSelectedProject] = useState<ProjectData | null>(
 		null
 	);
 
-	const handleOpenProject = (project: ProjectProps) => {
+	const handleOpenProject = (project: ProjectData) => {
 		setSelectedProject(project);
 		open();
 	};
@@ -38,7 +38,6 @@ export const ProjectPage = () => {
 
 	return (
 		<>
-			<div className="container-center">
 				<Modal
 					size="xl"
 					opened={opened}
@@ -52,11 +51,6 @@ export const ProjectPage = () => {
 					{selectedProject && <Stack></Stack>}
 				</Modal>
 				<div
-					className={`box-container ${
-						colorScheme === "light"
-							? "box-container-light"
-							: "box-container-dark"
-					}`}
 				>
 					<div className="projects-inner">
 						{projectsData.slice(0, 4).map((project) => (
@@ -68,7 +62,6 @@ export const ProjectPage = () => {
 						))}
 					</div>
 				</div>
-			</div>
 		</>
 	);
 };
@@ -133,20 +126,17 @@ const Project = ({
 	return (
 		<>
 			<Paper
-				className={`project-box ${
-					colorScheme === "light" ? "project-box-light" : "project-box-dark"
-				}`}
+				className={`project-box`}
 				onClick={openProject}
 				component="button"
 				radius="md"
 			>
 				<Box pt="md" className="project-image-box">
 					<div
-						className={`project-image-inner ${
-							colorScheme === "light"
+						className={`project-image-inner ${colorScheme === "light"
 								? "project-image-inner-light"
 								: "project-image-inner-dark"
-						}`}
+							}`}
 					>
 						<Image className="project-image image-dim" src={src} alt={alt} />
 					</div>
@@ -174,7 +164,7 @@ const Project = ({
 											rel="noopener noreferrer"
 											radius="md"
 											size="lg"
-											variant="outline"
+											variant="subtle"
 											className="project-link"
 										>
 											{renderActionIcon(link.location)}
@@ -189,51 +179,16 @@ const Project = ({
 						<div className="project-skills-list">
 							{skills &&
 								skills.map((skill, index) => (
-									<Paper
-										key={index}
-										shadow="xs"
-										radius="xl"
-										withBorder
-										className="project-skills-item image-dim"
-									>
-										<Text className="skill-item-name">{skill.name}</Text>
-										<Image
-											src={`icons/${skill.icon_src}`}
-											style={{
-												width: skill.size,
-												height: skill.size,
-											}}
-										/>
-									</Paper>
+									<>	
+										<div className="project-skills-item" key={index}>
+											<Text className="skill-item-text">{skill.name}</Text>
+										</div>
+										
+
+									</>
 								))}
 						</div>
 					</div>
-					{/** 
-					<div className="project-links inter-400">
-						{links &&
-							links.map((link) => (
-								<Button
-									key={link.url}
-									onClick={(e) => {
-										handleProjectLinkClick(e, link.url);
-									}}
-									rel="noopener noreferrer"
-									radius="md"
-									size="sm"
-									variant="outline"
-									style={{
-										borderWidth: "1px",
-									}}
-									className="project-link c-white bor-white"
-									rightSection={
-										<FiExternalLink className="project-link-icon" />
-									}
-								>
-									{link.location}
-								</Button>
-							))}
-					</div>
-					**/}
 				</Box>
 			</Paper>
 		</>

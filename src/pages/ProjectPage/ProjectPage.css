@@ -9,35 +9,20 @@
 .project-box {
 	display: flex !important;
 	flex-direction: row-reverse !important;
-	transition: all 0.33s ease;
-	background-color: #2d2d2d99 !important;
 	margin-bottom: 20px;
 	overflow: hidden;
 	border: 1px solid rgba(64, 64, 64, 0.6);
+	transition: background-color 0.3s ease-in-out;
+	cursor: pointer;
 }
 
-.project-box-dark {
+.project-box:hover {
 	background-color: #2d2d2d99 !important;
-	border: 1px solid rgba(64, 64, 64, 0.6);
-	box-shadow: var(--shadow-elevation-medium-dark) !important;
-}
-
-.project-box-light {
-	background-color: rgba(255, 255, 255, 0.8) !important;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	box-shadow: var(--shadow-elevation-medium-light) !important;
 }
 
 .project-box:last-child {
 	margin-bottom: 0;
 }
-
-.project-box:hover {
-	cursor: pointer;
-	transform: scale(1.01);
-	border-color: var(--primary);
-}
-
 .project-box:hover .project-image-inner {
 	transform: translate(10px, -10px) rotate(0.5deg);
 }
@@ -56,10 +41,10 @@
 	top: 20px;
 	width: 100% !important;
 	height: 99%;
-	border-radius: 10px 0 0 0 !important;
 	transition: transform 0.33s ease;
 	will-change: transform;
 	overflow: hidden;
+	border-radius: 10px 0 0 10px;
 }
 
 .project-image-inner-dark {
@@ -108,6 +93,10 @@
 	margin-right: 10px;
 }
 
+.project-link {
+	color: #8A9299 !important; 
+}
+
 .project-link-icon {
 	height: 0.9rem;
 	width: 0.9rem;
@@ -122,7 +111,6 @@
 
 .project-title {
 	font-weight: 600 !important;
-	font-family: "Montserrat" !important;
 }
 
 .project-short-descrip {
@@ -131,7 +119,7 @@
 	text-overflow: ellipsis;
 	height: 105px;
 	color: var(--white) !important;
-	font-weight: 400 !important;
+	font-weight: 300 !important;
 	font-size: 16px !important;
 	overflow-y: auto;
 	scrollbar-width: thin;
@@ -172,19 +160,17 @@
 	justify-content: center !important;
 	align-items: center !important;
 	flex-direction: row !important;
-	font-family: "consolas";
 	gap: 5px;
 	padding: 0px 10px;
 	border-color: var(--primary) !important;
-	border-radius: 10px;
+	border-radius: 20px !important;
 	height: 27px;
-	cursor: default;
-	background-color: transparent !important;
+	background-color: #3488e23a !important;
 	box-shadow: var(--shadow-elevation-high);
-	color: var(--primary);
+	color: #3ea8ff !important;
 }
 
-.skill-item-name {
+.skill-item-text {
 	font-size: 14px !important;
 }
 

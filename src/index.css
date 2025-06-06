@@ -116,6 +116,8 @@ a {
 	padding-right: 5px;
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
 
 .container-center::-webkit-scrollbar {

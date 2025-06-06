@@ -1,5 +1,5 @@
 import { ProjectPage } from "./pages/ProjectPage/ProjectPage.tsx";
-import { StudyLogPage } from "./pages/StudyLogPage/StudyLogPage.tsx";
+import { StudyLogPage, StudyPage } from "./pages/StudyLogPage/StudyPage.tsx";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useDisclosure } from "@mantine/hooks";
 import { Link as RouterLink } from "react-router-dom";
@@ -15,16 +15,11 @@ import {
 } from "@mantine/core";
 
 import { AppShell, Burger, Group, Text, Image } from "@mantine/core";
-
-import { FaLinkedin, FaGithub, FaLaptopCode, FaBook } from "react-icons/fa";
-import { IoMoonOutline, IoPersonSharp, IoSunnyOutline } from "react-icons/io5";
-import { IoIosMail } from "react-icons/io";
 import { MouseEvent } from "react";
 
 import RootLayout from "./layouts/RootLayout";
 
 import "./App.scss";
-import classes from "./App.module.css";
 import { NavButton } from "./components/NavButton.tsx";
 
 function App() {
@@ -70,19 +65,16 @@ function App() {
 				<AppShell.Navbar py="md" px={4}>
 					<NavButton
 						name={"Projects"}
-						active={location.pathname === "/projects"}
 						to="/projects"
 						onClick={toggleMobile}
 					/>
 					<NavButton
 						name={"About"}
-						active={location.pathname === "/about"}
 						to="/about"
 						onClick={toggleMobile}
 					/>
 					<NavButton
 						name={"StudyLog"}
-						active={location.pathname === "/studylog"}
 						to="/studylog"
 						onClick={toggleMobile}
 					/>
@@ -93,7 +85,7 @@ function App() {
 						<Route path="/" element={<RootLayout />}>
 							<Route index element={<Navigate to="/projects" replace />} />
 							<Route path="/projects" element={<ProjectPage />} />
-							<Route path="/study" element={<StudyLogPage />} />
+							<Route path="/study" element={<StudyPage />} />
 						</Route>
 					</Routes>
 				</AppShell.Main>

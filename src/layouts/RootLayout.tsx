@@ -6,8 +6,8 @@ const RootLayout = () => {
 	return (
 		<>
 			<main>
-				<Navbar />
 				<div className="container-center">
+					<Navbar />
 					<div className="content-container">
 						<Outlet />
 						<Space h="25px" />

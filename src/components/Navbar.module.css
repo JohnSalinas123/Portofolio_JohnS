@@ -4,6 +4,9 @@
     justify-content: center;
     align-items: center;
     position: fixed;
+    top: 0;
+    padding-left: inherit;
+    padding-right: inherit;
     z-index: 1000;
     backdrop-filter: blur(4px);
 	-webkit-backdrop-filter: blur(4px);

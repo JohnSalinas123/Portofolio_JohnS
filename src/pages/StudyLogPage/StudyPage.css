@@ -1,8 +1,7 @@
 .study-outer {
-	width: 600px;
 	display: flex;
 	flex-direction: column;
-	gap: 40px;;
+	gap: 20px;
 }
 
 .studylog-display {
@@ -25,11 +24,9 @@
 }
 
 .study-node {
-	width: 100%;
+	max-width: 600px;
 	border-radius: 20px;
-	padding: 5px;
-	display: flex;
-	flex-direction: column;
+	padding: 15px;
 	gap: 5px;
 }
 
@@ -37,6 +34,13 @@
 	text-align: left;
 	font-size: 18px !important;
 	font-weight: 600 !important;
+}
+
+.study-time {
+	width: 150px;
+	min-width: 150px;
+	text-align: end !important;
+	padding-top: 10px !important;
 }
 
 .study-category {
@@ -48,6 +52,7 @@
 	font-weight: 400;
 	white-space: pre-wrap;
 	padding-left: 10px;
+	width: 100%;
 }
 
 .study-node-text:hover {

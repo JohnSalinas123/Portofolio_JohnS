@@ -13,9 +13,9 @@ export function Navbar() {
                 <Group justify="space-between" w="100%">
                     <Group >
                         <NavButton name={"Projects"} to={"/projects"} />
-                        <NavButton name={"study"} to={"/study"} />
-                        <NavButton name={"about"} to={"/about"} />
-                        <NavButton name={"hobby"} to={"/hobby"} />
+                        <NavButton name={"Study"} to={"/study"} />
+                        <NavButton name={"About"} to={"/about"} />
+                        <NavButton name={"Hobby"} to={"/hobby"} />
                     </Group>
                     <Group gap={12}>
                         <Group gap={8}>
@@ -25,15 +25,18 @@ export function Navbar() {
                         </Group>
                         
                         <Divider orientation="vertical"/>
-                        <ActionIcon variant="subtle" aria-label="Settings">
+                        <ActionIcon variant="subtle" aria-label="Settings" component="a" href="https://www.linkedin.com/in/johnsalinas123/" target="_blank"
+										rel="noreferrer">
                             <IconBrandLinkedinFilled style={{ width: '70%', height: '70%' }} stroke={1.5} color="#8A9299"/>
                         </ActionIcon>
                         <Divider orientation="vertical"/>
-                        <ActionIcon variant="subtle" aria-label="Settings">
+                        <ActionIcon variant="subtle" aria-label="Settings" component="a" href="mailto: salinasjohn257@gmail.com" target="_blank"
+										rel="noreferrer">
                             <IconMailFilled style={{ width: '70%', height: '70%' }} stroke={1.5} color="#8A9299"/>
                         </ActionIcon>
                         <Divider orientation="vertical"/>
-                        <ActionIcon variant="subtle" aria-label="Settings">
+                        <ActionIcon variant="subtle" aria-label="Settings" component="a" href="https://github.com/JohnSalinas123" target="_blank"
+										rel="noreferrer">
                             <IconBrandGithubFilled style={{ width: '70%', height: '70%' }} stroke={1.5} color="#8A9299"/>
                         </ActionIcon>
                     </Group>

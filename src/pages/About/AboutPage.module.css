@@ -1,0 +1,27 @@
+.outer {
+    flex-wrap: nowrap !important;
+    width: 100%;
+}
+
+.left {
+    width: 40%;
+}
+
+.right {
+    width: 60%;
+}
+
+.profile-pic {
+    padding: 2px;
+    background-color: #1376cd;
+    width: 100px;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.github {
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+
+}

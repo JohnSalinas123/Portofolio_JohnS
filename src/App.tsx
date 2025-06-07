@@ -21,6 +21,7 @@ import RootLayout from "./layouts/RootLayout";
 
 import "./App.scss";
 import { NavButton } from "./components/NavButton.tsx";
+import { AboutPage } from "./pages/About/AboutPage.tsx";
 
 function App() {
 	const { setColorScheme } = useMantineColorScheme();
@@ -86,6 +87,7 @@ function App() {
 							<Route index element={<Navigate to="/projects" replace />} />
 							<Route path="/projects" element={<ProjectPage />} />
 							<Route path="/study" element={<StudyPage />} />
+							<Route path="/about" element={<AboutPage />} />
 						</Route>
 					</Routes>
 				</AppShell.Main>

@@ -1,21 +1,24 @@
 import { ActionIcon, Divider, Group, Paper,Text } from "@mantine/core";
 
-import { IconBrandGithubFilled, IconBrandLinkedinFilled, IconMailFilled, IconSunFilled } from '@tabler/icons-react';
+import { IconBrandGithubFilled, IconBrandLinkedinFilled, IconMailFilled } from '@tabler/icons-react';
 
 import classes from './Navbar.module.css'
 import { NavButton } from "./NavButton";
+import { useLocation } from "react-router-dom";
 
 export function Navbar() {
 
+    const location = useLocation();
+    const isProjects = location.pathname === "/projects";
+
     return (
         <div className={classes['nav-outer']}>
-            <Paper withBorder className={classes.nav}>
+            <Paper withBorder className={`${classes.nav} ${isProjects ? classes['nav-outer-blur-bottom'] : ""}`}>
                 <Group justify="space-between" w="100%">
                     <Group >
                         <NavButton name={"Projects"} to={"/projects"} />
                         <NavButton name={"Study"} to={"/study"} />
                         <NavButton name={"About"} to={"/about"} />
-                        <NavButton name={"Hobby"} to={"/hobby"} />
                     </Group>
                     <Group gap={12}>
                         <Group gap={8}>

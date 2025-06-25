@@ -1,5 +1,3 @@
-import "./ProjectPage.css";
-
 import {
 	Image,
 	Paper,
@@ -12,12 +10,18 @@ import {
 	Group,
 	useMantineTheme,
 	useMantineColorScheme,
+	Space,
+	Pill,
+	TextInput,
 } from "@mantine/core";
 
 import projectsData from "../../data/projects_data.json";
 import { useDisclosure } from "@mantine/hooks";
 import { MouseEvent, useState } from "react";
 import { FaAppStoreIos, FaGithub } from "react-icons/fa";
+
+import classes from './ProjectPage.module.css'
+import { IconSearch } from "@tabler/icons-react";
 
 export const ProjectPage = () => {
 	const [opened, { open, close }] = useDisclosure(false);
@@ -30,14 +34,13 @@ export const ProjectPage = () => {
 		open();
 	};
 
-	const { colorScheme } = useMantineColorScheme();
-	const theme = useMantineTheme();
-	//const titleColor = colorScheme === "light" ? theme.black : theme.white;
+	//const projectCategories = projectsData.
 
 	// project dark/light colors for project page
 
 	return (
-		<>
+		<>	
+			
 				<Modal
 					size="xl"
 					opened={opened}
@@ -50,17 +53,27 @@ export const ProjectPage = () => {
 				>
 					{selectedProject && <Stack></Stack>}
 				</Modal>
-				<div
-				>
-					<div className="projects-inner">
-						{projectsData.slice(0, 4).map((project) => (
-							<Project
-								key={project.title}
-								{...project}
-								openProject={() => handleOpenProject(project)}
-							/>
-						))}
-					</div>
+				<div className={classes['controls']}>
+						<div className={classes['categories']}>
+							<Pill className={classes.pill}>Web Development</Pill>
+							<Pill className={classes.pill}>Machine Learning</Pill>
+							<Pill className={classes.pill}>Backend</Pill>
+							<Pill className={classes.pill}>CLI</Pill>
+							<Pill className={classes.pill}>iOS</Pill>
+						</div>
+						<TextInput
+						className={classes.search} 
+						leftSection={<IconSearch stroke={2} />}
+						/>	
+				</div>
+				<div className={classes.projects}>
+					{projectsData.slice(0, 4).map((project) => (
+						<Project
+							key={project.title}
+							{...project}
+							openProject={() => handleOpenProject(project)}
+						/>
+					))}
 				</div>
 		</>
 	);
@@ -126,33 +139,29 @@ const Project = ({
 	return (
 		<>
 			<Paper
-				className={`project-box`}
+				className={classes['project-box']}
 				onClick={openProject}
-				component="button"
 				radius="md"
 			>
-				<Box pt="md" className="project-image-box">
+				<Box pt="md" className={classes["project-image-box"]}>
 					<div
-						className={`project-image-inner ${colorScheme === "light"
-								? "project-image-inner-light"
-								: "project-image-inner-dark"
-							}`}
+						className={classes['project-image-inner']}
 					>
-						<Image className="project-image image-dim" src={src} alt={alt} />
+						<Image className={classes["project-image image-dim"]} src={src} alt={alt} />
 					</div>
 				</Box>
 
-				<Box p="md" className="project-footer">
-					<div className="project-text-header">
+				<Box p="md" className={classes["project-footer"]}>
+					<div className={classes["project-text-header"]}>
 						<Group justify="space-between" wrap="nowrap">
 							<Title
 								order={3}
-								className="project-title"
+								className={classes["project-title"]}
 								style={{ color: titleColor }}
 							>
 								{title}
 							</Title>
-							<div className="project-links">
+							<div className={classes["project-links"]}>
 								{links &&
 									links.map((link) => (
 										<ActionIcon
@@ -165,7 +174,7 @@ const Project = ({
 											radius="md"
 											size="lg"
 											variant="subtle"
-											className="project-link"
+											className={classes["project-link"]}
 										>
 											{renderActionIcon(link.location)}
 										</ActionIcon>
@@ -173,19 +182,15 @@ const Project = ({
 							</div>
 						</Group>
 
-						<Text className="project-short-descrip">{short_descrip}</Text>
+						<Text className={classes["project-short-descrip"]}>{short_descrip}</Text>
 					</div>
-					<div className="project-skills">
-						<div className="project-skills-list">
+					<div className={classes["project-skills"]}>
+						<div className={classes["project-skills-list"]}>
 							{skills &&
 								skills.map((skill, index) => (
-									<>	
-										<div className="project-skills-item" key={index}>
-											<Text className="skill-item-text">{skill.name}</Text>
+										<div className={classes["project-skills-item"]} key={index}>
+											<Text className={classes["skill-item-text"]}>{skill.name}</Text>
 										</div>
-										
-
-									</>
 								))}
 						</div>
 					</div>

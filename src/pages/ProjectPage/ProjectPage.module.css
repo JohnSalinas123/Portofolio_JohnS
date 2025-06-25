@@ -1,6 +1,35 @@
-.projects-inner {
+
+.controls {
+	height: 80px;
+	margin-bottom: 25px;
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	gap: 20px;
+	background-color: #242424;
+}
+
+.search {
+	width: 100%;
+}
+
+.categories {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	overflow-y: scroll;
+	gap: 10px;
+}
+
+.pill {
+	background-color: rgba(128, 128, 128, 0.242) !important;
+	cursor:pointer;
+}
+
+.projects {
+	height: calc(100vh - 114px - 105px - 25px) !important;
 	border-radius: 0;
-	overflow-y: auto;
+	overflow-y: scroll;
 	overflow-x: hidden;
 	height: 100%;
 	padding: 5px 15px;

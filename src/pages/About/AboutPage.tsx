@@ -12,7 +12,7 @@ export function AboutPage() {
             <Group align="flex-start" className={classes['outer']}>
                 <div className={classes.left}>
                     <Paper withBorder pl={20} pr={20} pb={20}>
-                        <Stack className="">
+                        <Stack gap={5}>
                             <Group m={20} justify="center" h={100}>
                                 <div className={classes["profile-pic"]}>
                                     <Image radius="9999px" src="other_images/profile_picture.png" />
@@ -20,21 +20,22 @@ export function AboutPage() {
                             </Group>
                             <Text>John Salinas</Text>
                             <Text>Software Developer</Text>
+                            <Text>Main Languages: JS/TS, Python, Java</Text>
+                            <Text>Frameworks: React, Express, </Text>
 
                         </Stack>
                     </Paper>
                 </div>
                 <div className={classes.right}>
                     <Stack>
-                       
+                       <Image h={125} w={125} src="./badges/aws-educate-introduction-to-cloud-101.png" />
                     </Stack>
                 </div>
             </Group>
             <Paper withBorder className={classes.github}>
                     <GitHubCalendar username="grubersjoe" />
                     <Text c="#8A9299">Only shows public contributions</Text>
-                    <img src="https://github-readme-stats.vercel.app/api?username=JohnSalinas123&show_icons=true&theme=default" alt="GitHub Stats" />
-                    <img src="https://streak-stats.demolab.com/?user=JohnSalinas123&theme=default" alt="GitHub Streak" />
+                    
                 </Paper>
             </Stack>
         </>

@@ -3,8 +3,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: inherit;
-    padding-right: inherit;
     background-color: rgb(36,36,36);
     margin-top: 25px !important;
     margin-bottom: 25px !important;

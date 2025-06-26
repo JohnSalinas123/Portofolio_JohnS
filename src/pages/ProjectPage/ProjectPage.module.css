@@ -1,9 +1,10 @@
 
 .controls {
+	max-width: 1200px;
+	width: 100%;
 	height: 80px;
 	margin-bottom: 25px;
 	display: flex;
-	flex-grow: 1;
 	flex-direction: column;
 	gap: 20px;
 	background-color: #242424;
@@ -11,6 +12,7 @@
 
 .search {
 	width: 100%;
+	flex-grow: 1;
 }
 
 .categories {
@@ -26,6 +28,10 @@
 	cursor:pointer;
 }
 
+.pill-active {
+	color: #3ea8ff !important;
+}
+
 .projects {
 	height: calc(100vh - 114px - 105px - 25px) !important;
 	border-radius: 0;
@@ -33,6 +39,7 @@
 	overflow-x: hidden;
 	height: 100%;
 	padding: 5px 15px;
+	max-width: 1200px;
 }
 
 .project-box {

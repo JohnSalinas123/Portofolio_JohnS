@@ -10,33 +10,79 @@ import {
 	Group,
 	useMantineTheme,
 	useMantineColorScheme,
-	Space,
 	Pill,
 	TextInput,
 } from "@mantine/core";
 
 import projectsData from "../../data/projects_data.json";
 import { useDisclosure } from "@mantine/hooks";
-import { MouseEvent, useState } from "react";
+import { MouseEvent, useEffect, useState } from "react";
 import { FaAppStoreIos, FaGithub } from "react-icons/fa";
 
 import classes from './ProjectPage.module.css'
 import { IconSearch } from "@tabler/icons-react";
+
+interface ProjectItem {
+	src: string,
+	title: string,
+	tags: string[],
+	short_descrip: string,
+	alt: string,
+	links: [{
+		location: string,
+		url: string
+	}],
+	skills: [{
+		name: string,
+		icon_src: string,
+		size: number
+	}]
+}
 
 export const ProjectPage = () => {
 	const [opened, { open, close }] = useDisclosure(false);
 	const [selectedProject, setSelectedProject] = useState<ProjectData | null>(
 		null
 	);
+	const [searchInput, setSearchInput] = useState<string>("")
+	const [activeCategory, setActiveCategory] = useState<string>('')
 
 	const handleOpenProject = (project: ProjectData) => {
 		setSelectedProject(project);
 		open();
-	};
+	};	
 
-	//const projectCategories = projectsData.
+	const categorySet = new Set<string>()
+	for (const project of projectsData) {
+		project.tags.forEach(tag => categorySet.add(tag));
+	}
 
-	// project dark/light colors for project page
+	
+	// search title, short_decrip, tags, skills.name
+	//const lowerSearchInput = searchInput.toLowerCase()
+	const filteredProjects = projectsData.filter(project => {
+		if (activeCategory != "") {
+			return project.tags.includes(activeCategory)
+		}		
+
+		const lowerSearchInput = searchInput.toLowerCase()
+		return project.title.toLowerCase().includes(lowerSearchInput) ||
+		project.short_descrip.toLowerCase().includes(lowerSearchInput) ||
+		project.tags.some(tag => tag.toLowerCase().includes(lowerSearchInput)) ||
+		project.skills.some(skillObj => skillObj.name.toLowerCase().includes(lowerSearchInput))
+	})
+
+	function selectCategory(cat: string) {
+		// reset search input
+		setSearchInput("")
+
+		if (activeCategory == cat) {
+			setActiveCategory("")
+			return
+		}
+
+		setActiveCategory(cat)
+	}
 
 	return (
 		<>	
@@ -55,19 +101,20 @@ export const ProjectPage = () => {
 				</Modal>
 				<div className={classes['controls']}>
 						<div className={classes['categories']}>
-							<Pill className={classes.pill}>Web Development</Pill>
-							<Pill className={classes.pill}>Machine Learning</Pill>
-							<Pill className={classes.pill}>Backend</Pill>
-							<Pill className={classes.pill}>CLI</Pill>
-							<Pill className={classes.pill}>iOS</Pill>
+							{categorySet && Array.from(categorySet).map((cat, index) => {
+								return <Pill key={index} className={`${classes.pill} ${activeCategory === cat ? classes['pill-active'] : ''}`}
+								onClick={() => selectCategory(cat)}
+								>{cat}</Pill>
+							})}
 						</div>
 						<TextInput
 						className={classes.search} 
 						leftSection={<IconSearch stroke={2} />}
+						onChange={e => setSearchInput(e.target.value)}
 						/>	
 				</div>
 				<div className={classes.projects}>
-					{projectsData.slice(0, 4).map((project) => (
+					{filteredProjects.slice(0, 4).map((project) => (
 						<Project
 							key={project.title}
 							{...project}

@@ -12,22 +12,20 @@
 			}
 		],
 		"skills": [
-			{ "name": "React", "icon_src": "react_icon.svg", "size": 16 },
-			{ "name": "Go", "icon_src": "go_icon.svg", "size": 16 },
-			{ "name": "Gin", "icon_src": "gin_icon.svg", "size": 16 },
-			{ "name": "PyTorch", "icon_src": "pytorch_icon.svg", "size": 16 },
+			{ "name": "React", "size": 16 },
+			{ "name": "Go",  "size": 16 },
+			{ "name": "Gin",  "size": 16 },
+			{ "name": "PyTorch",  "size": 16 },
 			{
-				"name": "Hugging Face",
-				"icon_src": "huggingface_icon.svg",
+				"name": "NLP",
 				"size": 16
 			},
-			{ "name": "PostgreSQL", "icon_src": "postgresql_icon.svg", "size": 16 },
+			{ "name": "PostgreSQL", "size": 16 },
 			{
 				"name": "gorilla/websocket",
-				"icon_src": "websocket_icon.svg",
 				"size": 16
 			},
-			{ "name": "Clerk Auth", "icon_src": "clerk_icon.svg", "size": 16 }
+			{ "name": "Clerk Auth", "size": 16 }
 		]
 	},
 	{
@@ -43,12 +41,12 @@
 			}
 		],
 		"skills": [
-			{ "name": "Swift", "icon_src": "swift_icon.svg", "size": 16 },
-			{ "name": "SwiftUI", "icon_src": "swiftui_icon.svg", "size": 20 },
-			{ "name": "Django", "icon_src": "django_icon.svg", "size": 16 },
-			{ "name": "Xcode", "icon_src": "xcode_icon.svg", "size": 16 },
-			{ "name": "Figma", "icon_src": "figma_icon.svg", "size": 16 },
-			{ "name": "Trello", "icon_src": "trello_icon.svg", "size": 16 }
+			{ "name": "Swift", "size": 16 },
+			{ "name": "SwiftUI", "size": 20 },
+			{ "name": "Django", "size": 16 },
+			{ "name": "Xcode",  "size": 16 },
+			{ "name": "Figma",  "size": 16 },
+			{ "name": "Trello", "size": 16 }
 		]
 	},
 	{
@@ -64,12 +62,12 @@
 			}
 		],
 		"skills": [
-			{ "name": "React", "icon_src": "react_icon.svg", "size": 16 },
-			{ "name": "CSS", "icon_src": "css_icon.svg", "size": 16 },
-			{ "name": "Node.js", "icon_src": "nodejs_icon.svg", "size": 18 },
-			{ "name": "Express", "icon_src": "express_icon.svg", "size": 16 },
-			{ "name": "MongoDB", "icon_src": "mongodb_icon.svg", "size": 16 },
-			{ "name": "Jest", "icon_src": "jest_icon.svg", "size": 16 }
+			{ "name": "React", "size": 16 },
+			{ "name": "CSS", "size": 16 },
+			{ "name": "Node.js", "size": 18 },
+			{ "name": "Express", "size": 16 },
+			{ "name": "MongoDB", "size": 16 },
+			{ "name": "Jest", "size": 16 }
 		]
 	},
 	{
@@ -85,12 +83,34 @@
 			}
 		],
 		"skills": [
-			{ "name": "TypeScript", "icon_src": "typescript_icon.svg", "size": 16 },
-			{ "name": "React", "icon_src": "react_icon.svg", "size": 16 },
-			{ "name": "Node.js", "icon_src": "nodejs_icon.svg", "size": 16 },
-			{ "name": "Express", "icon_src": "express_icon.svg", "size": 16 },
-			{ "name": "MongoDB", "icon_src": "mongodb_icon.svg", "size": 16 },
-			{ "name": "JWT Auth", "icon_src": "jwt_auth_icon.svg", "size": 16 }
+			{ "name": "TypeScript", "size": 16 },
+			{ "name": "React", "size": 16 },
+			{ "name": "Node.js", "size": 16 },
+			{ "name": "Express", "size": 16 },
+			{ "name": "MongoDB", "size": 16 },
+			{ "name": "JWT Auth", "size": 16 }
+		]
+	},
+	{
+		"src": "./Projects/mybookshelf_image.png",
+		"title": "MyBookshelf",
+		"tags": ["Web Development","Desktop", "Frontend", "UI/UX"],
+		"short_descrip": "Placeholder text",
+		"alt": "An image of a pdf library desktop application",
+		"links": [
+			{
+				"location": "Github",
+				"url": "https://github.com/JohnSalinas123/AppTrack"
+			}
+		],
+		"skills": [
+			{ "name": "TypeScript", "size": 16 },
+			{ "name": "React", "size": 16 },
+			{ "name": "Node.js", "size": 16 },
+			{ "name": "Express", "size": 16 },
+			{ "name": "MongoDB", "size": 16 },
+			{ "name": "JWT Auth", "size": 16 }
 		]
 	}
+
 ]

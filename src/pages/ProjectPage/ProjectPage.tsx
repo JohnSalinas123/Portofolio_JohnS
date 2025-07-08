@@ -12,11 +12,12 @@ import {
 	useMantineColorScheme,
 	Pill,
 	TextInput,
+	SimpleGrid,
 } from "@mantine/core";
 
 import projectsData from "../../data/projects_data.json";
 import { useDisclosure } from "@mantine/hooks";
-import { MouseEvent, useEffect, useState } from "react";
+import { MouseEvent, useState } from "react";
 import { FaAppStoreIos, FaGithub } from "react-icons/fa";
 
 import classes from './ProjectPage.module.css'
@@ -114,13 +115,16 @@ export const ProjectPage = () => {
 						/>	
 				</div>
 				<div className={classes.projects}>
-					{filteredProjects.slice(0, 4).map((project) => (
-						<Project
-							key={project.title}
-							{...project}
-							openProject={() => handleOpenProject(project)}
-						/>
-					))}
+					<SimpleGrid cols={3}>
+						{filteredProjects.map((project) => (
+							<Project
+								key={project.title}
+								{...project}
+								openProject={() => handleOpenProject(project)}
+							/>
+						))}
+					</SimpleGrid>
+					
 				</div>
 		</>
 	);
@@ -128,7 +132,6 @@ export const ProjectPage = () => {
 
 interface Skill {
 	name: string;
-	icon_src: string;
 	size: number;
 }
 
@@ -190,24 +193,18 @@ const Project = ({
 				onClick={openProject}
 				radius="md"
 			>
-				<Box pt="md" className={classes["project-image-box"]}>
-					<div
-						className={classes['project-image-inner']}
-					>
-						<Image className={classes["project-image image-dim"]} src={src} alt={alt} />
-					</div>
-				</Box>
-
+				
+				<Image className={classes["image"]} src={src} alt={alt} />
+			
 				<Box p="md" className={classes["project-footer"]}>
 					<div className={classes["project-text-header"]}>
 						<Group justify="space-between" wrap="nowrap">
-							<Title
-								order={3}
-								className={classes["project-title"]}
+							<Text
+								className={classes["title"]}
 								style={{ color: titleColor }}
 							>
 								{title}
-							</Title>
+							</Text>
 							<div className={classes["project-links"]}>
 								{links &&
 									links.map((link) => (

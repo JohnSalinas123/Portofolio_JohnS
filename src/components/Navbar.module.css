@@ -1,18 +1,17 @@
 .nav-outer {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(36,36,36);
-    margin-top: 25px !important;
-    margin-bottom: 25px !important;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 25px !important;
+	margin-bottom: 25px !important;
 }
 
 .nav {
 	height: 64px !important;
-    max-width: 1200px !important;
-    flex-grow: 1;
-    display: flex !important;
-    align-items: center;
-    padding: 0 20px;
+	max-width: 1200px !important;
+	flex-grow: 1;
+	display: flex !important;
+	align-items: center;
+	padding: 0 20px;
 }

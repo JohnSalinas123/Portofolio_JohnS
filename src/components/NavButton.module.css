@@ -18,8 +18,8 @@
 	color: inherit;
 }
 
-.nav-underline {
-	border: 1.5px solid var(--primary);
+.underline {
+	border: 1.5px solid black;
 	border-radius: 20px;
 	transition: all;
 	transition-duration: 300ms;
@@ -27,12 +27,8 @@
 	width: 0;
 }
 
-.active-nav {
-	color: var(--primary) !important;
-}
-
-.nav-button-box:hover .nav-underline {
-	width: 100%;
+.underline-visible {
+	width: 100% !important;
 	visibility: visible;
 }
 

@@ -2,45 +2,46 @@ import { Text, Group } from "@mantine/core";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
 
-import classes from './NavButton.module.css'
+import classes from "./NavButton.module.css";
 
 interface NavButtonProps {
 	name: string;
+	color: string;
 	to: string;
 	onClick?: () => void;
 }
 
-export const NavButton = ({ name, to, onClick }: NavButtonProps) => {
+export const NavButton = ({ name, color, to, onClick }: NavButtonProps) => {
 	const location = useLocation();
-	const [hovered, setHovered] = useState(false);
+	//const [hovered, setHovered] = useState(false);
 
 	const isActive = location.pathname === to;
-
 
 	return (
 		<motion.div
 			className={classes["nav-button-box"]}
-			onHoverStart={() => setHovered(true)}
-			onHoverEnd={() => setHovered(false)}
 		>
 			<motion.div>
 				<RouterLink
 					to={to}
 					onClick={onClick}
-					className={`${classes['nav-button']} ${isActive ? classes['active-nav'] : ""}`}
+					className={`${classes["nav-button"]} ${
+						isActive ? classes["active-nav"] : ""
+					}`}
 				>
-                    <Group gap={0}>
-						<Text className={classes['forward-slash']}>/</Text>
-                        <Text>{name}</Text>
-                    </Group>
+					<Group gap={0}>
+						<Text className={classes["forward-slash"]} c={color}>
+							/
+						</Text>
+						<Text c={color}>{name}</Text>
+					</Group>
 				</RouterLink>
 			</motion.div>
 
 			<div
-				className={`${classes['nav-underline']} ${hovered ? classes["full-w visible"] : ""} ${
-					isActive ? classes["full-w visible"] : ""
+				className={`${classes["underline"]} ${
+					isActive ? classes["underline-visible"] : ""
 				}`}
 			></div>
 		</motion.div>

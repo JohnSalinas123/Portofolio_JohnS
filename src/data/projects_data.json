@@ -2,7 +2,14 @@
 	{
 		"src": "./Projects/linguachat_image.png",
 		"title": "LinguaChat",
-		"tags": ["Web Development", "Machine Learning", "Frontend", "Backend", "NLP", "UI/UX"],
+		"tags": [
+			"Web Development",
+			"Machine Learning",
+			"Frontend",
+			"Backend",
+			"NLP",
+			"UI/UX"
+		],
 		"short_descrip": "A real-time chat translation app designed to bridge language barriers, allowing users to communicate seamlessly across different languages. The app offers translated chats, an easy chat invitation process, and makes use of an inference API powered by translation models. I plan to explore integrating DeepL translation for improved reliability in the future.",
 		"alt": "An image of a chat application showcasing real-time translation features between users speaking different languages.",
 		"links": [
@@ -12,48 +19,48 @@
 			}
 		],
 		"skills": [
-			{ "name": "React", "size": 16 },
-			{ "name": "Go",  "size": 16 },
-			{ "name": "Gin",  "size": 16 },
-			{ "name": "PyTorch",  "size": 16 },
+			{ "name": "React" },
+			{ "name": "Go" },
+			{ "name": "Gin" },
+			{ "name": "PyTorch" },
 			{
-				"name": "NLP",
-				"size": 16
+				"name": "NLP"
 			},
-			{ "name": "PostgreSQL", "size": 16 },
+			{ "name": "PostgreSQL" },
 			{
-				"name": "gorilla/websocket",
-				"size": 16
+				"name": "gorilla/websocket"
 			},
-			{ "name": "Clerk Auth", "size": 16 }
+			{ "name": "Clerk Auth" }
 		]
 	},
 	{
 		"src": "./Projects/weekly_image.png",
-		"title": "Weekly: Calendar for friends",
+		"title": "Weekly",
 		"tags": ["iOS", "Mobile", "Frontend", "UI/UX"],
 		"short_descrip": "A mobile application that allows users to create and discover plans with friends. I contributed to the iOS development team, helping implement features for organizing and sharing events in a social, intuitive interface.",
 		"alt": "An image of a mobile application Weekly, it displays the apps features, of sharing your calendar, discovering free time with friends and making plans.",
-		"links": [
-			{
-				"location": "App Store",
-				"url": "https://apps.apple.com/us/app/weekly-calendar-for-friends/id1596555762"
-			}
-		],
+		"links": [],
 		"skills": [
-			{ "name": "Swift", "size": 16 },
-			{ "name": "SwiftUI", "size": 20 },
-			{ "name": "Django", "size": 16 },
-			{ "name": "Xcode",  "size": 16 },
-			{ "name": "Figma",  "size": 16 },
-			{ "name": "Trello", "size": 16 }
+			{ "name": "Swift" },
+			{ "name": "SwiftUI" },
+			{ "name": "Django" },
+			{ "name": "Xcode" },
+			{ "name": "Figma" },
+			{ "name": "Trello" }
 		]
 	},
 	{
 		"src": "./Projects/cppeventmap_image.png",
 		"title": "CPPEventMap",
-		"tags": ["Web Development", "Full Stack", "Frontend", "Backend", "AWS", "UI/UX"],
-		"short_descrip": "As the tech lead in my software engineering class, I led the development of CPP Event Map, a web app designed to help Cal Poly Pomona students discover and navigate on-campus events. This project utilized the Mapbox API for interactive mapping features, enhancing the user experience by providing an intuitive interface for accessing event information.",
+		"tags": [
+			"Web Development",
+			"Full Stack",
+			"Frontend",
+			"Backend",
+			"AWS",
+			"UI/UX"
+		],
+		"short_descrip": "Lead my team in software engineering class in the development of CPP Event Map, a web app designed to help Cal Poly Pomona students discover and navigate on-campus events. This project utilized the Mapbox API for interactive mapping features, enhancing the user experience by providing an intuitive interface for accessing event information.",
 		"alt": "An image of a web application that is mainly a map that shows where events are occurring on the Cal Poly Pomona campus.",
 		"links": [
 			{
@@ -62,12 +69,12 @@
 			}
 		],
 		"skills": [
-			{ "name": "React", "size": 16 },
-			{ "name": "CSS", "size": 16 },
-			{ "name": "Node.js", "size": 18 },
-			{ "name": "Express", "size": 16 },
-			{ "name": "MongoDB", "size": 16 },
-			{ "name": "Jest", "size": 16 }
+			{ "name": "React" },
+			{ "name": "CSS" },
+			{ "name": "Node.js" },
+			{ "name": "Express" },
+			{ "name": "MongoDB" },
+			{ "name": "Jest" }
 		]
 	},
 	{
@@ -83,34 +90,30 @@
 			}
 		],
 		"skills": [
-			{ "name": "TypeScript", "size": 16 },
-			{ "name": "React", "size": 16 },
-			{ "name": "Node.js", "size": 16 },
-			{ "name": "Express", "size": 16 },
-			{ "name": "MongoDB", "size": 16 },
-			{ "name": "JWT Auth", "size": 16 }
+			{ "name": "TypeScript" },
+			{ "name": "React" },
+			{ "name": "Node.js" },
+			{ "name": "Express" },
+			{ "name": "MongoDB" },
+			{ "name": "JWT Auth" }
 		]
 	},
 	{
 		"src": "./Projects/mybookshelf_image.png",
 		"title": "MyBookshelf",
-		"tags": ["Web Development","Desktop", "Frontend", "UI/UX"],
-		"short_descrip": "Placeholder text",
+		"tags": ["Web Development", "Desktop", "Frontend", "UI/UX"],
+		"short_descrip": "An electron app I made to better organize, keep track of pages, and overall help in my reading.",
 		"alt": "An image of a pdf library desktop application",
 		"links": [
 			{
 				"location": "Github",
-				"url": "https://github.com/JohnSalinas123/AppTrack"
+				"url": "https://github.com/JohnSalinas123/mybookshelf-2"
 			}
 		],
 		"skills": [
-			{ "name": "TypeScript", "size": 16 },
-			{ "name": "React", "size": 16 },
-			{ "name": "Node.js", "size": 16 },
-			{ "name": "Express", "size": 16 },
-			{ "name": "MongoDB", "size": 16 },
-			{ "name": "JWT Auth", "size": 16 }
+			{ "name": "TypeScript" },
+			{ "name": "React" },
+			{ "name": "Electron" }
 		]
 	}
-
 ]

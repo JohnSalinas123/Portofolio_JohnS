@@ -35,7 +35,7 @@ export const IntroSection = () => {
 	const calculatePosition = (
 		index: number,
 		totalItems: number,
-		radius: number
+		radius: number,
 	) => {
 		const angle = (2 * Math.PI * index) / totalItems;
 		return {
@@ -115,7 +115,7 @@ export const IntroSection = () => {
 								const { x, y } = calculatePosition(
 									i,
 									itemsInLayer,
-									radii[layerIndex]
+									radii[layerIndex],
 								);
 								const skill = skillsData[skillIndex++];
 								return (
@@ -146,7 +146,7 @@ export const IntroSection = () => {
 											display: "flex",
 											justifyContent: "center",
 											alignItems: "center",
-											cursor: "pointer",
+											cursor: "default",
 										}}
 									>
 										<div className="tech-box">
